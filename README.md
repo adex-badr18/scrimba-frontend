@@ -1,4 +1,4 @@
-# SCRIMBA'S FRONTEND SOFTWARE DEVELOPMENT COURSE
+# Scrimba's Frontend Software Development Course
 
 All projects in this repository are built as a part of Scrimba's Frontend Software Development Course.
 
