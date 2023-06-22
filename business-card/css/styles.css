@@ -6,3 +6,24 @@ body {
 .avatar {
     width: 150px;
 }
+
+.card {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    background: #22223b;
+    color: #ffffff;
+    border-bottom: 6px solid #9a8c98;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+        
+    /*
+    Challenge:
+    Find a color palette you like on Coolors.co
+    and use it in your business card.
+     */
+}
