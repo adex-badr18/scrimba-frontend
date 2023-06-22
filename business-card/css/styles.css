@@ -32,6 +32,10 @@ body {
     box-shadow: 0 0 10px #4a4e69;
 }
 
+.info {
+    margin: auto auto;
+}
+
 /*
 Stretch goals:
 Find other ways you can personalize 
