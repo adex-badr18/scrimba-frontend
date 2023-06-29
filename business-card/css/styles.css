@@ -1,3 +1,8 @@
+@font-face {
+    font-family: DancingScript;
+    src: url("../fonts/DancingScript-Bold.ttf");
+}
+
 body {
     margin: 20px;
     font-family: Arial, Helvetica, sans-serif;
