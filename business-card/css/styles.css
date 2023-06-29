@@ -37,6 +37,11 @@ body {
     box-shadow: 0 0 10px #4a4e69;
 }
 
+.name {
+    font-family: DancingScript;
+    font-size: 24px;
+}
+
 .info {
     margin: auto auto;
 }
