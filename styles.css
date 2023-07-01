@@ -2,3 +2,15 @@
     width: 50%;
     margin: 0 auto;
 }
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    background-color: coral;
+    color: white;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
