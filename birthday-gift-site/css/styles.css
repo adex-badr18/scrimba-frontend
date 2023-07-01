@@ -8,3 +8,10 @@ body {
 h1, h2, h3, h4, p {
     text-shadow: 0 0 1px black;
 }
+
+#bff-img {
+    width: 150px;
+    border-radius: 50%;
+    border: 6px solid #EFB0C9;
+    margin-bottom: 10px;
+}
