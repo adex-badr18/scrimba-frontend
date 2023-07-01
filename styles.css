@@ -14,3 +14,7 @@
     margin-bottom: 10px;
 }
 
+.nav-item:hover {
+    background-color: rgb(235, 108, 61);
+    font-size: 24px;
+}
