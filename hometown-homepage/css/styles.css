@@ -26,3 +26,15 @@ body {
     width: 30%;
     text-align: center;
 }
+
+/* Statistics section */
+
+#stat {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: #0dcabada;
+    padding: 30px 60px;
+    text-align: center;
+}
