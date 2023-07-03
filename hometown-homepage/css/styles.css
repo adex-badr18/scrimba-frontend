@@ -101,3 +101,11 @@ body {
     display: flex;
 }
 
+/* Footer section */
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 20px 40px;
+    font-size: 18px;
+    color: #0c6b6e;
+}
