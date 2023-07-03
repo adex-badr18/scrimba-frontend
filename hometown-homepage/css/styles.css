@@ -72,7 +72,7 @@ body {
     margin-right: 50px;
 }
 
-.overview-history h3 {
+.overview-history h3, .overview-images h3 {
     text-align: center;
     color: #0c6b6e;
     font-size: 24px;
