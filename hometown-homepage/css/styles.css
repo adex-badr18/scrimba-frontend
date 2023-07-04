@@ -95,6 +95,7 @@ body {
     flex-flow: row wrap;
     justify-content: space-between;
     margin-top: 40px;
+    row-gap: 30px;
 }
 
 .image {
@@ -102,11 +103,13 @@ body {
     flex-direction: column;
     align-items: center;
     width: 350px;
+    border: 1px solid #0c6b6e;
+    padding: 10px 20px;
 }
 
 .image img {
-    width: 200px;
-    margin-right: 20px;
+    width: 250px;
+    /* margin-right: 20px; */
 }
 
 .image p {
