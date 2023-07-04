@@ -76,7 +76,7 @@ body {
     margin: 5px 0;
 }
 
-#history p {
+#history p, .image p {
     text-align: justify;
     font-size: 18px;
     word-spacing: 1.5px;
@@ -119,10 +119,6 @@ body {
 
 .image h4 {
     margin-bottom: 5px;
-}
-
-.image p {
-    text-align: justify;
 }
 
 /* Footer section */
