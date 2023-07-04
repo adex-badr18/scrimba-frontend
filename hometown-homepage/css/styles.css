@@ -130,9 +130,11 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #b9dfdbda;
+    color: #031c1d;
     padding: 20px 40px;
     font-size: 18px;
-    color: #0c6b6e;
+    
 }
 
 footer p {
