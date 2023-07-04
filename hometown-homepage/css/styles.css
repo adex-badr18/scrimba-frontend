@@ -105,8 +105,13 @@ body {
 /* Footer section */
 footer {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     padding: 20px 40px;
     font-size: 18px;
     color: #0c6b6e;
+}
+
+footer p {
+    margin: 5px 0;
 }
