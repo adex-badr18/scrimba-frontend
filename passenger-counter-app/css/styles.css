@@ -3,7 +3,7 @@ body {
     background-size: cover;
     font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;
-    margin: 0 auto;
+    margin: 0;
 }
 
 h1 {
@@ -17,19 +17,28 @@ h2 {
     margin-bottom: 20px;
 }
 
+.body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
 .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    border: 1px solid blue;
+    background: #ffffff;
+    border: 5px solid black;
+    border-radius: 10px;
+    padding: 20px 40px;
 }
 
 .controls {
     display: flex;
     justify-content: space-between;
-    width: 12%;
+    width: 60%;
 }
 
 .buttons {
@@ -38,7 +47,7 @@ h2 {
     padding-bottom: 10px;
     color: white;
     font-weight: bold;
-    min-width: 45px;
+    width: 45px;
     margin-bottom: 5px;
     border-radius: 50%;
     text-align: center;

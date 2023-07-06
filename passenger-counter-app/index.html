@@ -11,25 +11,27 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1>Passenger Counter</h1>
-        <h2 id="count-el">0</h2>
-        <div class="controls">
-            <div class="buttons" id="increment-btn" onclick="increment()">
-                <span class="material-symbols-outlined">add</span>
+    <div class="body">
+        <div class="container">
+            <h1>Passenger Counter</h1>
+            <h2 id="count-el">0</h2>
+            <div class="controls">
+                <div class="buttons" id="increment-btn" onclick="increment()">
+                    <span class="material-symbols-outlined">add</span>
+                </div>
+    
+                <div class="buttons" id="decrement-btn" onclick="decrement()">
+                    <span class="material-symbols-outlined">remove</span>
+                </div>
+    
+                <div class="buttons" id="save-btn" onclick="save()">
+                    <span class="material-symbols-outlined">save</span>
+                </div>
             </div>
-
-            <div class="buttons" id="decrement-btn" onclick="decrement()">
-                <span class="material-symbols-outlined">remove</span>
-            </div>
-
-            <div class="buttons" id="save-btn" onclick="save()">
-                <span class="material-symbols-outlined">save</span>
-            </div>
+    
+            <p id="save-el">Previous entries: </p>
+    
         </div>
-
-        <p id="save-el">Previous entries: </p>
-
     </div>
 
     <script src="./js/script.js"></script>
