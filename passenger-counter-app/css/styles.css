@@ -29,7 +29,6 @@ h2 {
 .controls {
     display: flex;
     justify-content: space-between;
-    /* border: 1px solid red; */
     width: 12%;
 }
 
