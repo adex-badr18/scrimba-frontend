@@ -4,3 +4,8 @@ body {
     margin: 0;
     text-align: center;
 }
+
+span {
+    border-bottom: 2px solid black;
+    padding: 4px;
+}
