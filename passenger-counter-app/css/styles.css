@@ -28,3 +28,14 @@ button {
     border-radius: 5px;
 }
 
+#increment-btn {
+    background: #6b6969;;
+}
+
+#decrement-btn {
+    background: darkred;
+}
+
+#save-btn {
+    background: darkgreen;
+}
