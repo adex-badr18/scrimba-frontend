@@ -12,3 +12,8 @@ function add2PointsHome() {
     homeCount += 2;
     homeScore.textContent = homeCount;
 }
+
+function add3PointsHome() {
+    homeCount += 3;
+    homeScore.textContent = homeCount;
+}
