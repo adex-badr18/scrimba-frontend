@@ -41,8 +41,29 @@ body {
     height: 150px;
 }
 
-p {
+.score p {
     color: #F94F6D;
     font-family: cursed-timer;
     font-size: 90px;
+}
+
+.add-points-btns {
+    display: flex;
+    justify-content: space-around;
+    height: 45px;
+}
+
+button {
+    width: 55px;
+    font-size: 20px;
+    font-family: cursed-timer;
+    background-color: inherit;
+    border: 2px solid #9AABD8;
+    border-radius: 5px;
+    color: #9AABD8;
+}
+
+button:hover {
+    background: #9AABD8;
+    color: #1B244A;
 }
