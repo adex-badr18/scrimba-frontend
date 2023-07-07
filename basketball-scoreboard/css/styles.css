@@ -25,7 +25,7 @@ body {
 
 .score-title {
     font-size: 50px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, sans-serif;
     font-weight: 900;
     text-align: center;
     margin-bottom: 15px;
@@ -38,14 +38,14 @@ body {
     align-items: center;
     background-color: #080001;
     border-radius: 10px;
-    width: 200px;
+    width: 170px;
     height: 150px;
 }
 
 .score p {
     color: #F94F6D;
     font-family: cursed-timer;
-    font-size: 90px;
+    font-size: 85px;
 }
 
 .add-points-btns {
