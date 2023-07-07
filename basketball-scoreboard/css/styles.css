@@ -31,12 +31,16 @@ body {
 
 .score {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #080001;
+    border-radius: 10px;
+    width: 200px;
+    height: 150px;
 }
 
-.score h1 {
+p {
     color: #F94F6D;
     font-family: cursed-timer;
     font-size: 90px;
