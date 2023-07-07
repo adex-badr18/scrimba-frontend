@@ -27,6 +27,7 @@ body {
 .score-title {
     font-size: 40px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
 }
 
 .score {
