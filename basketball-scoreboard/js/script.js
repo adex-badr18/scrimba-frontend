@@ -7,3 +7,8 @@ function add1PointHome() {
     homeCount += 1;
     homeScore.textContent = homeCount;
 }
+
+function add2PointsHome() {
+    homeCount += 2;
+    homeScore.textContent = homeCount;
+}
