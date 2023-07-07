@@ -11,3 +11,10 @@ body {
     height: 100vh;
     column-gap: 250px;
 }
+
+.board-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 30px;
+}
