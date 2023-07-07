@@ -33,3 +33,7 @@ function add3PointsGuest() {
     guestCount += 3;
     guestScore.textContent = guestCount;
 }
+
+function markHigherScore() {
+    
+}
