@@ -17,3 +17,19 @@ function add3PointsHome() {
     homeCount += 3;
     homeScore.textContent = homeCount;
 }
+
+// Guest score functions
+function add1PointGuest() {
+    guestCount += 1;
+    guestScore.textContent = guestCount;
+}
+
+function add2PointsGuest() {
+    guestCount += 2;
+    guestScore.textContent = guestCount;
+}
+
+function add3PointsGuest() {
+    guestCount += 3;
+    guestScore.textContent = guestCount;
+}
