@@ -5,26 +5,34 @@
 
 body {
     margin: 0;
-    background-color: #1B244A;
+    background-color: #EEEEEE;
     color: #EEEEEE;
-}
-
-.container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+}
+
+.container {
+    background-color: #1B244A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     column-gap: 100px;
+    width: 45%;
+    height: 65vh;
 }
 
 .board-panel {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: initial;
+    margin-bottom: 30px;
+    
 }
 
 .score-title {
-    font-size: 45px;
+    font-size: 40px;
     font-family: Verdana, sans-serif;
     letter-spacing: 3px;
     font-weight: bold;
