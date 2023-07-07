@@ -18,3 +18,14 @@ body {
     justify-content: center;
     row-gap: 30px;
 }
+
+.score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #080001;
+}
+
+.score h1 {
+    color: #F94F6D;
+}
