@@ -1,3 +1,8 @@
+@font-face {
+    font-family: cursed-timer;
+    src: url("./CursedTimerUlil-Aznm.ttf");
+}
+
 body {
     margin: 0;
     background-color: #1B244A;
@@ -33,4 +38,6 @@ body {
 
 .score h1 {
     color: #F94F6D;
+    font-family: cursed-timer;
+    font-size: 90px;
 }
