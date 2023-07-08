@@ -10,32 +10,38 @@
 
 <body>
     <div class="container">
-        <div class="board-panel">
-            <h1 class="score-title">HOME</h1>
+        <div class="scoreboard">
+            <div class="board-panel">
+                <h1 class="score-title">HOME</h1>
 
-            <div id="home-score-container" class="score">
-                <p id="home-score">0</p>
+                <div id="home-score-container" class="score">
+                    <p id="home-score">0</p>
+                </div>
+
+                <div class="add-points-btns">
+                    <button id="home-add-1" class="add-1-point" onclick="add1PointHome()">+1</button>
+                    <button id="home-add-2" class="add-2-point" onclick="add2PointsHome()">+2</button>
+                    <button id="home-add-3" class="add-3-point" onclick="add3PointsHome()">+3</button>
+                </div>
             </div>
 
-            <div class="add-points-btns">
-                <button id="home-add-1" class="add-1-point" onclick="add1PointHome()">+1</button>
-                <button id="home-add-2" class="add-2-point" onclick="add2PointsHome()">+2</button>
-                <button id="home-add-3" class="add-3-point" onclick="add3PointsHome()">+3</button>
+            <div class="board-panel">
+                <h1 class="score-title">GUEST</h1>
+
+                <div id="guest-score-container" class="score">
+                    <p id="guest-score">0</p>
+                </div>
+
+                <div class="add-points-btns">
+                    <button id="guest-add-1" class="add-1-point" onclick="add1PointGuest()">+1</button>
+                    <button id="guest-add-2" class="add-2-point" onclick="add2PointsGuest()">+2</button>
+                    <button id="guest-add-3" class="add-3-point" onclick="add3PointsGuest()">+3</button>
+                </div>
             </div>
         </div>
 
-        <div class="board-panel">
-            <h1 class="score-title">GUEST</h1>
-
-            <div id="guest-score-container" class="score">
-                <p id="guest-score">0</p>
-            </div>
-
-            <div class="add-points-btns">
-                <button id="guest-add-1" class="add-1-point" onclick="add1PointGuest()">+1</button>
-                <button id="guest-add-2" class="add-2-point" onclick="add2PointsGuest()">+2</button>
-                <button id="guest-add-3" class="add-3-point" onclick="add3PointsGuest()">+3</button>
-            </div>
+        <div class="new-game">
+            <button class="reset">New Game</button>
         </div>
     </div>
 
