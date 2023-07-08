@@ -13,14 +13,36 @@ body {
     height: 100vh;
 }
 
+button {
+    width: 50px;
+    font-size: 20px;
+    font-family: cursed-timer;
+    background-color: inherit;
+    border: 2px solid #9AABD8;
+    border-radius: 5px;
+    color: #9AABD8;
+}
+
+button:hover {
+    background: #9AABD8;
+    color: #1B244A;
+}
+
 .container {
     background-color: #1B244A;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    height: 70vh;
+}
+
+.scoreboard {
     display: flex;
     justify-content: center;
     align-items: center;
     column-gap: 100px;
-    width: 45%;
-    height: 65vh;
 }
 
 .board-panel {
@@ -34,7 +56,6 @@ body {
 .score-title {
     font-size: 40px;
     font-family: Verdana, sans-serif;
-    letter-spacing: 3px;
     font-weight: bold;
     text-align: center;
     margin-bottom: 15px;
@@ -64,17 +85,14 @@ body {
     margin-top: 26px;
 }
 
-button {
-    width: 50px;
-    font-size: 20px;
-    font-family: cursed-timer;
-    background-color: inherit;
-    border: 2px solid #9AABD8;
+.reset {
+    width: 100%;
+    font-size: 22px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: #EEEEEE;
+    /* border: 2px solid #9AABD8; */
     border-radius: 5px;
-    color: #9AABD8;
-}
-
-button:hover {
-    background: #9AABD8;
     color: #1B244A;
+    font-weight: bold;
+    padding: 5px 10px;
 }
