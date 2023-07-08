@@ -1,23 +1,23 @@
 let homeScoreEl = document.getElementById("home-score");
 let guestScoreEl = document.getElementById("guest-score");
 let newGameEl = document.getElementById("new-game");
+let homeScoreContainer = document.getElementById('home-score-container');
+let guestScoreContainer = document.getElementById('guest-score-container');
 let homeCount = 0;
 let guestCount = 0;
 
 function markHigherScore() {
     let homeScore = Number(homeScoreEl.textContent);
     let guestScore = Number(guestScoreEl.textContent);
-    let home = document.getElementById('home-score-container');
-    let guest = document.getElementById('guest-score-container');
 
     if (homeScore > guestScore) {
-        home.style.border = '3px solid #00ff00';
-        guest.style.removeProperty('border');
+        homeScoreContainer.style.border = '3px solid #00ff00';
+        guestScoreContainer.style.removeProperty('border');
     } 
 
     if (guestScore > homeScore) {
-        guest.style.border = '3px solid #00ff00';
-        home.style.removeProperty('border');
+        guestScoreContainer.style.border = '3px solid #00ff00';
+        homeScoreContainer.style.removeProperty('border');
     }
 }
 
@@ -63,6 +63,8 @@ function newGame() {
     guestCount = 0;
     homeScoreEl.textContent = homeCount;
     guestScoreEl.textContent = guestCount;
+    homeScoreContainer.style.removeProperty('border');
+    guestScoreContainer.style.removeProperty('border');
 }
 
 
