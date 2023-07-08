@@ -1,5 +1,6 @@
 let homeScoreEl = document.getElementById("home-score");
 let guestScoreEl = document.getElementById("guest-score");
+let newGameEl = document.getElementById("new-game");
 let homeCount = 0;
 let guestCount = 0;
 
@@ -55,6 +56,13 @@ function add3PointsGuest() {
     guestCount += 3;
     guestScoreEl.textContent = guestCount;
     markHigherScore();
+}
+
+function newGame() {
+    homeCount = 0;
+    guestCount = 0;
+    homeScoreEl.textContent = homeCount;
+    guestScoreEl.textContent = guestCount;
 }
 
 
