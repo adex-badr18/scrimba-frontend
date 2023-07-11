@@ -1,10 +1,7 @@
-// 1. Create two variables, firstCard and secondCard. Set their values to a random number between 2-11
-let firstCard = getRandomCard(); 
-let secondCard = getRandomCard();
-let cards = [firstCard, secondCard] // array - ordered list of items
-let sum = firstCard + secondCard; // Create a variable, sum, and set it to the sum of the two cards
+let cards = [] // array - ordered list of items
+let sum = 0; // Create a variable, sum, and set it to the sum of the two cards
 let hasBlackJack = false;
-let isAlive = true // Create a variable called isAlive and assign it to true
+let isAlive = false // Create a variable called isAlive and assign it to true
 let message = "" // Declare a variable called message and assign its value to an empty string
 
 // Store the message-el paragraph in a variable called messageEl
@@ -21,7 +18,7 @@ let cardsEl = document.getElementById("cards-el");
 function getRandomCard() {
     // if 1     -> return 11
     // if 11-13 -> return 10
-    let randomNumer = Math.floor( Math.random()*13 ) + 1
+    let randomNumer = Math.floor(Math.random() * 13) + 1
     if (randomNumer > 10) {
         return 10
     } else if (randomNumer === 1) {
@@ -33,6 +30,12 @@ function getRandomCard() {
 
 // Create a new function called startGame() that calls renderGame()
 function startGame() {
+    isAlive = true // Create a variable called isAlive and assign it to true
+    let firstCard = getRandomCard();
+    let secondCard = getRandomCard();
+    cards = [firstCard, secondCard] // array - ordered list of items
+    sum = firstCard + secondCard; // Create a variable, sum, and set it to the sum of the two cards
+
     renderGame()
 }
 
@@ -54,7 +57,7 @@ function renderGame() {
 
     if (sum <= 20) {
         // Reassign the message variable to the string we're logging out
-        message = "Do you want to draw a new card? 🙂"; 
+        message = "Do you want to draw a new card? 🙂";
     } else if (sum === 21) {
         message = "Wohoo! You've got Blackjack! 🥳";
         hasBlackJack = true;
