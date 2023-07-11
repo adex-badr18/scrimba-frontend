@@ -3,10 +3,10 @@
 
 // 2. Create a variable, sum, and set it to the sum of the two cards
 
-let firstCard = 6;
-let secondCard = 9;
-
+let firstCard = 10;
+let secondCard = 11;
 let sum = firstCard + secondCard;
+let hasBlackJack = false;
 
 // Write the conditional according to these rules:
 
@@ -22,3 +22,5 @@ if (sum <= 20) {
 } else {
     console.log("You're out of the game! 😭")
 }
+
+console.log(hasBlackJack);
