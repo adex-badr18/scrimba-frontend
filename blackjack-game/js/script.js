@@ -1,6 +1,6 @@
 // 1. Create two variables, firstCard and secondCard. Set their values to a random number between 2-11
-let firstCard = 10; 
-let secondCard = 11;
+let firstCard = getRandomCard(); 
+let secondCard = getRandomCard();
 let cards = [firstCard, secondCard] // array - ordered list of items
 let sum = firstCard + secondCard; // Create a variable, sum, and set it to the sum of the two cards
 let hasBlackJack = false;
@@ -17,6 +17,11 @@ let sumEl = document.getElementById("sum-el");
 let cardsEl = document.getElementById("cards-el");
 
 
+// Create a function that returns a random number between 1 and 13
+function getRandomCard() {
+    return Math.floor( Math.random()*13 ) + 1 // 1-13
+}
+
 // Create a new function called startGame() that calls renderGame()
 function startGame() {
     renderGame()
@@ -29,7 +34,7 @@ function startGame() {
 
 function renderGame() {
     cardsEl.textContent = "Cards: "
-    
+
     // Create a for loop that renders out all the cards instead of just two
     for (let i = 0; i < cards.length; i++) {
         cardsEl.textContent += cards[i] + " "
