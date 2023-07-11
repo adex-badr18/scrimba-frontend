@@ -21,7 +21,7 @@ let sumEl = document.getElementById("sum-el");
 
 function startGame() {
     // Render the sum on the page using this format -> "Sum: 14"
-    sumEl.textContent = "Sum: " + sum
+    sumEl.textContent = "Sum: " + sum;
 
     if (sum <= 20) {
         // Reassign the message variable to the string we're logging out
