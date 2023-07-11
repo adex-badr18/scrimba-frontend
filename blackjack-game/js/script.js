@@ -46,4 +46,10 @@ function startGame() {
 // Create a function newCard() that logs out "Drawing a new card from the deck!"
 function newCard() {
     console.log("Drawing a new card from the deck!");
+    // Create a card variable, and hard code its value to a number (2-11)
+    let card = 6;
+    // Add the new card to the sum variable
+    sum += card;
+    // Call startGame()
+    startGame();
 }
