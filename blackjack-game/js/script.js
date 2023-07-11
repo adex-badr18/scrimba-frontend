@@ -1,14 +1,11 @@
-// 1. Create two variables, firstCard and secondCard. 
-// Set their values to a random number between 2-11
-
-// 2. Create a variable, sum, and set it to the sum of the two cards
-
-let firstCard = 10;
+// 1. Create two variables, firstCard and secondCard. Set their values to a random number between 2-11
+let firstCard = 10; 
 let secondCard = 11;
-let sum = firstCard + secondCard;
+let sum = firstCard + secondCard; // Create a variable, sum, and set it to the sum of the two cards
 let hasBlackJack = false;
-// 1. Create a variable called isAlive and assign it to true
-let isAlive = true
+let isAlive = true // Create a variable called isAlive and assign it to true
+
+let message = "" // Declare a variable called message and assign its value to an empty string
 
 
 // Write the conditional according to these rules:
@@ -17,15 +14,15 @@ let isAlive = true
 // else if exactly 21 -> "Wohoo! You've got Blackjack! 🥳"
 // else -> "You're out of the game! 😭"
 
-// 2. Flip isAlive value to false in the appropriate code block
 if (sum <= 20) {
-    console.log("Do you want to draw a new card? 🙂")
+    // Reassign the message variable to the string we're logging out
+    message = "Do you want to draw a new card? 🙂"; 
 } else if (sum === 21) {
-    console.log("Wohoo! You've got Blackjack! 🥳");
+    message = "Wohoo! You've got Blackjack! 🥳";
     hasBlackJack = true;
 } else {
-    console.log("You're out of the game! 😭");
-    isAlive = false;
+    message = "You're out of the game! 😭";
+    isAlive = false; // Flip isAlive value to false in the appropriate code block
 }
 
-console.log(hasBlackJack);
+console.log(message);
