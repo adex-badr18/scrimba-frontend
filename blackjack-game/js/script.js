@@ -28,8 +28,12 @@ function startGame() {
 // else -> "You're out of the game! 😭"
 
 function renderGame() {
-    // Render the cards on the page using this format -> "Cards: 10 4"
-    cardsEl.textContent = "Cards: " + cards[0] + " " + cards[1];
+    cardsEl.textContent = "Cards: "
+    
+    // Create a for loop that renders out all the cards instead of just two
+    for (let i = 0; i < cards.length; i++) {
+        cardsEl.textContent += cards[i] + " "
+    }
 
     // Render the sum on the page using this format -> "Sum: 14"
     sumEl.textContent = "Sum: " + sum;
