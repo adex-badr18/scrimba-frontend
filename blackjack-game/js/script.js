@@ -7,6 +7,9 @@ let isAlive = true // Create a variable called isAlive and assign it to true
 
 let message = "" // Declare a variable called message and assign its value to an empty string
 
+// Store the message-el paragraph in a variable called messageEl
+let messageEl = document.getElementById("message-el");
+
 
 // Write the conditional according to these rules:
 
@@ -25,6 +28,6 @@ function startGame() {
         message = "You're out of the game! 😭";
         isAlive = false; // Flip isAlive value to false in the appropriate code block
     }
-    
-    console.log(message);
+    // Display the message in the messageEl using messageEl.textContent
+    messageEl.textContent = message;
 }
