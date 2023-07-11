@@ -69,17 +69,18 @@ function renderGame() {
     messageEl.textContent = message;
 }
 
-// Create a function newCard() that logs out "Drawing a new card from the deck!"
+// Create a function newCard() that allows player to pick a new card
 function newCard() {
-    console.log("Drawing a new card from the deck!");
-    // Create a card variable, and hard code its value to a number (2-11)
-    let card = 6;
-    // Add the new card to the sum variable
-    sum += card;
+    if (isAlive === true && hasBlackJack === false) {
+        // Create a card variable, and hard code its value to a number (2-11)
+        let card = getRandomCard();
+        // Add the new card to the sum variable
+        sum += card;
 
-    // Push the card to the cards array
-    cards.push(card)
+        // Push the card to the cards array
+        cards.push(card)
 
-    // Call renderGame()
-    renderGame();
+        // Call renderGame()
+        renderGame();
+    }
 }
