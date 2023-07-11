@@ -22,7 +22,7 @@ let cardsEl = document.getElementById("cards-el");
 // else if exactly 21 -> "Wohoo! You've got Blackjack! 🥳"
 // else -> "You're out of the game! 😭"
 
-function startGame() {
+function renderGame() {
     // Render the cards on the page using this format -> "Cards: 10 4"
     cardsEl.textContent = "Cards: " + firstCard + " " + secondCard
 
@@ -51,5 +51,5 @@ function newCard() {
     // Add the new card to the sum variable
     sum += card;
     // Call startGame()
-    startGame();
+    renderGame();
 }
