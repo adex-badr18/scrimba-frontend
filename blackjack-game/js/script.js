@@ -14,15 +14,17 @@ let message = "" // Declare a variable called message and assign its value to an
 // else if exactly 21 -> "Wohoo! You've got Blackjack! 🥳"
 // else -> "You're out of the game! 😭"
 
-if (sum <= 20) {
-    // Reassign the message variable to the string we're logging out
-    message = "Do you want to draw a new card? 🙂"; 
-} else if (sum === 21) {
-    message = "Wohoo! You've got Blackjack! 🥳";
-    hasBlackJack = true;
-} else {
-    message = "You're out of the game! 😭";
-    isAlive = false; // Flip isAlive value to false in the appropriate code block
+function startGame() {
+    if (sum <= 20) {
+        // Reassign the message variable to the string we're logging out
+        message = "Do you want to draw a new card? 🙂"; 
+    } else if (sum === 21) {
+        message = "Wohoo! You've got Blackjack! 🥳";
+        hasBlackJack = true;
+    } else {
+        message = "You're out of the game! 😭";
+        isAlive = false; // Flip isAlive value to false in the appropriate code block
+    }
+    
+    console.log(message);
 }
-
-console.log(message);
