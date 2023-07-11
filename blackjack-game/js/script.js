@@ -42,3 +42,8 @@ function startGame() {
     // Display the message in the messageEl using messageEl.textContent
     messageEl.textContent = message;
 }
+
+// Create a function newCard() that logs out "Drawing a new card from the deck!"
+function newCard() {
+    console.log("Drawing a new card from the deck!");
+}
