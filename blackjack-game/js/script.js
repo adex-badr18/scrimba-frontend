@@ -19,7 +19,16 @@ let cardsEl = document.getElementById("cards-el");
 
 // Create a function that returns a random number between 1 and 13
 function getRandomCard() {
-    return Math.floor( Math.random()*13 ) + 1 // 1-13
+    // if 1     -> return 11
+    // if 11-13 -> return 10
+    let randomNumer = Math.floor( Math.random()*13 ) + 1
+    if (randomNumer > 10) {
+        return 10
+    } else if (randomNumer === 1) {
+        return 11
+    } else {
+        return randomNumer
+    }
 }
 
 // Create a new function called startGame() that calls renderGame()
