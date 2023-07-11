@@ -12,6 +12,9 @@ let messageEl = document.getElementById("message-el");
 // Store the sum paragraph in a variable called sumEl
 let sumEl = document.getElementById("sum-el");
 
+// Store the cards paragraph in a variable called cardsEl
+let cardsEl = document.getElementById("cards-el");
+
 
 // Write the conditional according to these rules:
 
@@ -20,6 +23,9 @@ let sumEl = document.getElementById("sum-el");
 // else -> "You're out of the game! 😭"
 
 function startGame() {
+    // Render the cards on the page using this format -> "Cards: 10 4"
+    cardsEl.textContent = "Cards: " + firstCard + " " + secondCard
+
     // Render the sum on the page using this format -> "Sum: 14"
     sumEl.textContent = "Sum: " + sum;
 
