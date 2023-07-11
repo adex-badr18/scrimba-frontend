@@ -1,3 +1,9 @@
+// Create the player object. Give it two keys, name and chips, and set their values
+let player = {
+    name: "Per",
+    chips: 200
+}
+
 let cards = [] // array - ordered list of items
 let sum = 0; // Create a variable, sum, and set it to the sum of the two cards
 let hasBlackJack = false;
@@ -12,6 +18,12 @@ let sumEl = document.getElementById("sum-el");
 
 // Store the cards paragraph in a variable called cardsEl
 let cardsEl = document.getElementById("cards-el");
+
+// Grab ahold of the player-el paragraph and store it in a variable called playerEl
+let playerEl = document.getElementById("player-el");
+
+// Render the player's name and chips in playerEl
+playerEl.textContent = player.name + ": $" + player.chips
 
 
 // Create a function that returns a random number between 1 and 13
