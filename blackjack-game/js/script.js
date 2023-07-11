@@ -55,6 +55,10 @@ function newCard() {
     let card = 6;
     // Add the new card to the sum variable
     sum += card;
-    // Call startGame()
+
+    // Push the card to the cards array
+    cards.push(card)
+
+    // Call renderGame()
     renderGame();
 }
