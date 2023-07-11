@@ -1,6 +1,7 @@
 // 1. Create two variables, firstCard and secondCard. Set their values to a random number between 2-11
 let firstCard = 10; 
 let secondCard = 11;
+let cards = [firstCard, secondCard] // array - ordered list of items
 let sum = firstCard + secondCard; // Create a variable, sum, and set it to the sum of the two cards
 let hasBlackJack = false;
 let isAlive = true // Create a variable called isAlive and assign it to true
@@ -28,7 +29,7 @@ function startGame() {
 
 function renderGame() {
     // Render the cards on the page using this format -> "Cards: 10 4"
-    cardsEl.textContent = "Cards: " + firstCard + " " + secondCard
+    cardsEl.textContent = "Cards: " + cards[0] + " " + cards[1];
 
     // Render the sum on the page using this format -> "Sum: 14"
     sumEl.textContent = "Sum: " + sum;
