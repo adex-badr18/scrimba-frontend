@@ -5,15 +5,21 @@ body {
 }
 
 h1 {
-    font-size: 44px;
+    font-size: 40px;
     font-weight: 900;
     line-height: 1;
     color: #FFFFFF;
-    margin-bottom: 3px;
+    margin-bottom: 10px;
 }
 
 span {
     color: #4ADF86;
+}
+
+p {
+    color: #D5D4D8;
+    font-size: 22px;
+    margin-top: 5px;
 }
 
 .container {
