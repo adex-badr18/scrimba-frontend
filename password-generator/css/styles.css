@@ -11,6 +11,10 @@ h1 {
     color: #FFFFFF;
 }
 
+span {
+    color: #4ADF86;
+}
+
 .container {
     width: 60%;
     margin: 0 auto;
