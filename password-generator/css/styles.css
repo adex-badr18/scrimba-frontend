@@ -3,3 +3,8 @@ body {
     font-family: 'Karla', sans-serif;
     height: 100vh;
 }
+
+.container {
+    width: 60%;
+    margin: 0 auto;
+}
