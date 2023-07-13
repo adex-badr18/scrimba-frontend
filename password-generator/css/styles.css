@@ -22,6 +22,17 @@ p {
     margin-top: 5px;
 }
 
+button {
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #10B981;
+    color: #FFFFFF;
+    padding: 12px 20px;
+    width: 200px;
+    border: none;
+    border-radius: 10px;
+}
+
 .container {
     width: 60%;
     margin: 0 auto;
