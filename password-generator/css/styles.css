@@ -2,6 +2,7 @@ body {
     margin: 0;
     font-family: 'Karla', sans-serif;
     height: 100vh;
+    background-color: black;
 }
 
 h1 {
@@ -68,7 +69,8 @@ hr {
     color: #55F991;
     background-color: #273549;
     width: 30%;
-    height: 25px;
+    height: 20px;
     padding: 10px 40px;
     border-radius: 5px;
+    text-align: center;
 }
