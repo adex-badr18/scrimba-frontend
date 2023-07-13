@@ -4,6 +4,13 @@ body {
     height: 100vh;
 }
 
+h1 {
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 1;
+    color: #FFFFFF;
+}
+
 .container {
     width: 60%;
     margin: 0 auto;
