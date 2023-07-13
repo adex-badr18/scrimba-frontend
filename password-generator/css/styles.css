@@ -31,7 +31,13 @@ button {
     width: 200px;
     border: none;
     border-radius: 10px;
-    margin-top: 50px;
+    margin-top: 40px;
+}
+
+hr {
+    width: 100%;
+    border: 1px solid #2F3E53;
+    margin: 35px 0;
 }
 
 .container {
