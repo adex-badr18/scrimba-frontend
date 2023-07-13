@@ -5,3 +5,23 @@ let buttonEl = document.querySelector("#btn-generate-paasword");
 let passwordOneEl = document.querySelector("#password-1");
 let passwordTwoEl = document.querySelector("#password-2");
 
+function generatePasswords() {
+    let password = "";
+
+    for (i = 0; i < 2; i++) {
+        password = "";
+        for (j = 0; j < 15; j++) {
+            let randomNumber = Math.floor(Math.random() * characters.length);
+            password += characters[randomNumber];
+        }
+        
+        if (i === 0) {
+            passwordOneEl.textContent = password;
+        } else {
+            passwordTwoEl.textContent = password;
+        }
+        
+    }
+}
+
+generatePasswords();
