@@ -55,7 +55,7 @@ hr {
     flex-direction: column;
     justify-content: center;
     height: 80%;
-    width: 55%;
+    width: 60%;
     background-color: #1F2937;
     padding: 0 60px;
 }
@@ -68,7 +68,7 @@ hr {
 .password {
     color: #55F991;
     background-color: #273549;
-    width: 30%;
+    width: 32%;
     height: 20px;
     padding: 10px 40px;
     border-radius: 5px;
