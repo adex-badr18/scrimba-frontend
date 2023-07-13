@@ -75,3 +75,13 @@ hr {
     border-radius: 5px;
     text-align: center;
 }
+
+#toggle-theme {
+    color: #FFFFFF;
+    margin-top: 30px;
+}
+
+#toggle-theme-mode {
+   margin-right: 5px;
+
+}
