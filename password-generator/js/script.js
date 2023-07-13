@@ -5,6 +5,8 @@ let buttonEl = document.querySelector("#btn-generate-paasword");
 let passwordOneEl = document.querySelector("#password-1");
 let passwordTwoEl = document.querySelector("#password-2");
 
+buttonEl.addEventListener("click", generatePasswords);
+
 function generatePasswords() {
     let password = "";
 
@@ -23,5 +25,3 @@ function generatePasswords() {
         
     }
 }
-
-generatePasswords();
