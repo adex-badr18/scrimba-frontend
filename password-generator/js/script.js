@@ -11,8 +11,18 @@ document.getElementById("password-length-input").addEventListener("input", (e) =
     passwordLength = Number(e.target.value);
 });
 
+// hide copy icon on page load
+let copy1El = document.querySelector("#copy1-el");
+let copy2El = document.querySelector("#copy2-el");
+
+window.addEventListener("load", (e) => {
+    copy1El.style.visibility = "hidden";
+    copy2El.style.visibility = "hidden";
+});
+
 // GENERATE PASSWORD ON BUTTON CLICK
 let errorMessageEl = document.querySelector("small");
+
 buttonEl.addEventListener("click", generatePasswords);
 
 function generatePasswords() {
@@ -29,8 +39,10 @@ function generatePasswords() {
     
             if (i === 0) {
                 passwordOneEl.textContent = password;
+                copy1El.style.visibility = "visible";
             } else {
                 passwordTwoEl.textContent = password;
+                copy2El.style.visibility = "visible";
             }
         }
     } else {
@@ -56,7 +68,27 @@ themeToggleEl.addEventListener("click", (e) => {
         document.querySelector("h1").style.color = "#FFFFFF";
         document.querySelector("span").style.color = "#4ADF86";
         document.querySelector("p").style.color = "#D5D4D8";
-        document.querySelector("hr").style.border = "1px solid ##2F3E53";
-        document.querySelector("#password-length-label-el").style.color = "#D5D4D8"
+        document.querySelector("hr").style.border = "1px solid #2F3E53";
+        document.querySelector("#password-length-label-el").style.color = "#D5D4D8";
     }
+});
+
+// Copy passwords
+let passwordCopy = "";
+copy1El.addEventListener("click", (e) => {
+    errorMessageEl.textContent = "";
+    passwordCopy = passwordOneEl.textContent;
+
+    navigator.clipboard.writeText(passwordCopy).then(() => {
+        errorMessageEl.textContent = "Password Copied";
+    });
+});
+
+copy2El.addEventListener("click", (e) => {
+    errorMessageEl.textContent = "";
+    passwordCopy = passwordTwoEl.textContent;
+
+    navigator.clipboard.writeText(passwordCopy).then(() => {
+        errorMessageEl.textContent = "Password Copied";
+    });
 });
