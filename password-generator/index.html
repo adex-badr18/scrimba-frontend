@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="./css/styles.css">
     <title>Password Generator</title>
 </head>
@@ -18,7 +20,7 @@
             <p>Never use an insecure password again.</p>
 
             <div id="password-length">
-                <label for="password-length-input"  id="password-length-label-el">Password Length:</label>
+                <label for="password-length-input" id="password-length-label-el">Password Length:</label>
                 <input type="number" name="password-length-input" min="8" max="15" id="password-length-input">
                 <br><small></small>
             </div>
@@ -28,8 +30,18 @@
             <hr>
 
             <div id="passwords">
-                <div id="password-1" class="password"></div>
-                <div id="password-2" class="password"></div>
+                <div class="password">
+                    <span id="password-1"></span>
+                    <span id="copy1-el" class="material-symbols-outlined">
+                        content_copy
+                    </span>
+                </div>
+                <div class="password">
+                    <span id="password-2"></span>
+                    <span id="copy2-el" class="material-symbols-outlined">
+                        content_copy
+                    </span>
+                </div>
             </div>
         </div>
 
