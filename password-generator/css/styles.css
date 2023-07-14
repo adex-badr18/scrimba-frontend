@@ -112,3 +112,8 @@ input[type="number"] {
     cursor: pointer;
     color: #55F991;
 }
+
+.alert {
+    text-align: center;
+    margin-top: 20px;
+}
