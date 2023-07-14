@@ -85,3 +85,19 @@ hr {
    margin-right: 5px;
 
 }
+
+input[type="number"] {
+    font-size: 16px;
+    padding: 5px 10px;
+    width: 40px;
+}
+
+#password-length label {
+    color: #D5D4D8;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+#password-length small {
+    color: rgb(247, 108, 108);
+}
