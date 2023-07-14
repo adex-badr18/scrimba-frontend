@@ -74,13 +74,14 @@ themeToggleEl.addEventListener("click", (e) => {
 });
 
 // Copy passwords
+let copiedEl = document.getElementById("copied-msg");
 let passwordCopy = "";
 copy1El.addEventListener("click", (e) => {
     errorMessageEl.textContent = "";
     passwordCopy = passwordOneEl.textContent;
 
     navigator.clipboard.writeText(passwordCopy).then(() => {
-        errorMessageEl.textContent = "Password Copied";
+        copiedEl.textContent = "Password Copied";
     });
 });
 
@@ -89,6 +90,6 @@ copy2El.addEventListener("click", (e) => {
     passwordCopy = passwordTwoEl.textContent;
 
     navigator.clipboard.writeText(passwordCopy).then(() => {
-        errorMessageEl.textContent = "Password Copied";
+        copiedEl.textContent = "Password Copied";
     });
 });
