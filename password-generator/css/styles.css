@@ -69,11 +69,13 @@ hr {
 .password {
     color: #55F991;
     background-color: #273549;
-    width: 32%;
+    width: 45%;
     height: 20px;
-    padding: 10px 40px;
+    padding: 10px 0;
     border-radius: 5px;
-    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 #toggle-theme {
@@ -100,4 +102,13 @@ input[type="number"] {
 
 #password-length small {
     color: rgb(247, 108, 108);
+}
+
+.material-symbols-outlined {
+    color: #D5D4D8;
+}
+
+.material-symbols-outlined:hover {
+    cursor: pointer;
+    color: #55F991;
 }
