@@ -42,19 +42,21 @@ function generatePasswords() {
 let themeToggleEl = document.getElementById("toggle-theme-mode");
 
 themeToggleEl.addEventListener("click", (e) => {
+    let passwordLengthEl = document.querySelector("#password-length-label-el");
     if (e.target.checked === true) {
         document.getElementById("password-generator").style.backgroundColor = "#ECFDF5";
         document.querySelector("h1").style.color = "#2B283A";
         document.querySelector("span").style.color = "#10B981";
         document.querySelector("p").style.color = "#6B7280";
         document.querySelector("hr").style.border = "1px solid #D5D4D8";
-        document.querySelector("#password-length label").style.color = "#D6B7280"
+        passwordLengthEl.style.color = "#6B7280";
+        passwordLengthEl.style.fontWeight = "700";
     } else {
         document.getElementById("password-generator").style.backgroundColor = "#1F2937";
         document.querySelector("h1").style.color = "#FFFFFF";
         document.querySelector("span").style.color = "#4ADF86";
         document.querySelector("p").style.color = "#D5D4D8";
         document.querySelector("hr").style.border = "1px solid ##2F3E53";
-        document.querySelector("#password-length label").style.color = "#D5D4D8"
+        document.querySelector("#password-length-label-el").style.color = "#D5D4D8"
     }
 });
