@@ -16,8 +16,7 @@ let copy1El = document.querySelector("#copy1-el");
 let copy2El = document.querySelector("#copy2-el");
 
 window.addEventListener("load", (e) => {
-    copy1El.style.visibility = "hidden";
-    copy2El.style.visibility = "hidden";
+    resetPasswords();
 });
 
 // GENERATE PASSWORD ON BUTTON CLICK
@@ -27,14 +26,10 @@ buttonEl.addEventListener("click", displayPasswords);
 
 function generatePassword() {
     let password = "";
-    if (passwordLength > 7 && passwordLength < 16) {
-        errorMessageEl.textContent = "";
-        for (i = 0; i < passwordLength; i++) {
-            let randomNumber = generateRandomNumber();
-            password += characters[randomNumber];
-        }
-    } else {
-        errorMessageEl.textContent = "Min: 8 characters | Max: 15 characters";
+
+    for (i = 0; i < passwordLength; i++) {
+        let randomNumber = generateRandomNumber();
+        password += characters[randomNumber];
     }
 
     return password;
@@ -44,12 +39,28 @@ function generateRandomNumber() {
     return Math.floor(Math.random() * characters.length);
 }
 
-function displayPasswords() {
-    passwordOneEl.textContent = generatePassword();
-    copy1El.style.visibility = "visible";
+function resetPasswords() {
+    copy1El.style.visibility = "hidden";
+    copy2El.style.visibility = "hidden";
+    passwordOneEl.textContent = "";
+    passwordTwoEl.textContent = "";
+}
 
-    passwordTwoEl.textContent = generatePassword();
-    copy2El.style.visibility = "visible";
+function displayPasswords() {
+    if (passwordLength > 7 && passwordLength < 16) {
+        errorMessageEl.textContent = "";
+
+        passwordOneEl.textContent = generatePassword();
+        copy1El.style.visibility = "visible";
+
+        passwordTwoEl.textContent = generatePassword();
+        copy2El.style.visibility = "visible";
+    } else {
+        errorMessageEl.textContent = "Min: 8 characters | Max: 15 characters";
+        resetPasswords();
+
+    }
+
 }
 
 // THEME MODE TOGGLING
