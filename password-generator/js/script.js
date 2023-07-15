@@ -23,31 +23,33 @@ window.addEventListener("load", (e) => {
 // GENERATE PASSWORD ON BUTTON CLICK
 let errorMessageEl = document.querySelector("small");
 
-buttonEl.addEventListener("click", generatePasswords);
+buttonEl.addEventListener("click", displayPasswords);
 
-function generatePasswords() {
+function generatePassword() {
     let password = "";
-
     if (passwordLength > 7 && passwordLength < 16) {
         errorMessageEl.textContent = "";
-        for (i = 0; i < 2; i++) {
-            password = "";
-            for (j = 0; j < passwordLength; j++) {
-                let randomNumber = Math.floor(Math.random() * characters.length);
-                password += characters[randomNumber];
-            }
-    
-            if (i === 0) {
-                passwordOneEl.textContent = password;
-                copy1El.style.visibility = "visible";
-            } else {
-                passwordTwoEl.textContent = password;
-                copy2El.style.visibility = "visible";
-            }
+        for (i = 0; i < passwordLength; i++) {
+            let randomNumber = generateRandomNumber();
+            password += characters[randomNumber];
         }
     } else {
         errorMessageEl.textContent = "Min: 8 characters | Max: 15 characters";
     }
+
+    return password;
+}
+
+function generateRandomNumber() {
+    return Math.floor(Math.random() * characters.length);
+}
+
+function displayPasswords() {
+    passwordOneEl.textContent = generatePassword();
+    copy1El.style.visibility = "visible";
+
+    passwordTwoEl.textContent = generatePassword();
+    copy2El.style.visibility = "visible";
 }
 
 // THEME MODE TOGGLING
