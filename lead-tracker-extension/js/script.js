@@ -5,12 +5,13 @@ const ulEl = document.getElementById("ul-el")
 
 inputBtn.addEventListener("click", function () {
     myLeads.push(inputEl.value);
+    inputEl.value = '';
     renderLeads();
 });
 
 
 function renderLeads() {
-    let listItems = "";
+    let listItems = '';
     for (let i = 0; i < myLeads.length; i++) {
         listItems += "<li>" + myLeads[i] + "</li>";
 
