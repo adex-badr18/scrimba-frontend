@@ -9,3 +9,6 @@ function generateSentence(desc, arr) {
     }
     return sentence
 }
+
+let sen = generateSentence("best fruits", ["Apples", "Bananas"])
+console.log(sen)
