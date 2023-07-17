@@ -28,7 +28,7 @@ body {
 .converter-container {
     display: flex;
     flex-direction: column;
-    width: 45%;
+    width: 40%;
     color: #FFFFFF;
     /* padding: 20px 0; */
     border: 5px solid #FFFFFF;
