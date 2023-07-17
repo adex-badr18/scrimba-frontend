@@ -40,6 +40,19 @@ body {
     color: #FFFFFF;
 }
 
+#convert-btn {
+    width: 100px;
+    height: 40px;
+    margin: 25px auto;
+    border: none;
+    background-color: #FFFFFF;
+    color: #3D3D3D;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
 .main {
     display: flex;
     justify-content: center;
