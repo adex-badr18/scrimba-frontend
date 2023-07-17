@@ -20,7 +20,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 200px;
+    height: 260px;
 }
 
 #title {
