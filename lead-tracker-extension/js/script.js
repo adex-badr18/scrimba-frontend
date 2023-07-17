@@ -17,7 +17,9 @@ let tab = [
 ]
 
 tabBtn.addEventListener("click", () => {
-    console.log(tab[0].url);
+    myLeads.push(tab[0].url);
+    localStorage.setItem("myLeads", JSON.stringify(myLeads));
+    render(myLeads);
 })
 
 function render(leads) {
