@@ -26,6 +26,7 @@ body {
 #title {
     font-size: 28px;
     font-weight: 800;
+    color: #FFFFFF;
 }
 
 #number-input {
@@ -65,7 +66,8 @@ body {
     display: flex;
     flex-direction: column;
     width: 40%;
-    color: #FFFFFF;
+    color: #353535;
     border: 5px solid #FFFFFF;
     border-radius: 20px;
+    background-color: #F4F4F4;
 }
