@@ -14,3 +14,8 @@ h1 {
     width: 100%;
 }
 
+.team-img {
+    width: 100px;
+    border-radius: 100%;
+    margin: 10px;
+}
