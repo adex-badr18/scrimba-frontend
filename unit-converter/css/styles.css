@@ -1,0 +1,9 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(white, gray);
+    height: 100vh;
+    color: #e98a1d;
+}
