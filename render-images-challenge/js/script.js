@@ -17,3 +17,4 @@ function render(images) {
     containerEl.innerHTML = output
 }
 
+render(imgs)
