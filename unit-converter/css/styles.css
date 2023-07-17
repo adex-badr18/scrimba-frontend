@@ -3,6 +3,24 @@ body {
     padding: 0;
     text-align: center;
     font-family: 'Inter', sans-serif;
-    background: linear-gradient(white, gray);
+    background: linear-gradient(gray, black);
     height: 100vh;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+    height: 100%;
+}
+
+.converter-container {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    color: #FFFFFF;
+    padding: 20px 0;
+    border: 5px solid #FFFFFF;
+    border-radius: 20px;
 }
