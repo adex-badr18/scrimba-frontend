@@ -10,7 +10,7 @@ body {
     text-align: center;
     font-family: 'Inter', sans-serif;
     background: linear-gradient(gray, black);
-    /* min-height: 100vh; */
+    height: 100vh;
 }
 
 #control {
@@ -20,7 +20,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 260px;
+    height: 240px;
 }
 
 #title {
@@ -59,8 +59,8 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 400px;
-    padding: 20px;
+    height: 390px;
+    padding: 15px 20px;
 }
 
 .main {
@@ -84,6 +84,5 @@ body {
 .output {
     background-color: #FFFFFF;
     width: 100%;
-    /* padding: 20px 0; */
     border: 1px solid grey;
 }
