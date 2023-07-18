@@ -10,6 +10,9 @@ const massOutputEl = document.getElementById("kilo-output");
 1 kilogram = 2.204 pound
 */
 
+let value = Number(numberInput.value);
+render(value);
+
 convertBtn.addEventListener("click", () => {
     value = Number(numberInput.value);
     render(value);
