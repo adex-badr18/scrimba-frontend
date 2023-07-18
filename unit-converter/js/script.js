@@ -34,5 +34,9 @@ function massConversion(num) {
 }
 
 function render(num) {
-    lengthOutputEl.textContent = `${value} meters = ${lengthConversion(num)[0]} feet | ${num} feet = ${lengthConversion(num)[1]} meters`
+    lengthOutputEl.textContent = `${value} meters = ${lengthConversion(num)[0]} feet | ${num} feet = ${lengthConversion(num)[1]} meters`;
+
+    volumeOutputEl.textContent = `${value} meters = ${volumeConversion(num)[0]} feet | ${num} feet = ${volumeConversion(num)[1]} meters`;
+
+    
 }
