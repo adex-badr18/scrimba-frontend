@@ -38,5 +38,5 @@ function render(num) {
 
     volumeOutputEl.textContent = `${value} meters = ${volumeConversion(num)[0]} feet | ${num} feet = ${volumeConversion(num)[1]} meters`;
 
-    
+    massOutputEl.textContent = `${value} meters = ${massConversion(num)[0]} feet | ${num} feet = ${massConversion(num)[1]} meters`;
 }
