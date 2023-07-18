@@ -67,7 +67,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid red;
     height: 100%;
 }
 
@@ -84,5 +83,4 @@ body {
 .output {
     background-color: #FFFFFF;
     width: 100%;
-    border: 1px solid grey;
 }
