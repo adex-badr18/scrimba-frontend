@@ -13,13 +13,20 @@ const massOutputEl = document.getElementById("kilo-output");
 value = Number(numberInput.value);
 
 function lengthConversion(num) {
-    const meter = num * 3.281;
-    const feet = num / 3.281;
-    return [meter, feet];
+    const feet = num * 3.281;
+    const meter = num / 3.281;
+    return [feet, meter];
 }
 
 function volumeConversion(num) {
-    const liter = num * 0.264;
-    const gallon = num / 0.264;
-    return [liter, gallon];
+    const gallon = num * 0.264;
+    const liter = num / 0.264;
+    return [gallon, liter];
 }
+
+function massConversion(num) {
+    const pound = num * 2.204;
+    const kilo = num / 2.204;
+    return [pound, kilo];
+}
+
