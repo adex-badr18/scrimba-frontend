@@ -18,3 +18,8 @@ function lengthConversion(num) {
     return [meter, feet];
 }
 
+function volumeConversion(num) {
+    const liter = num * 0.264;
+    const gallon = num / 0.264;
+    return [liter, gallon];
+}
