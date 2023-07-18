@@ -39,7 +39,7 @@ function massConversion(num) {
 function render(num) {
     lengthOutputEl.textContent = `${value} meters = ${lengthConversion(num)[0]} feet | ${num} feet = ${lengthConversion(num)[1]} meters`;
 
-    volumeOutputEl.textContent = `${value} meters = ${volumeConversion(num)[0]} feet | ${num} feet = ${volumeConversion(num)[1]} meters`;
+    volumeOutputEl.textContent = `${value} liters = ${volumeConversion(num)[0]} gallons | ${num} gallons = ${volumeConversion(num)[1]} liters`;
 
-    massOutputEl.textContent = `${value} meters = ${massConversion(num)[0]} feet | ${num} feet = ${massConversion(num)[1]} meters`;
+    massOutputEl.textContent = `${value} kilos = ${massConversion(num)[0]} pounds | ${num} pounds = ${massConversion(num)[1]} kilos`;
 }
