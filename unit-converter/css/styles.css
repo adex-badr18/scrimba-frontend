@@ -13,6 +13,10 @@ body {
     height: 100vh;
 }
 
+h3 {
+    color: #5A537B;
+}
+
 #control {
     background-color: #6943FF;
     border-top-left-radius: 14px;
@@ -84,4 +88,8 @@ body {
     background-color: #FFFFFF;
     width: 100%;
     padding: 5px 0;
+}
+
+.output p {
+    color: #353535;
 }
