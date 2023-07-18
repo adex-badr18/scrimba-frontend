@@ -10,7 +10,7 @@ body {
     text-align: center;
     font-family: 'Inter', sans-serif;
     background: linear-gradient(gray, black);
-    height: 100vh;
+    /* min-height: 100vh; */
 }
 
 #control {
@@ -54,6 +54,15 @@ body {
     font-weight: 500;
 }
 
+#output-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 400px;
+    padding: 20px;
+}
+
 .main {
     display: flex;
     justify-content: center;
@@ -70,4 +79,11 @@ body {
     border: 5px solid #FFFFFF;
     border-radius: 20px;
     background-color: #F4F4F4;
+}
+
+.output {
+    background-color: #FFFFFF;
+    width: 100%;
+    /* padding: 20px 0; */
+    border: 1px solid grey;
 }
