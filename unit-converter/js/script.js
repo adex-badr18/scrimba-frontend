@@ -10,23 +10,29 @@ const massOutputEl = document.getElementById("kilo-output");
 1 kilogram = 2.204 pound
 */
 
-value = Number(numberInput.value);
+convertBtn.addEventListener("click", () => {
+    value = Number(numberInput.value);
+    render(value);
+})
 
 function lengthConversion(num) {
-    const feet = num * 3.281;
-    const meter = num / 3.281;
+    const feet = (num * 3.281).toFixed(3);
+    const meter = (num / 3.281).toFixed(3);
     return [feet, meter];
 }
 
 function volumeConversion(num) {
-    const gallon = num * 0.264;
-    const liter = num / 0.264;
+    const gallon = (num * 0.264).toFixed(3);
+    const liter = (num / 0.264).toFixed(3);
     return [gallon, liter];
 }
 
 function massConversion(num) {
-    const pound = num * 2.204;
-    const kilo = num / 2.204;
+    const pound = (num * 2.204).toFixed(3);
+    const kilo = (num / 2.204).toFixed(3);
     return [pound, kilo];
 }
 
+function render(num) {
+    lengthOutputEl.textContent = `${value} meters = ${lengthConversion(num)[0]} feet | ${num} feet = ${lengthConversion(num)[1]} meters`
+}
