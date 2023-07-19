@@ -22,16 +22,19 @@ button {
 #cart-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
 }
 
 #image {
     width: 250px;
+
 }
 
-/* .image {
-    height: 160px;
-    background-image: url("../images/cat.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-} */
+.main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
