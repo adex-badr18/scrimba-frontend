@@ -14,5 +14,6 @@ const inputField = document.getElementById("input-field");
 
 addBtn.addEventListener("click", () => {
     let inputValue = inputField.value;
+    push(shoppingListInDB, inputValue)
     console.log(inputValue);
 });
