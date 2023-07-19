@@ -20,14 +20,13 @@ input {
 button {
     color: #FDFDFD;
     background-color: #AC485A;
+    border: 0;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
    
-}
-
-#cart-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 img {
