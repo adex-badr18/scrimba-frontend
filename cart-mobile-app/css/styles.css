@@ -24,9 +24,9 @@ button {
     align-items: center;
 }
 
-#image {
-    width: 250px;
-
+img {
+    width: 150px;
+    margin: 0 auto;
 }
 
 .container {
