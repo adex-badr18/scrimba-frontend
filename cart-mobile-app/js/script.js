@@ -9,19 +9,24 @@ const app = initializeApp(appSettings)
 const database = getDatabase(app)
 const shoppingListInDB = ref(database, "shoppingList")
 
-const addBtn = document.getElementById("add-button");
+const addButtonEl = document.getElementById("add-button");
 const inputFieldEl = document.getElementById("input-field");
 const shoppingListEl = document.getElementById("shopping-list");
 
-addBtn.addEventListener("click", () => {
-    let inputValue = inputFieldEl.value;
-    push(shoppingListInDB, inputValue);
+addButtonEl.addEventListener("click", function() {
+    let inputValue = inputFieldEl.value
+    
+    push(shoppingListInDB, inputValue)
+    
+    clearInputFieldEl()
 
-    inputFieldEl.value = "";
+    appendItemToShoppingListEl(inputValue)
+})
 
-    shoppingListEl.innerHTML += `
-        <li>
-            ${inputValue}
-        </li>
-    `
-});
+function clearInputFieldEl() {
+    inputFieldEl.value = ""
+}
+
+function appendItemToShoppingListEl(itemValue) {
+    shoppingListEl.innerHTML += `<li>${itemValue}</li>`
+}
