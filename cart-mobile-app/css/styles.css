@@ -29,6 +29,11 @@ button {
    
 }
 
+button:hover {
+    background-color: #432000;
+    cursor: pointer;
+}
+
 img {
     width: 150px;
     margin: 0 auto;
