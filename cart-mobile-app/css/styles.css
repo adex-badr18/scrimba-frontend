@@ -34,6 +34,15 @@ img {
     margin: 0 auto;
 }
 
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 8px;
+    width: 100%;
+    padding: 0;
+}
+
 .container {
     display: flex;
     flex-direction: column;
