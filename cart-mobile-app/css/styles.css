@@ -21,11 +21,13 @@ input {
 
 button {
     color: #FDFDFD;
-    background-color: #AC485A;
+    /* background-color: #AC485A; */
+    background-color: #66ADF4;
     border: 0;
     padding: 15px;
     border-radius: 8px;
     font-size: 20px;
+    font-weight: bold;
     text-align: center;
     font-family: 'Rubik', sans-serif;
    
