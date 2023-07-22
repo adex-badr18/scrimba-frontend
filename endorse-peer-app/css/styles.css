@@ -1,4 +1,9 @@
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
+    background-color: #1B1924;
+    color: #FFFFFF;
+    /* font-family: 'Inter', sans-serif; */
+    font-family: 'Josefin Sans', sans-serif;
 }
