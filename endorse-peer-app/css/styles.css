@@ -50,3 +50,14 @@ p {
     margin: 30px auto;
     padding: 40px;
 }
+
+.posted-endorsement {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    background-color: #FFFFFF;
+    color: #1B1924;
+    padding: 12px;
+    text-align: left;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
