@@ -19,4 +19,5 @@ img {
     flex-direction: column;
     max-width: 350px;
     margin: 30px auto;
+    padding: 40px;
 }
