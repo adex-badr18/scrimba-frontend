@@ -3,7 +3,6 @@ body {
     margin: 0;
     padding: 0;
     color: #FFFFFF;
-    /* font-family: 'Inter', sans-serif; */
     font-family: 'Josefin Sans', sans-serif;
     text-align: center;
 }
@@ -11,6 +10,20 @@ body {
 img {
     width: 90px;
     margin: 0 auto;
+}
+
+h1 {
+    font-size: 25px;
+}
+
+textarea {
+    font-family: 'Inter', sans-serif;
+    background-color: #444059;
+    border: none;
+    border-radius: 8px;
+    height: 118px;
+    padding: 10px 20px;
+    margin-bottom: 12px;
 }
 
 .container {
