@@ -19,8 +19,6 @@ publishButton.addEventListener("click", () => {
         let endorsement = textareaEl.value;
 
         push(endorsementListInDB, endorsement);
-
-        appendEndorsementToChatList(endorsement);
         clearTextarea();
     } else {
         showErrorMessage();
@@ -31,6 +29,8 @@ publishButton.addEventListener("click", () => {
 onValue(endorsementListInDB, (snapshot) => {
     if (snapshot.exists()) {
         let endorsementArray = Object.values(snapshot.val());
+
+        clearEndorsementChatList();
 
         endorsementArray.forEach((currentEndorsement) => {
             appendEndorsementToChatList(currentEndorsement);
@@ -50,6 +50,10 @@ function clearErrorMessage() {
 
 function clearTextarea() {
     textareaEl.value = "";
+}
+
+function clearEndorsementChatList() {
+    endorsementChatListEl.innerHTML = '';
 }
 
 function appendEndorsementToChatList(endorsement) {
