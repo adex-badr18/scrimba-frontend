@@ -12,7 +12,7 @@ publishButton.addEventListener("click", () => {
 })
 
 function showErrorMessage() {
-    errorMessageEl.textContent = "Endorsement field should not be empty";
+    errorMessageEl.textContent = "Write endorsement in the text field above 👆";
 }
 
 function clearErrorMessage() {
