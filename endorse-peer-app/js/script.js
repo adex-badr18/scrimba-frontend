@@ -11,8 +11,8 @@ const endorsementListInDB = ref(database, "endorsementList");
 
 const textareaEl = document.getElementById("endorsement-text");
 const publishButton = document.getElementById("publish-btn");
-const errorMessageEl = document.getElementById("error-message-el");
 const endorsementChatListEl = document.getElementById("endorsement-list-el");
+const endorsementInfoEl = document.getElementById('endorsement-info')
 
 publishButton.addEventListener("click", () => {
     if (textareaEl.value !== "") {
@@ -22,7 +22,8 @@ publishButton.addEventListener("click", () => {
         clearTextarea();
     } else {
         showErrorMessage();
-        setTimeout(clearErrorMessage, 5000);
+        
+        setTimeout(removeErrorMessageEl, 5000);
     }
 })
 
@@ -41,11 +42,21 @@ onValue(endorsementListInDB, (snapshot) => {
 })
 
 function showErrorMessage() {
-    errorMessageEl.textContent = "Write endorsement in the text field above 👆";
+    createErrorMessageElement();
 }
 
-function clearErrorMessage() {
-    errorMessageEl.textContent = "";
+function createErrorMessageElement() {
+    let errorMessageElement = document.createElement('span');
+    errorMessageElement.id = 'error-message-el';
+    errorMessageElement.textContent = 'Write endorsement in the text field above 👆';
+
+    endorsementInfoEl.parentNode.insertBefore(errorMessageElement, endorsementInfoEl.nextSibling);
+}
+
+function removeErrorMessageEl() {
+    const errorMessageEl = document.getElementById("error-message-el");
+    errorMessageEl.remove();
+    
 }
 
 function clearTextarea() {
