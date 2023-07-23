@@ -19,12 +19,24 @@ publishButton.addEventListener("click", () => {
         let endorsement = textareaEl.value;
 
         push(endorsementListInDB, endorsement);
-        
-        appendEndorsementToChatList();
+
+        appendEndorsementToChatList(endorsement);
         clearTextarea();
     } else {
         showErrorMessage();
         setTimeout(clearErrorMessage, 5000);
+    }
+})
+
+onValue(endorsementListInDB, (snapshot) => {
+    if (snapshot.exists()) {
+        let endorsementArray = Object.values(snapshot.val());
+
+        endorsementArray.forEach((currentEndorsement) => {
+            appendEndorsementToChatList(currentEndorsement);
+        })
+    } else {
+        endorsementChatListEl.innerHTML = `No endorsements posted yet`
     }
 })
 
@@ -40,9 +52,7 @@ function clearTextarea() {
     textareaEl.value = "";
 }
 
-function appendEndorsementToChatList() {
-    let endorsement = textareaEl.value;
-
+function appendEndorsementToChatList(endorsement) {
     let endorsementEl = document.createElement("div");
     endorsementEl.textContent = endorsement;
     endorsementEl.className = "posted-endorsement-el"
