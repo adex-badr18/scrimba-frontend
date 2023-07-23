@@ -1,10 +1,11 @@
 const textareaEl = document.getElementById("endorsement-text");
 const publishButton = document.getElementById("publish-btn");
 const errorMessageEl = document.getElementById("error-message-el");
+const endorsementChatListEl = document.getElementById("endorsement-list-el");
 
 publishButton.addEventListener("click", () => {
     if (textareaEl.value !== "") {
-        console.log("Not empty");
+        appendEndorsementToChatList();
     } else {
         showErrorMessage();
         setTimeout(clearErrorMessage, 5000);
@@ -17,4 +18,14 @@ function showErrorMessage() {
 
 function clearErrorMessage() {
     errorMessageEl.textContent = "";
+}
+
+function appendEndorsementToChatList() {
+    let endorsement = textareaEl.value;
+
+    let endorsementEl = document.createElement("div");
+    endorsementEl.textContent = endorsement;
+    endorsementEl.className = "posted-endorsement-el"
+
+    endorsementChatListEl.append(endorsementEl);
 }
