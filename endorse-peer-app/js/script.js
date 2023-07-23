@@ -16,6 +16,10 @@ const endorsementChatListEl = document.getElementById("endorsement-list-el");
 
 publishButton.addEventListener("click", () => {
     if (textareaEl.value !== "") {
+        let endorsement = textareaEl.value;
+
+        push(endorsementListInDB, endorsement);
+        
         appendEndorsementToChatList();
         clearTextarea();
     } else {
