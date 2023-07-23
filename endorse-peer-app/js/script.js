@@ -6,6 +6,7 @@ const endorsementChatListEl = document.getElementById("endorsement-list-el");
 publishButton.addEventListener("click", () => {
     if (textareaEl.value !== "") {
         appendEndorsementToChatList();
+        // clearTextarea();
     } else {
         showErrorMessage();
         setTimeout(clearErrorMessage, 5000);
@@ -20,6 +21,10 @@ function clearErrorMessage() {
     errorMessageEl.textContent = "";
 }
 
+// function clearTextarea() {
+//     textareaEl.value = "";
+// }
+
 function appendEndorsementToChatList() {
     let endorsement = textareaEl.value;
 
@@ -27,5 +32,5 @@ function appendEndorsementToChatList() {
     endorsementEl.textContent = endorsement;
     endorsementEl.className = "posted-endorsement-el"
 
-    endorsementChatListEl.append(endorsementEl);
+    endorsementChatListEl.prepend(endorsementEl);
 }
