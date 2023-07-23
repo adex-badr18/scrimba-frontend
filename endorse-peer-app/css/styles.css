@@ -19,7 +19,7 @@ h1 {
 textarea {
     font-family: 'Inter', sans-serif;
     background-color: #444059;
-    color: #e0dfdf;
+    color: #E0DFDF;
     border: none;
     border-radius: 8px;
     height: 100px;
@@ -35,6 +35,7 @@ button {
     border: none;
     border-radius: 8px;
     padding: 15px 0;
+    margin-top: 8px;
 }
 
 p {
@@ -47,7 +48,7 @@ p {
     color: #f50707;
     font-size: 14px;
     font-weight: bold;
-    margin: 3px 0 8px;
+    /* margin: 0 0 8px; */
 }
 
 .container {
@@ -68,4 +69,21 @@ p {
     text-align: left;
     margin-bottom: 15px;
     line-height: 1.4;
+}
+
+#endorsement-info {
+    display: flex;
+    justify-content: space-between;
+    margin: 7px 0;
+}
+
+.endorsement-info {
+    width: 156px;
+    font-family: 'Inter', sans-serif;
+    background-color: #444059;
+    color: #E0DFDF;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    box-sizing: border-box;
 }
