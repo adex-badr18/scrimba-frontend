@@ -7,9 +7,14 @@ publishButton.addEventListener("click", () => {
         console.log("Not empty");
     } else {
         showErrorMessage();
+        setTimeout(clearErrorMessage, 5000);
     }
 })
 
 function showErrorMessage() {
     errorMessageEl.textContent = "Endorsement field should not be empty";
+}
+
+function clearErrorMessage() {
+    errorMessageEl.textContent = "";
 }
