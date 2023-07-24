@@ -12,7 +12,9 @@ const endorsementListInDB = ref(database, "endorsementList");
 const textareaEl = document.getElementById("endorsement-textarea");
 const publishButton = document.getElementById("publish-btn");
 const endorsementChatListEl = document.getElementById("endorsement-list-el");
-const endorsementInfoEl = document.getElementById('endorsement-info')
+const endorsementInfoEl = document.getElementById('endorsement-info');
+const fromEl = document.getElementById("from-el");
+const toEl = document.getElementById("to-el");
 
 publishButton.addEventListener("click", () => {
     if (textareaEl.value !== "") {
