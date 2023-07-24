@@ -94,6 +94,7 @@ function appendEndorsementToChatList(endorsementObj) {
     endorsementFooterEl.className = "endorsement-footer";
     endorsementLikeEl.className = "like-el";
     endorsementLikeIcon.className = "material-symbols-outlined like-icon";
+    endorsementLikeIcon.id = "like-icon";
     endorsementLikesCountEl.className = "likes-count";
 
     endorsementToEl.textContent = `To ${endorsementObj.to}`;
