@@ -27,7 +27,7 @@ publishButton.addEventListener("click", () => {
         };
 
         push(endorsementListInDB, endorsement);
-        clearTextarea();
+        clearInputFields();
     } else {
         showErrorMessage();
         
@@ -56,7 +56,7 @@ function showErrorMessage() {
 function createErrorMessageElement() {
     let errorMessageElement = document.createElement('span');
     errorMessageElement.id = 'error-message-el';
-    errorMessageElement.textContent = 'Write endorsement in the text field above 👆';
+    errorMessageElement.textContent = 'All fields are required';
 
     endorsementInfoEl.parentNode.insertBefore(errorMessageElement, endorsementInfoEl.nextSibling);
 }
@@ -67,8 +67,10 @@ function removeErrorMessageEl() {
     
 }
 
-function clearTextarea() {
+function clearInputFields() {
     textareaEl.value = "";
+    toEl.value = "";
+    fromEl.value = "";
 }
 
 function clearEndorsementChatList() {
