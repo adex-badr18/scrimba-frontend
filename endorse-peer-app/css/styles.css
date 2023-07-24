@@ -81,6 +81,7 @@ button {
     font-size: 14px;
     font-weight: normal;
     margin-top: 10px;
+    text-align: justify;
 }
 
 .endorsement-footer {
