@@ -102,7 +102,14 @@ function appendEndorsementToChatList(endorsementObj) {
     endorsementTextEl.textContent = `${endorsementObj.body}`;
     endorsementLikesCountEl.textContent = `${endorsementObj.likesCount}`;
 
-    
+    endorsementLikeIcon.addEventListener("click", () => {
+        if (endorsementLikeIcon.classList.contains("fa-regular")) {
+            endorsementLikeIcon.className = "fa-solid fa-heart like-icon";
+
+        } else {
+            endorsementLikeIcon.className = "fa-regular fa-heart like-icon";
+        }
+    })
 
     endorsementLikeEl.append(endorsementLikeIcon, endorsementLikesCountEl);
     endorsementFooterEl.append(endorsementFromEl, endorsementLikeEl);
