@@ -39,10 +39,10 @@ onValue(endorsementListInDB, (snapshot) => {
     if (snapshot.exists()) {
         let endorsementArray = Object.values(snapshot.val());
 
-        // clearEndorsementChatList();
+        clearEndorsementChatList();
 
         endorsementArray.forEach((currentEndorsement) => {
-            // appendEndorsementToChatList(currentEndorsement);
+            appendEndorsementToChatList(currentEndorsement);
         })
     } else {
         endorsementChatListEl.innerHTML = `No endorsements posted yet`
