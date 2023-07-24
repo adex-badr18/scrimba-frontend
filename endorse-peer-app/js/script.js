@@ -9,7 +9,7 @@ const app = initializeApp(appSettings);
 const database = getDatabase(app);
 const endorsementListInDB = ref(database, "endorsementList");
 
-const textareaEl = document.getElementById("endorsement-text");
+const textareaEl = document.getElementById("endorsement-textarea");
 const publishButton = document.getElementById("publish-btn");
 const endorsementChatListEl = document.getElementById("endorsement-list-el");
 const endorsementInfoEl = document.getElementById('endorsement-info')
@@ -31,10 +31,10 @@ onValue(endorsementListInDB, (snapshot) => {
     if (snapshot.exists()) {
         let endorsementArray = Object.values(snapshot.val());
 
-        clearEndorsementChatList();
+        // clearEndorsementChatList();
 
         endorsementArray.forEach((currentEndorsement) => {
-            appendEndorsementToChatList(currentEndorsement);
+            // appendEndorsementToChatList(currentEndorsement);
         })
     } else {
         endorsementChatListEl.innerHTML = `No endorsements posted yet`

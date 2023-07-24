@@ -38,7 +38,7 @@ button {
     margin-top: 8px;
 }
 
-p {
+.endorsements-title-el {
     font-size: 20px;
     font-weight: 600;
     margin-top: 25px;
@@ -71,13 +71,46 @@ p {
     line-height: 1.4;
 }
 
+.endorsement-endpoints {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.endorsement-text {
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+.endorsement-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.like-el {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 0;
+}
+
+.like-el span {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
 #endorsement-info {
     display: flex;
     justify-content: space-between;
     margin: 7px 0;
 }
 
-.endorsement-info {
+.endorsement-info-field {
     width: 156px;
     font-family: 'Inter', sans-serif;
     background-color: #444059;
