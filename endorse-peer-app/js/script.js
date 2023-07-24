@@ -67,10 +67,33 @@ function clearEndorsementChatList() {
     endorsementChatListEl.innerHTML = '';
 }
 
-function appendEndorsementToChatList(endorsement) {
-    let endorsementEl = document.createElement("div");
-    endorsementEl.textContent = endorsement;
-    endorsementEl.className = "posted-endorsement-el"
+function appendEndorsementToChatList(endorsementObj) {
+    const endorsementEl = document.createElement("div");
+    const endorsementToEl = document.createElement("h4");
+    const endorsementFromEl = document.createElement("p");
+    const endorsementTextEl = document.createElement("p");
+    const endorsementFooterEl = document.createElement("div");
+    const endorsementLikeEl = document.createElement("div");
+    const endorsementLikeIcon = document.createElement("span");
+    const endorsementLikesCountEl = document.createElement("span");
 
+    endorsementEl.className = "posted-endorsement-el";
+    endorsementToEl.className = "endorsement-endpoints";
+    endorsementFromEl.className = "endorsement-endpoints";
+    endorsementTextEl.className = "endorsement-text";
+    endorsementFooterEl.className = "endorsement-footer";
+    endorsementLikeEl.className = "like-el";
+    endorsementLikeIcon.className = "material-symbols-outlined";
+    endorsementLikesCountEl.className = "likes-count";
+
+    endorsementToEl.textContent = `To ${endorsementObj.to}`;
+    endorsementFromEl.textContent = `From ${endorsementObj.from}`;
+    endorsementTextEl.textContent = `${endorsementObj.body}`;
+    endorsementLikeIcon.textContent = 'favorite';
+    endorsementLikesCountEl.textContent = `${endorsementObj.likesCount}`;
+
+    endorsementLikeEl.append(endorsementLikeIcon, endorsementLikesCountEl);
+    endorsementFooterEl.append(endorsementFromEl, endorsementLikeEl);
+    endorsementEl.append(endorsementToEl, endorsementTextEl, endorsementFooterEl);
     endorsementChatListEl.prepend(endorsementEl);
 }
