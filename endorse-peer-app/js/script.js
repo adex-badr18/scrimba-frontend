@@ -17,7 +17,7 @@ const fromEl = document.getElementById("from-el");
 const toEl = document.getElementById("to-el");
 
 publishButton.addEventListener("click", () => {
-    if (textareaEl.value !== "") {
+    if (textareaEl.value !== "" && fromEl.value !== "" && toEl.value !== "") {
         let endorsement = textareaEl.value;
 
         push(endorsementListInDB, endorsement);
