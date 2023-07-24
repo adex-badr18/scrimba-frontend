@@ -99,10 +99,13 @@ button {
     margin-bottom: 0;
 }
 
-.like-el span {
+.like-el span, .like-el i {
     font-size: 16px;
-    font-weight: bold;
     margin-bottom: 0;
+}
+
+.like-el span {
+    font-weight: bold;
 }
 
 .like-icon:hover {

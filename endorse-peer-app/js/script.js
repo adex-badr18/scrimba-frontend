@@ -84,7 +84,7 @@ function appendEndorsementToChatList(endorsementObj) {
     const endorsementTextEl = document.createElement("p");
     const endorsementFooterEl = document.createElement("div");
     const endorsementLikeEl = document.createElement("div");
-    const endorsementLikeIcon = document.createElement("span");
+    const endorsementLikeIcon = document.createElement("i");
     const endorsementLikesCountEl = document.createElement("span");
 
     endorsementEl.className = "posted-endorsement-el";
@@ -93,16 +93,16 @@ function appendEndorsementToChatList(endorsementObj) {
     endorsementTextEl.className = "endorsement-text";
     endorsementFooterEl.className = "endorsement-footer";
     endorsementLikeEl.className = "like-el";
-    endorsementLikeIcon.className = "material-symbols-outlined like-icon";
+    endorsementLikeIcon.className = "fa-regular fa-heart like-icon";
+    // endorsementLikeIcon.style.fontWeight = 'normal';
     endorsementLikesCountEl.className = "likes-count";
 
     endorsementToEl.textContent = `To ${endorsementObj.to}`;
     endorsementFromEl.textContent = `From ${endorsementObj.from}`;
     endorsementTextEl.textContent = `${endorsementObj.body}`;
-    endorsementLikeIcon.textContent = 'favorite';
     endorsementLikesCountEl.textContent = `${endorsementObj.likesCount}`;
 
-
+    
 
     endorsementLikeEl.append(endorsementLikeIcon, endorsementLikesCountEl);
     endorsementFooterEl.append(endorsementFromEl, endorsementLikeEl);
