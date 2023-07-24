@@ -93,7 +93,7 @@ function appendEndorsementToChatList(endorsementObj) {
     endorsementTextEl.className = "endorsement-text";
     endorsementFooterEl.className = "endorsement-footer";
     endorsementLikeEl.className = "like-el";
-    endorsementLikeIcon.className = "material-symbols-outlined";
+    endorsementLikeIcon.className = "material-symbols-outlined like-icon";
     endorsementLikesCountEl.className = "likes-count";
 
     endorsementToEl.textContent = `To ${endorsementObj.to}`;
@@ -101,6 +101,8 @@ function appendEndorsementToChatList(endorsementObj) {
     endorsementTextEl.textContent = `${endorsementObj.body}`;
     endorsementLikeIcon.textContent = 'favorite';
     endorsementLikesCountEl.textContent = `${endorsementObj.likesCount}`;
+
+
 
     endorsementLikeEl.append(endorsementLikeIcon, endorsementLikesCountEl);
     endorsementFooterEl.append(endorsementFromEl, endorsementLikeEl);

@@ -105,6 +105,11 @@ button {
     margin-bottom: 0;
 }
 
+.like-icon:hover {
+    cursor: pointer;
+    font-size: larger;
+}
+
 #endorsement-info {
     display: flex;
     justify-content: space-between;
