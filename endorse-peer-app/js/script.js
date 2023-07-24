@@ -18,7 +18,13 @@ const toEl = document.getElementById("to-el");
 
 publishButton.addEventListener("click", () => {
     if (textareaEl.value !== "" && fromEl.value !== "" && toEl.value !== "") {
-        let endorsement = textareaEl.value;
+
+        let endorsement = {
+            to: toEl.value,
+            from: fromEl.value,
+            body: textareaEl.value,
+            likesCount: 0
+        };
 
         push(endorsementListInDB, endorsement);
         clearTextarea();
