@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"
-import { getDatabase, ref, push, onValue, remove } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
+import { getDatabase, ref, push, onValue, update } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
 
 const appSettings = {
     databaseURL: "https://realtime-database-dd256-default-rtdb.firebaseio.com/"
@@ -30,18 +30,19 @@ publishButton.addEventListener("click", () => {
         clearInputFields();
     } else {
         showErrorMessage();
-        
+
         setTimeout(removeErrorMessageEl, 5000);
     }
 })
 
 onValue(endorsementListInDB, (snapshot) => {
     if (snapshot.exists()) {
-        let endorsementArray = Object.values(snapshot.val());
+        let endorsementArray = Object.entries(snapshot.val());
 
         clearEndorsementChatList();
 
         endorsementArray.forEach((currentEndorsement) => {
+            // currentEndorsement = currentEndorsement[1]
             appendEndorsementToChatList(currentEndorsement);
         })
     } else {
@@ -64,7 +65,7 @@ function createErrorMessageElement() {
 function removeErrorMessageEl() {
     const errorMessageEl = document.getElementById("error-message-el");
     errorMessageEl.remove();
-    
+
 }
 
 function clearInputFields() {
@@ -77,7 +78,10 @@ function clearEndorsementChatList() {
     endorsementChatListEl.innerHTML = '';
 }
 
-function appendEndorsementToChatList(endorsementObj) {
+function appendEndorsementToChatList(endorsementArr) {
+    let likes = 0;
+    let endorsementID = endorsementArr[0];
+    let endorsementObj = endorsementArr[1];
     const endorsementEl = document.createElement("div");
     const endorsementToEl = document.createElement("h4");
     const endorsementFromEl = document.createElement("p");
@@ -94,22 +98,26 @@ function appendEndorsementToChatList(endorsementObj) {
     endorsementFooterEl.className = "endorsement-footer";
     endorsementLikeEl.className = "like-el";
     endorsementLikeIcon.className = "fa-regular fa-heart like-icon";
-    // endorsementLikeIcon.style.fontWeight = 'normal';
     endorsementLikesCountEl.className = "likes-count";
+
+    endorsementLikeIcon.addEventListener("click", () => {
+        if (endorsementLikeIcon.classList.contains("fa-regular")) {
+            endorsementLikeIcon.className = "fa-solid fa-heart like-icon";
+            likes += 1;
+        } else if (endorsementLikeIcon.classList.contains("fa-solid")) {
+            endorsementLikeIcon.className = "fa-regular fa-heart like-icon";
+            likes -= 1;
+        }
+
+        let endorsementLocationInDB = ref(database, `endorsementList/${endorsementID}`);
+        endorsementObj.likesCount = likes;
+        update(endorsementLocationInDB, { likesCount: likes });
+    });
 
     endorsementToEl.textContent = `To ${endorsementObj.to}`;
     endorsementFromEl.textContent = `From ${endorsementObj.from}`;
     endorsementTextEl.textContent = `${endorsementObj.body}`;
     endorsementLikesCountEl.textContent = `${endorsementObj.likesCount}`;
-
-    endorsementLikeIcon.addEventListener("click", () => {
-        if (endorsementLikeIcon.classList.contains("fa-regular")) {
-            endorsementLikeIcon.className = "fa-solid fa-heart like-icon";
-
-        } else {
-            endorsementLikeIcon.className = "fa-regular fa-heart like-icon";
-        }
-    })
 
     endorsementLikeEl.append(endorsementLikeIcon, endorsementLikesCountEl);
     endorsementFooterEl.append(endorsementFromEl, endorsementLikeEl);
