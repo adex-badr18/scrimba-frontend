@@ -119,7 +119,7 @@ button {
 }
 
 .endorsement-info-field {
-    width: 156px;
+    max-width: 49%;
     font-family: 'Inter', sans-serif;
     background-color: #444059;
     color: #E0DFDF;
