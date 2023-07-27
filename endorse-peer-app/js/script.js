@@ -99,37 +99,26 @@ function appendEndorsementToChatList(endorsementArr) {
     endorsementTextEl.className = "endorsement-text";
     endorsementFooterEl.className = "endorsement-footer";
     endorsementLikeEl.className = "like-el";
-    endorsementLikeIcon.className = "fa-regular fa-heart like-icon";
     endorsementLikesCountEl.className = "likes-count";
+
+    if (endorsementObj.isLiked) {
+        endorsementLikeIcon.className = "fa-solid fa-heart like-icon";
+    } else {
+        endorsementLikeIcon.className = "fa-regular fa-heart like-icon";
+    }
 
     endorsementLikeIcon.addEventListener("click", () => {
         let endorsementLocationInDB = ref(database, `endorsementList/${endorsementID}`);
 
         if (!endorsementObj.isLiked) {
-            endorsementLikeIcon.className = "fa-solid fa-heart like-icon";
             likes += 1;
             isLiked = true;
             updateLikesCountInDB(endorsementLocationInDB, endorsementObj, likes, isLiked);
         } else {
-            endorsementLikeIcon.className = "fa-regular fa-heart like-icon";
             likes -= 1;
             isLiked = false;
             updateLikesCountInDB(endorsementLocationInDB, endorsementObj, likes, isLiked);
         }
-
-        // if (endorsementLikeIcon.classList.contains("fa-regular")) {
-        //     likes += 1;
-        //     updateLikesCountInDB(endorsementLocationInDB, endorsementObj, likes);
-        //     endorsementLikeIcon.className = "fa-solid fa-heart like-icon";
-        // } else if (endorsementLikeIcon.classList.contains("fa-solid")) {
-        //     endorsementLikeIcon.className = "fa-regular fa-heart like-icon";
-        //     likes -= 1;
-        //     updateLikesCountInDB(endorsementLocationInDB, endorsementObj, likes);
-        // }
-
-        // let endorsementLocationInDB = ref(database, `endorsementList/${endorsementID}`);
-        // endorsementObj.likesCount = likes;
-        // update(endorsementLocation, { likesCount: likes });
     });
 
     endorsementToEl.textContent = `To ${endorsementObj.to}`;
