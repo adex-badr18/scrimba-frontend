@@ -43,7 +43,6 @@ onValue(endorsementListInDB, (snapshot) => {
         clearEndorsementChatList();
 
         endorsementArray.forEach((currentEndorsement) => {
-            // currentEndorsement = currentEndorsement[1]
             appendEndorsementToChatList(currentEndorsement);
         })
     } else {
