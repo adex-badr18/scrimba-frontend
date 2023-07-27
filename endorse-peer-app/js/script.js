@@ -23,7 +23,8 @@ publishButton.addEventListener("click", () => {
             to: toEl.value,
             from: fromEl.value,
             body: textareaEl.value,
-            likesCount: 0
+            likesCount: 0,
+            isLiked: false
         };
 
         push(endorsementListInDB, endorsement);
@@ -79,9 +80,10 @@ function clearEndorsementChatList() {
 }
 
 function appendEndorsementToChatList(endorsementArr) {
-    let likes = 0;
+    let isLiked = false;
     let endorsementID = endorsementArr[0];
     let endorsementObj = endorsementArr[1];
+    let likes = endorsementObj.likesCount;
     const endorsementEl = document.createElement("div");
     const endorsementToEl = document.createElement("h4");
     const endorsementFromEl = document.createElement("p");
@@ -101,17 +103,33 @@ function appendEndorsementToChatList(endorsementArr) {
     endorsementLikesCountEl.className = "likes-count";
 
     endorsementLikeIcon.addEventListener("click", () => {
-        if (endorsementLikeIcon.classList.contains("fa-regular")) {
+        let endorsementLocationInDB = ref(database, `endorsementList/${endorsementID}`);
+
+        if (!endorsementObj.isLiked) {
             endorsementLikeIcon.className = "fa-solid fa-heart like-icon";
             likes += 1;
-        } else if (endorsementLikeIcon.classList.contains("fa-solid")) {
+            isLiked = true;
+            updateLikesCountInDB(endorsementLocationInDB, endorsementObj, likes, isLiked);
+        } else {
             endorsementLikeIcon.className = "fa-regular fa-heart like-icon";
             likes -= 1;
+            isLiked = false;
+            updateLikesCountInDB(endorsementLocationInDB, endorsementObj, likes, isLiked);
         }
 
-        let endorsementLocationInDB = ref(database, `endorsementList/${endorsementID}`);
-        endorsementObj.likesCount = likes;
-        update(endorsementLocationInDB, { likesCount: likes });
+        // if (endorsementLikeIcon.classList.contains("fa-regular")) {
+        //     likes += 1;
+        //     updateLikesCountInDB(endorsementLocationInDB, endorsementObj, likes);
+        //     endorsementLikeIcon.className = "fa-solid fa-heart like-icon";
+        // } else if (endorsementLikeIcon.classList.contains("fa-solid")) {
+        //     endorsementLikeIcon.className = "fa-regular fa-heart like-icon";
+        //     likes -= 1;
+        //     updateLikesCountInDB(endorsementLocationInDB, endorsementObj, likes);
+        // }
+
+        // let endorsementLocationInDB = ref(database, `endorsementList/${endorsementID}`);
+        // endorsementObj.likesCount = likes;
+        // update(endorsementLocation, { likesCount: likes });
     });
 
     endorsementToEl.textContent = `To ${endorsementObj.to}`;
@@ -123,4 +141,9 @@ function appendEndorsementToChatList(endorsementArr) {
     endorsementFooterEl.append(endorsementFromEl, endorsementLikeEl);
     endorsementEl.append(endorsementToEl, endorsementTextEl, endorsementFooterEl);
     endorsementChatListEl.prepend(endorsementEl);
+}
+
+function updateLikesCountInDB(endorsementLocation, obj, likes, isLiked) {
+    obj.likesCount = likes;
+    update(endorsementLocation, { likesCount: likes, isLiked: isLiked });
 }
