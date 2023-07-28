@@ -4,3 +4,8 @@ body {
     color: #2b283a;
     font-family: 'Roboto', sans-serif;
 }
+
+header{
+    background-color: #5f29a3;
+    padding: 45px 0px;
+}
