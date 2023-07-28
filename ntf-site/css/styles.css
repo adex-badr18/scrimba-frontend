@@ -9,3 +9,9 @@ header{
     background-color: #5f29a3;
     padding: 45px 0px;
 }
+
+h1{
+    color: whitesmoke;
+    font-size: 36px;
+    margin: 0;
+}
