@@ -63,3 +63,8 @@ section:nth-of-type(even) {
 .main-image{
     width: 100%;
 }
+
+.feature-image {
+    width: 300px;
+    border-radius: 4.6px;
+}
