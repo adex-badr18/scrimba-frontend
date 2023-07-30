@@ -69,3 +69,7 @@ section:nth-of-type(even) {
     border-radius: 4.6px;
 }
 
+.feature-images-container {
+    display: flex;
+    justify-content: space-between;
+}
