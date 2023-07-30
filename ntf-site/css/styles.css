@@ -73,3 +73,9 @@ section:nth-of-type(even) {
     display: flex;
     justify-content: space-between;
 }
+
+footer {
+    text-align: center;
+    padding: 45px 0;
+    color: #5f29a3;
+}
