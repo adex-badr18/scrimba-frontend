@@ -5,10 +5,7 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-header{
-    background-color: #5f29a3;
-    padding: 45px 0px;
-}
+/* Typography */
 
 h1{
     color: whitesmoke;
@@ -26,6 +23,8 @@ h3{
     margin: 0;
 }
 
+/* Links */
+
 a {
     color: #EF5839;
     /* text-decoration: underline dotted; */
@@ -38,6 +37,13 @@ a:hover {
 
 a:active {
     color: #D4B44C;
+}
+
+/* Layout */
+
+header{
+    background-color: #5f29a3;
+    padding: 45px 0px;
 }
 
 .container {
