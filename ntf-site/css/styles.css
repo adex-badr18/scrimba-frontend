@@ -55,6 +55,11 @@ section{
     padding: 45px 0;
 }
 
+section:nth-of-type(even) {
+    color: whitesmoke;
+    background-color: #5f29a3;
+}
+
 .main-image{
     width: 100%;
 }
