@@ -5,6 +5,8 @@ body {
     font-size: 21px;
 }
 
+/* Typography */
+
 h1,
 h2 {
     font-weight: 300;
@@ -49,11 +51,21 @@ p a:focus {
     font-size: 16px;
 }
 
+/* Layout */
+
+header {
+    background-color: #D7D7D7;
+}
+
+section {
+    background-color: #FFEAEA;
+}
+
+section:nth-of-type(2) {
+    background-color: #EAF9FF;
+}
+
 .container {
     width: 570px;
     margin: 0 auto;
 }
-
-/* .profile-img {
-    border-radius: 60%;
-} */
