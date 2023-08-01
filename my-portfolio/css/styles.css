@@ -18,17 +18,17 @@ h2 {
     font-size: 42px;
 }
 
-h1 span, h2 span {
-    font-weight: 700;
+.bold-text {
+    font-weight: 900;
     display: block;
 }
 
-h1 span {
+h1 .bold-text {
     font-size: 80px;
 }
 
 
-h2 span {
+h2 .bold-text {
     font-size: 60px;
 }
 
