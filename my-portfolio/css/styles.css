@@ -53,6 +53,10 @@ p a:focus {
 
 /* Layout */
 
+header, section {
+    padding: 60px 0;
+}
+
 header {
     background-color: #D7D7D7;
 }
