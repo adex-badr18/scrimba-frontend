@@ -10,22 +10,23 @@ h2 {
     font-weight: 300;
 }
 
+h1 {
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 42px;
+}
+
 h1 span, h2 span {
     font-weight: 700;
     display: block;
-}
-
-h1 {
-    font-size: 60px;
 }
 
 h1 span {
     font-size: 80px;
 }
 
-h2 {
-    font-size: 42px;
-}
 
 h2 span {
     font-size: 60px;
@@ -39,7 +40,8 @@ p a {
     color: #99D930;
 }
 
-p a:hover {
+p a:hover,
+p a:focus {
     color: #131313;
 }
 
