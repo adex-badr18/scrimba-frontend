@@ -52,4 +52,20 @@ html, body {
 
 .post-img {
     width: 570px;
+    margin-bottom: -7px;
+}
+
+
+
+/* Icons Wrapper */
+.icons-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 10px;
+}
+
+.icons-wrapper img {
+    width: 50px;
 }
