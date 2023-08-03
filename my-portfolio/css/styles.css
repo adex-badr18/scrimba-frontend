@@ -74,6 +74,12 @@ p a:focus {
     color: #FFF;
 }
 
+article .work-article-link:hover,
+article .work-article-link:focus {
+    background-color: #FFF;
+    color: #252525;
+}
+
 .small-text {
     font-size: 16px;
 }
