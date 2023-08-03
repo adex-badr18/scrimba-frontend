@@ -54,6 +54,22 @@ p a:focus {
     color: #131313;
 }
 
+.work-article-link {
+    background-color: #99D930;
+    color: #252525;
+    padding: 15px 25px;
+    font-weight: 900;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 30px;
+}
+
+.work-article-link:hover, 
+.work-article-link:focus {
+    background-color: #252525;
+    color: #FFF;
+}
+
 .small-text {
     font-size: 16px;
 }
