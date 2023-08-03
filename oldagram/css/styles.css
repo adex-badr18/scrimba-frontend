@@ -7,24 +7,52 @@ html, body {
 .container {
     width: 570px;
     margin: 0 auto;
-    /* border: 1px solid lightcoral; */
+    box-sizing: border-box;
 }
+
+/* header */
 
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    border: 1px solid yellow;
 }
 
 .logo {
     width: 180px;
     height: 80px;
-    /* border: 1px solid blue; */
 }
 
 .user-avatar {
     width: 60px;
     height: 60px;
+    border-radius: 50%;
 }
 
+/* User info wrapper */
+
+.user-post-wrapper {
+    border: 1px solid slateblue;
+}
+
+.user-info-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    padding: 0 10px;
+}
+
+.name {
+    margin-bottom: 5px;
+}
+
+.location {
+    margin-top: 0;
+}
+
+.post-img {
+    width: 570px;
+}
