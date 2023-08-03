@@ -71,3 +71,9 @@ header {
     width: 570px;
     margin: 0 auto;
 }
+
+img {
+    width: 300px;
+    border-radius: 50%;
+    border: 8px solid white;
+}
