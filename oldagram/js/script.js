@@ -77,6 +77,11 @@ function renderPostMarkup(postObj) {
     heartIcon.setAttribute('src', './images/icon-heart.png');
     heartIcon.setAttribute('alt', 'Heart icon, represents like button');
 
+    heartIcon.addEventListener('click', () => {
+        postObj.likes += 1;
+        likesCountEl.textContent = `${postObj.likes} likes`;
+    });
+
     const commentIcon = document.createElement('img');
     commentIcon.className = 'social-icon';
     commentIcon.setAttribute('src', './images/icon-comment.png');
