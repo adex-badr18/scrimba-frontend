@@ -2,7 +2,7 @@ html, body {
     font-family: 'Source Sans 3', sans-serif;
     margin: 0;
     padding: 0;
-    font-size: 21px;
+    font-size: 16px;
     background-color: #C1C1C1;
 }
 
@@ -61,11 +61,11 @@ html, body {
 .name {
     margin-bottom: 3px;
     margin-top: 0;
-    font-size: 23px;
+    font-size: 18px;
 }
 
 .location {
-    font-size: 20px;
+    font-size: 16px;
 }
 
 p {
