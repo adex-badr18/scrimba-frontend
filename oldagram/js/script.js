@@ -62,6 +62,12 @@ function renderPostMarkup(postObj) {
     postImage.setAttribute('src', `${postObj.post}`);
     postImage.setAttribute('alt', 'Posted image');
 
+
+    postImage.ondblclick = () => {
+        postObj.likes += 1;
+        likesCountEl.textContent = `${postObj.likes} likes`;
+    };
+
     // IconsWrapper markup
     const iconsWrapper = document.createElement('div');
     iconsWrapper.className = 'icons-wrapper wrapper';
@@ -119,4 +125,4 @@ function renderPostMarkup(postObj) {
 
 posts.forEach(post => {
     renderPostMarkup(post);
-})
+});
