@@ -7,7 +7,7 @@ html, body {
 }
 
 .container {
-    background-color: #FFFFFF;
+    background-color: #C1C1C1;
     width: 570px;
     margin: 0 auto;
     box-sizing: border-box;
@@ -25,6 +25,11 @@ html, body {
     align-items: center;
     padding: 20px;
     border-bottom: 1px solid #C6C6C6;
+}
+
+.header,
+.user-post-wrapper {
+    background-color: #FFFFFF;
 }
 
 .logo {
