@@ -8,7 +8,7 @@ html, body {
 
 .container {
     background-color: #C1C1C1;
-    width: 570px;
+    width: 500px;
     margin: 0 auto;
     box-sizing: border-box;
 }
@@ -77,7 +77,7 @@ p {
 }
 
 .post-img {
-    width: 570px;
+    width: 100%;
     margin-bottom: -7px;
 }
 
