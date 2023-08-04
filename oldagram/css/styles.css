@@ -47,8 +47,12 @@ html, body {
     margin-bottom: 5px;
 }
 
-.location {
-    margin-top: 0;
+p {
+    margin: 0;
+}
+
+.post-image-wrapper {
+    margin-bottom: 28px;
 }
 
 .post-img {
@@ -56,17 +60,25 @@ html, body {
     margin-bottom: -7px;
 }
 
-
-
 /* Icons Wrapper */
 .icons-wrapper {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 20px;
-    padding: 30px 10px;
+    margin-bottom: 20px;
 }
 
 .icons-wrapper img {
     width: 50px;
 }
+
+.bold-text {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.bold-text, .comment {
+    font-size: 24px;
+}
+
