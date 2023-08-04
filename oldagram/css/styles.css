@@ -84,8 +84,14 @@ p {
     margin-bottom: 20px;
 }
 
-.icons-wrapper img {
+.social-icon {
     width: 40px;
+}
+
+.social-icon:hover,
+.social-icon:focus {
+    width: 42px;
+    cursor: pointer;
 }
 
 .bold-text {
