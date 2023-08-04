@@ -40,6 +40,10 @@ html, body {
 
 /* User info wrapper */
 
+.user-post-wrapper {
+    padding-bottom: 20px;
+}
+
 .user-info-wrapper {
     display: flex;
     justify-content: flex-start;
