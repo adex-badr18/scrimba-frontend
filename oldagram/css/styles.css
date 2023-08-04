@@ -86,17 +86,17 @@ p {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 22px;
+    gap: 16px;
     margin-bottom: 20px;
 }
 
 .social-icon {
-    width: 40px;
+    width: 30px;
 }
 
 .social-icon:hover,
 .social-icon:focus {
-    width: 42px;
+    width: 32px;
     cursor: pointer;
 }
 
