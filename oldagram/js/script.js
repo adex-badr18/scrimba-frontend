@@ -98,7 +98,7 @@ function renderPostMarkup(postObj) {
     const usernameEl = document.createElement('span');
     usernameEl.className = 'comment-username bold-text';
     usernameEl.textContent = `${postObj.username}`;
-    const commentText = document.createTextNode(` ${posts[1].comment}`);
+    const commentText = document.createTextNode(` ${postObj.comment}`);
 
     // Append child elements inside parent elements
     nameLocationBox.append(nameEl, locationEl);
