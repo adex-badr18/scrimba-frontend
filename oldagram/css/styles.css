@@ -3,9 +3,11 @@ html, body {
     margin: 0;
     padding: 0;
     font-size: 21px;
+    background-color: #C1C1C1;
 }
 
 .container {
+    background-color: #FFFFFF;
     width: 570px;
     margin: 0 auto;
     box-sizing: border-box;
