@@ -33,13 +33,13 @@ html, body {
 }
 
 .logo {
-    width: 200px;
-    height: 80px;
+    width: 150px;
+    height: 60px;
 }
 
 .user-avatar {
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
 }
 
