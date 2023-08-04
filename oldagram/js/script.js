@@ -38,17 +38,19 @@ userInfoWrapper.className = "user-info-wrapper wrapper";
 
 const userAvatarImg = document.createElement('img');
 userAvatarImg.className = "user-avatar";
-userAvatarImg.setAttribute('src', `${posts[0].avatar}`);
+userAvatarImg.setAttribute('src', `${posts[1].avatar}`);
 userAvatarImg.setAttribute('alt', 'User avatar in a post');
 
 const nameLocationBox = document.createElement('div');
 nameLocationBox.className = 'name-location-box';
 
 const nameEl = document.createElement('h3');
-nameEl.textContent = `${posts[0].name}`;
+nameEl.className = 'name';
+nameEl.textContent = `${posts[1].name}`;
 
 const locationEl = document.createElement('p');
-locationEl.textContent = `${posts[0].location}`;
+locationEl.className = 'location';
+locationEl.textContent = `${posts[1].location}`;
 
 // postImageWrapper markup
 const postImageWrapper = document.createElement('div');
@@ -56,12 +58,59 @@ postImageWrapper.className = 'post-image-wrapper';
 
 const postImage = document.createElement('img');
 postImage.className = 'post-img';
-postImage.setAttribute('src', `${posts[0].post}`);
+postImage.setAttribute('src', `${posts[1].post}`);
 postImage.setAttribute('alt', 'Posted image');
 
+// IconsWrapper markup
+const iconsWrapper = document.createElement('div');
+iconsWrapper.className = 'icons-wrapper wrapper';
 
+const heartIcon = document.createElement('img');
+heartIcon.className = 'social-icon';
+heartIcon.setAttribute('src', './images/icon-heart.png');
+heartIcon.setAttribute('alt', 'Heart icon, represents like button');
+
+const commentIcon = document.createElement('img');
+commentIcon.className = 'social-icon';
+commentIcon.setAttribute('src', './images/icon-comment.png');
+commentIcon.setAttribute('alt', 'Comment icon');
+
+const dmIcon = document.createElement('img');
+dmIcon.className = 'social-icon';
+dmIcon.setAttribute('src', './images/icon-dm.png');
+dmIcon.setAttribute('alt', 'Share icon');
+
+// Likes count wrapper markup
+const likesCountWrapper = document.createElement('div');
+likesCountWrapper.className = 'likes-count-wrapper wrapper';
+
+const likesCountEl = document.createElement('p');
+likesCountEl.className = 'bold-text';
+likesCountEl.textContent = `${posts[1].likes} likes`;
+
+// Comments wrapper markup
+const commentWrapper = document.createElement('div');
+commentWrapper.className = 'comments-wrapper wrapper';
+
+const commentEl = document.createElement('p');
+commentEl.className = 'comment';
+const usernameEl = document.createElement('span');
+usernameEl.className = 'comment-username bold-text';
+usernameEl.textContent = `${posts[1].username}`;
+const commentText = document.createTextNode(` ${posts[1].comment}`);
+
+// Append child elements inside parent elements
 nameLocationBox.append(nameEl, locationEl);
 userInfoWrapper.append(userAvatarImg, nameLocationBox);
 
+postImageWrapper.append(postImage);
 
+iconsWrapper.append(heartIcon, commentIcon, dmIcon);
 
+likesCountWrapper.append(likesCountEl);
+
+commentWrapper.append(usernameEl, commentText);
+
+postEl.append(userInfoWrapper, postImageWrapper, iconsWrapper, likesCountWrapper, commentWrapper);
+
+postContainer.append(postEl);
