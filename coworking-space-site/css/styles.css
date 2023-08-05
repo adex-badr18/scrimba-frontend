@@ -38,7 +38,9 @@ h1 {
     margin: 30px 25px;
 }
 
-
+.item-img {
+    width: 100%;
+}
 
 .caption {
     margin: 0 25px;
