@@ -62,3 +62,40 @@ main{
     margin: 0 auto;
 }
 
+/* modal */
+  
+.modal {
+    /* position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto; */
+    
+/*
+Challenge:
+1. Make the modal sit on top of the other content. 
+2. Make sure it is centrally aligned both horizontally
+   and vertically (just like in the slide).
+3. When it's positioned correctly, set its display 
+   property to 'none'.
+*/
+ 
+
+    height: 420px;
+    width: 350px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 6px 2px #666;
+    background-color: #212529;
+    color: whitesmoke;
+}
+
+.modal-inner{
+    width: 290px;
+    margin: 0 auto;
+}
+
+.modal-inner-loading{
+    text-align: center;
+}
+
