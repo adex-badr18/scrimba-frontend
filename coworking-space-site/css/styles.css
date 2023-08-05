@@ -84,10 +84,10 @@ button {
     border-radius: 50%;
     cursor: pointer;
     box-shadow: 1px 1px 5px #999;
-    /* display: flex; */
+    display: flex;
 }
 
 .chatbox-img {
     width: 50%;
-    /* margin: auto; */
+    margin: auto;
 }
