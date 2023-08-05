@@ -51,3 +51,14 @@ li{
 .li-blue{background-color:#E5F9FE}
 .li-pink{background-color:#FCF1FE}
 
+/* layout */
+
+img{
+    width: 100%;
+}
+
+main{
+    width: 400px;
+    margin: 0 auto;
+}
+
