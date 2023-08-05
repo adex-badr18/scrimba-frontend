@@ -148,3 +148,19 @@ input{
     border-radius: 3px;
 }
 
+/* modal after submit */
+
+.loading{
+    width: 100%; 
+    margin-top: 10px;
+}
+
+.modal-display-name{
+    color: fuchsia;
+}
+
+.modal-text{
+    height: 140px;
+    line-height: 23px;
+    margin-bottom: 0;
+}
