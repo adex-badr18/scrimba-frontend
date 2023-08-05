@@ -68,6 +68,7 @@ h1 {
 }
 
 button {
+    align-self: center; /* OR margin: auto, this centers an element in a flex container*/
     border: none;
     background-color: #CD6858;
     color: whitesmoke;
