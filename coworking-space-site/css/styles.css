@@ -48,6 +48,7 @@ h1 {
 
 .item-img {
     width: 100%;
+    display: block;  /* OR vertical-align: top, this removes the extra space below an image*/
 }
 
 .caption {
