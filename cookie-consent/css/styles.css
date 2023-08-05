@@ -99,3 +99,42 @@ Challenge:
     text-align: center;
 }
 
+/* modal buttons */
+
+.close-modal-btn-container{
+    text-align: right;
+    margin: 9px;
+}
+
+.modal-close-btn {
+  font-size: 22px;
+  font-weight: bold;
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: whitesmoke;
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:active{
+    color: red;
+    cursor: pointer;
+}
+
+.modal-close-btn:disabled{
+    color: whitesmoke;
+    opacity: 0.2;
+    cursor: not-allowed;
+}
+
+.modal-choice-btns{
+    margin-top: 10px;
+    padding: 8px 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.modal-btn{
+    padding: 10px 24px;
+    cursor: pointer;
+}
+
