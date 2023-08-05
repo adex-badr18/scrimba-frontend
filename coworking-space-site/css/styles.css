@@ -63,3 +63,11 @@ h1 {
     padding: 10px;
 }
 
+button {
+    border: none;
+    background-color: #CD6858;
+    color: whitesmoke;
+    padding: 10px 15px;
+    font-weight: 700;
+    cursor: pointer;
+}
