@@ -9,4 +9,45 @@ html, body {
     color: #222;
 }
 
+/* typography */
+
+h1{
+    font-size: 48px;
+    line-height: 60px;
+    font-weight: 900;
+}
+
+h2{
+    margin-top: 0;
+}
+
+h3{
+    font-size: 20px;
+    font-weight: 700; 
+    line-height: 30px;
+}
+
+p{
+    font-size: 18px;
+    line-height: 28px;
+
+}
+
+ul{
+    list-style: none;
+    padding: 5px 0 0 0;
+}
+
+li{
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 12px;
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.li-green{background-color:#E5FDEA}
+.li-yellow{background-color:#FCFDD6}
+.li-blue{background-color:#E5F9FE}
+.li-pink{background-color:#FCF1FE}
 
