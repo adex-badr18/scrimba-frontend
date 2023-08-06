@@ -167,4 +167,17 @@ const catsData = [
         image: "sad.gif",
         alt: "A cat looking sad",
     },
-]
+];
+
+function getEmotions(cats) {
+    let catsArray = [];
+
+    cats.forEach((cat) => {
+        for (const emotion of cat.emotionTags) {
+            console.log(emotion)
+            catsArray.push(emotion);
+        }
+    });
+
+    return catsArray;
+}
