@@ -3,15 +3,16 @@ import { catsData } from "./data.js";
 const emotionRadios = document.getElementById("emotion-radios");
 
 function getEmotionsArray(cats) {
-    let catsArray = [];
+    let emotionsArray = [];
 
     cats.forEach((cat) => {
         for (const emotion of cat.emotionTags) {
-            catsArray.push(emotion);
+            if (!emotionsArray.includes(emotion)) {
+                emotionsArray.push(emotion);
+            }
         }
     });
-
-    return catsArray;
+    return emotionsArray;
 }
 
 function renderEmotionsRadios(cats){
