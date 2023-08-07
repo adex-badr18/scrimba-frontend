@@ -169,12 +169,13 @@ const catsData = [
     },
 ];
 
+const emotionRadios = document.getElementById("emotion-radios");
+
 function getEmotionsArray(cats) {
     let catsArray = [];
 
     cats.forEach((cat) => {
         for (const emotion of cat.emotionTags) {
-            console.log(emotion)
             catsArray.push(emotion);
         }
     });
@@ -183,9 +184,14 @@ function getEmotionsArray(cats) {
 }
 
 function renderEmotionsRadios(cats){
-    
+    let radioItems = ``;
     const emotions = getEmotionsArray(cats)
-    console.log(emotions)
+
+    emotions.forEach(emotion => {
+        radioItems += `<p>${emotion}</p>`;
+    });
+
+    emotionRadios.innerHTML = radioItems;
 }
 
 renderEmotionsRadios(catsData)
