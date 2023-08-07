@@ -169,7 +169,7 @@ const catsData = [
     },
 ];
 
-function getEmotions(cats) {
+function getEmotionsArray(cats) {
     let catsArray = [];
 
     cats.forEach((cat) => {
@@ -181,3 +181,11 @@ function getEmotions(cats) {
 
     return catsArray;
 }
+
+function renderEmotionsRadios(cats){
+    
+    const emotions = getEmotionsArray(cats)
+    console.log(emotions)
+}
+
+renderEmotionsRadios(catsData)
