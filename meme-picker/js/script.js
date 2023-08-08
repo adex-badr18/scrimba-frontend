@@ -3,6 +3,8 @@ import { catsData } from "./data.js";
 const emotionRadios = document.getElementById("emotion-radios");
 const getImageBtn = document.getElementById('get-image-btn');
 const gifsOnlyOption = document.getElementById('gifs-only-option');
+const memeModalInner = document.getElementById('meme-modal-inner');
+const memeModal = document.getElementById('meme-modal');
 
 getImageBtn.addEventListener('click', renderCat);
 
@@ -21,12 +23,12 @@ function getMatchingCatsArray() {
 
             return cat.emotionTags.includes(selectedEmotion);
         });
-        
+
         return matchingCatsArray;
     }
 }
 
-function getSingleCatObject(){
+function getSingleCatObject() {
     const catsArray = getMatchingCatsArray();
 
     if (catsArray.length === 1) {
@@ -37,8 +39,14 @@ function getSingleCatObject(){
     }
 }
 
-function renderCat(){
-    getSingleCatObject();
+function renderCat() {
+    const catObject = getSingleCatObject();
+
+    memeModalInner.innerHTML = `
+        <img class="cat-img" src="./images/${catObject.image}" alt="${catObject.alt}">
+    `;
+
+    memeModal.style.display = 'flex';
 }
 
 emotionRadios.addEventListener('change', highlightCheckedOption);
