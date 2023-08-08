@@ -4,7 +4,7 @@ const emotionRadios = document.getElementById("emotion-radios");
 const getImageBtn = document.getElementById('get-image-btn');
 const gifsOnlyOption = document.getElementById('gifs-only-option');
 
-getImageBtn.addEventListener('click', getMatchingCatsArray);
+getImageBtn.addEventListener('click', renderCat);
 
 function getMatchingCatsArray() {
     const selectedRadio = document.querySelector('input[type="radio"]:checked');
@@ -26,6 +26,14 @@ function getMatchingCatsArray() {
     }
 
     console.log(isGif);
+
+}
+
+function getSingleCatObject(){
+
+}
+
+function renderCat(){
 
 }
 
