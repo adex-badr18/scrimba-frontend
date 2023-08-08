@@ -5,8 +5,17 @@ const getImageBtn = document.getElementById('get-image-btn');
 const gifsOnlyOption = document.getElementById('gifs-only-option');
 const memeModalInner = document.getElementById('meme-modal-inner');
 const memeModal = document.getElementById('meme-modal');
+const memeModalCloseBtn = document.getElementById('meme-modal-close-btn');
 
 getImageBtn.addEventListener('click', renderCat);
+
+emotionRadios.addEventListener('change', highlightCheckedOption);
+
+memeModalCloseBtn.addEventListener('click', closeModal);
+
+function closeModal() {
+    memeModal.style.display = 'none';
+}
 
 function getMatchingCatsArray() {
     const selectedRadio = document.querySelector('input[type="radio"]:checked');
@@ -48,8 +57,6 @@ function renderCat() {
 
     memeModal.style.display = 'flex';
 }
-
-emotionRadios.addEventListener('change', highlightCheckedOption);
 
 function highlightCheckedOption(e) {
     const radios = document.getElementsByClassName('radio');
