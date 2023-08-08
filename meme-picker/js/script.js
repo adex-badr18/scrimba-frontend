@@ -21,20 +21,21 @@ function getMatchingCatsArray() {
 
             return cat.emotionTags.includes(selectedEmotion);
         });
-        console.log(matchingCatsArray)
+        
         return matchingCatsArray;
     }
-
-    console.log(isGif);
-
 }
 
 function getSingleCatObject(){
+    const catsArray = getMatchingCatsArray();
 
+    if (catsArray.length === 1) {
+        console.log(catsArray[0]);
+    }
 }
 
 function renderCat(){
-
+    getSingleCatObject();
 }
 
 emotionRadios.addEventListener('change', highlightCheckedOption);
