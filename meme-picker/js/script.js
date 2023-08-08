@@ -6,8 +6,12 @@ const getImageBtn = document.getElementById('get-image-btn');
 getImageBtn.addEventListener('click', getMatchingCatsArray);
 
 function getMatchingCatsArray() {
-    const selectedEmotion = document.querySelector('input[type="radio"]:checked').value;
-    console.log(selectedEmotion);
+    const selectedRadio = document.querySelector('input[type="radio"]:checked');
+    if (selectedRadio) {
+        const selectedEmotion = selectedRadio.value;
+        console.log(selectedEmotion);
+    }
+
 }
 
 emotionRadios.addEventListener('change', highlightCheckedOption);
@@ -35,7 +39,7 @@ function getEmotionsArray(cats) {
     return emotionsArray;
 }
 
-function renderEmotionsRadios(cats){
+function renderEmotionsRadios(cats) {
     let radioItems = ``;
     const emotions = getEmotionsArray(cats)
 
