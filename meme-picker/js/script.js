@@ -33,11 +33,14 @@ function closeModal() {
 }
 
 function renderCat() {
-    const catObject = getSingleCatObject();
+    const catsArray = getMatchingCatsArray();
 
-    memeModalInner.innerHTML = `
-        <img class="cat-img" src="./images/${catObject.image}" alt="${catObject.alt}">
-    `;
+    let imageElement = '';
+    for (const cat of catsArray) {
+        imageElement += `<img class="cat-img" src="./images/${cat.image}" alt="${cat.alt}">`;
+    }
+
+    memeModalInner.innerHTML = imageElement;
 
     memeModal.style.display = 'flex';
 }
