@@ -13,7 +13,12 @@ function getMatchingCatsArray() {
 
     if (selectedRadio) {
         selectedEmotion = selectedRadio.value;
-        console.log(selectedEmotion);
+
+        const matchingCatsArray = catsData.filter(cat => {
+            return cat.emotionTags.includes(selectedEmotion)
+        });
+
+        console.log(matchingCatsArray);
     }
 
     console.log(isGif);
