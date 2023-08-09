@@ -137,7 +137,7 @@ input[type="radio"]{
     justify-content: space-between;
     padding: 20px;
     background-color: #999495;
-    /* color: ; */
+    color: #FFF;
 }
 
 .meme-modal-inner {
