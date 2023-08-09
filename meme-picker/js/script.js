@@ -6,18 +6,27 @@ const gifsOnlyOption = document.getElementById('gifs-only-option');
 const memeModalInner = document.getElementById('meme-modal-inner');
 const memeModal = document.getElementById('meme-modal');
 const modalTitle = document.getElementById('modal-title');
+const memeModalCloseBtn = document.getElementById('meme-modal-close-btn');
 
-document.addEventListener('click', (e) => {
-    if (e.target.matches('#meme-modal-close-btn') || e.target.matches('#meme-picker-container')) {
-        closeModal();
-    }
-});
+memeModalCloseBtn.addEventListener('mouseover', changeToSolid);
+
+memeModalCloseBtn.addEventListener('mouseleave', changeToRegular)
+
+document.addEventListener('click', closeModal);
 
 emotionRadios.addEventListener('change', highlightCheckedOption);
 
-// memeModalCloseBtn.addEventListener('click', closeModal);
-
 getImageBtn.addEventListener('click', renderCat);
+
+function changeToSolid(e) {
+    e.target.classList.remove('fa-regular');
+    e.target.classList.add('fa-solid');
+}
+
+function changeToRegular(e) {
+    e.target.classList.add('fa-regular');
+    e.target.classList.remove('fa-solid');
+}
 
 function highlightCheckedOption(e) {
     const radios = document.getElementsByClassName('radio');
@@ -29,8 +38,10 @@ function highlightCheckedOption(e) {
     document.getElementById(e.target.id).parentElement.classList.add('highlight');
 }
 
-function closeModal() {
-    memeModal.style.display = 'none';
+function closeModal(e) {
+    if (e.target.matches('#meme-modal-close-btn') || e.target.matches('#meme-picker-container')) {
+        memeModal.style.display = 'none';
+    }
 }
 
 function renderCat() {
@@ -43,7 +54,7 @@ function renderCat() {
     }
 
     memeModalInner.innerHTML = imageElement;
-    modalTitle.textContent = caption;
+    modalTitle.textContent = `Meme of cats that are ${caption}`;
 
     memeModal.style.display = 'flex';
 }
