@@ -34,13 +34,15 @@ function closeModal() {
 
 function renderCat() {
     const catsArray = getMatchingCatsArray();
+    const caption = catsArray[1];
 
     let imageElement = '';
-    for (const cat of catsArray) {
+    for (const cat of catsArray[0]) {
         imageElement += `<img class="cat-img" src="./images/${cat.image}" alt="${cat.alt}">`;
     }
 
     memeModalInner.innerHTML = imageElement;
+    console.log(caption);
 
     memeModal.style.display = 'flex';
 }
@@ -72,7 +74,7 @@ function getMatchingCatsArray() {
             return cat.emotionTags.includes(selectedEmotion);
         });
 
-        return matchingCatsArray;
+        return [matchingCatsArray, selectedEmotion];
     }
 }
 
