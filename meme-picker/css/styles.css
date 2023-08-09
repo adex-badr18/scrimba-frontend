@@ -35,9 +35,10 @@ header{
 .header-inner{
     display: flex;
     align-items: center;
+    justify-content: center;
     margin: 0 auto;
-    width: 370px;
-    gap: 15px;
+    /* width: 100%; */
+    gap: 20px;
     padding: 10px 0 0 0;
 }
 
@@ -113,9 +114,39 @@ input[type="radio"]{
 }
 
 /* modal */
+.meme-modal {
+    display: none;
+    flex-direction: column;
+    border: 1px solid #67595e;
+    border-radius: 5px;
+    max-width: 500px;
+    /* height: 400px; */
+    background-color: #fff0ee;
+    padding: 20px;
+    margin: auto;
+    position: fixed;
+    top: 100px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
 
+.meme-modal-inner {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.cat-img {
+    max-width: 160px;
+    max-height: 160px;
+    border-radius: 5px;
+}
+
+/*
 .meme-modal{
-    display: none; /*flex when displayed*/
+    display: none; 
     position: fixed;
     margin: auto;
     top: 80px;
@@ -135,6 +166,7 @@ input[type="radio"]{
     max-height: 420px;
     border-radius: 5px;
 }
+*/
 
 .meme-modal-close-btn{
     position: absolute;
