@@ -5,6 +5,7 @@ const getImageBtn = document.getElementById('get-image-btn');
 const gifsOnlyOption = document.getElementById('gifs-only-option');
 const memeModalInner = document.getElementById('meme-modal-inner');
 const memeModal = document.getElementById('meme-modal');
+const modalTitle = document.getElementById('modal-title');
 
 document.addEventListener('click', (e) => {
     if (e.target.matches('#meme-modal-close-btn') || e.target.matches('#meme-picker-container')) {
@@ -42,7 +43,7 @@ function renderCat() {
     }
 
     memeModalInner.innerHTML = imageElement;
-    console.log(caption);
+    modalTitle.textContent = caption;
 
     memeModal.style.display = 'flex';
 }
