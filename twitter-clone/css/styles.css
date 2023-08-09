@@ -112,3 +112,11 @@ button{
     font-size: 14px;
     line-height: 20px;
 }
+
+/* images */
+
+.profile-pic{
+    border: 1px solid lightgray;
+    border-radius: 50%;
+    width: 48px;
+}
