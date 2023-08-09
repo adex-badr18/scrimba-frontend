@@ -120,12 +120,13 @@ input[type="radio"]{
     border: 1px solid #67595e;
     border-radius: 5px;
     max-width: 500px;
-    /* height: 400px; */
+    max-height: 510px;
+    overflow: auto;
     background-color: #fff0ee;
     padding: 20px;
     margin: auto;
     position: fixed;
-    top: 100px;
+    top: 90px;
     left: 0;
     right: 0;
     bottom: 0;
