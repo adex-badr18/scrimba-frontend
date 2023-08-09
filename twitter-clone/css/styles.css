@@ -3,3 +3,24 @@ html, body {
     padding: 0;
     font-family: 'Roboto', sans-serif;
 }
+
+/* typography and icons */
+
+h1{
+    color: #0F8CDF;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+i{
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.liked{
+    color: red;
+}
+
+.retweeted {
+  color: limegreen;
+}
