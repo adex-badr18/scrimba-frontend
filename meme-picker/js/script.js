@@ -54,7 +54,7 @@ function renderCat() {
     }
 
     memeModalInner.innerHTML = imageElement;
-    modalTitle.textContent = `Meme of cats that are ${caption}`;
+    modalTitle.textContent = `#${caption}`;
 
     memeModal.style.display = 'flex';
 }
