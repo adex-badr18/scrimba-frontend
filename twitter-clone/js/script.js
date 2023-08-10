@@ -13,11 +13,16 @@ document.addEventListener('click', (e) => {
     if (e.target.dataset.like) {
         handleLikeClick(e.target.dataset.like);
     }
-    // console.log(e.target.dataset.retweet);
 })
 
 function handleLikeClick(tweetId) {
-    console.log(tweetId);
+    const targetTweetObj = tweetsData.filter((tweet) => {
+        return tweet.uuid === tweetId;
+    })[0];
+
+    targetTweetObj.likes += 1;
+
+    console.log(targetTweetObj.likes);
 }
 
 function getFeedHtml() {
