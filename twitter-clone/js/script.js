@@ -22,7 +22,7 @@ function handleLikeClick(tweetId) {
 
     targetTweetObj.likes += 1;
 
-    console.log(targetTweetObj.likes);
+    render();
 }
 
 function getFeedHtml() {
