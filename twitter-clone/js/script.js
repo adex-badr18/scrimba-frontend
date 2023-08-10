@@ -4,6 +4,9 @@ const tweetInput = document.getElementById('tweet-input')
 const tweetBtn = document.getElementById('tweet-btn')
 
 tweetBtn.addEventListener('click', function(){
+    const tweet = tweetInput.value;
+
+    console.log(tweet);
 /*
 Challenge
 1. Have the eventListener's function
