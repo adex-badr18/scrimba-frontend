@@ -22,11 +22,11 @@ function handleLikeClick(tweetId) {
 
     if (targetTweetObj.isLiked) {
         targetTweetObj.likes--;
-        targetTweetObj.isLiked = false;
     } else {
         targetTweetObj.likes++;
-        targetTweetObj.isLiked = true;
     }
+
+    targetTweetObj.isLiked = !targetTweetObj.isLiked;
 
     render();
 }
