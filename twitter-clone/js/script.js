@@ -9,15 +9,13 @@ tweetBtn.addEventListener('click', function () {
     console.log(tweet);
 })
 
+document.addEventListener('click', (e) => {
+    console.log(e.target.dataset.like);
+    console.log(e.target.dataset.retweet);
+})
+
 function getFeedHtml() {
     let feedHtml = '';
-
-    /*
-    Challenge:
-    1. Add data attributes to each of the  <i> tags. You can call
-    them 'reply', 'like', and 'retweet’.
-    2. Each data attribute should hold the tweet's uuid.
-    */
 
     tweetsData.forEach(tweet => {
         feedHtml += `
