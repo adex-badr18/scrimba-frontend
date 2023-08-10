@@ -64,6 +64,10 @@ function getFeedHtml() {
             retweetedIconClass = 'retweeted';
         }
 
+        if (tweet.replies.length) {
+            console.log(tweet.uuid);
+        }
+
         feedHtml += `
             <div class="tweet">
                 <div class="tweet-inner">
