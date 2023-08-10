@@ -10,9 +10,15 @@ tweetBtn.addEventListener('click', function () {
 })
 
 document.addEventListener('click', (e) => {
-    console.log(e.target.dataset.like);
-    console.log(e.target.dataset.retweet);
+    if (e.target.dataset.like) {
+        handleLikeClick(e.target.dataset.like);
+    }
+    // console.log(e.target.dataset.retweet);
 })
+
+function handleLikeClick(tweetId) {
+    console.log(tweetId);
+}
 
 function getFeedHtml() {
     let feedHtml = '';
