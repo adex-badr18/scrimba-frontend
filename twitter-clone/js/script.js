@@ -15,17 +15,6 @@ document.addEventListener('click', (e) => {
     }
 });
 
-/*
-Challenge:
-2. When the Tweet button is clicked, log out an object
-   for a new tweet. Make sure you include the text of 
-   the tweet (how can you get that?) and a unique 
-   identifier using uuidjs.
-   
-   The handle @Scrimba (or whatever you prefer) and 
-   the profile pic scrimbalogo.png can be hard-coded.
-*/
-
 function handleTweetBtnClick() {
     const tweetObj = {
         handle: `@Scrimba`,
@@ -38,7 +27,7 @@ function handleTweetBtnClick() {
         isRetweeted: false,
         uuid: uuidv4(),
     }
-    tweetsData.push(tweetObj);
+    tweetsData.unshift(tweetObj);
 
     render();
 }
