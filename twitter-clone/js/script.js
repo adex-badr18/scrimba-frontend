@@ -71,7 +71,7 @@ function getFeedHtml() {
                 repliesHtml += `
                     <div class="tweet-reply">
                         <div class="tweet-inner">
-                            <img src="./images/${reply.profilePic}" class="profile-pic">
+                            <img src="./${reply.profilePic}" class="profile-pic">
                             <div>
                                 <p class="handle">${reply.handle}</p>
                                 <p class="tweet-text">${reply.tweetText}</p>
@@ -79,7 +79,7 @@ function getFeedHtml() {
                         </div>
                     </div>
                 `;
-            })
+            });
         }
 
         feedHtml += `
@@ -107,9 +107,15 @@ function getFeedHtml() {
                 </div>
                 <div id="replies-${tweet.uuid}">
                     <!-- REPLIES HERE -->
+                    ${repliesHtml}
                 </div> 
             </div>
         `
+
+        /*Challenge:
+2. Place repliesHtml in its parent div remembering 
+   to update that divs id.
+*/
     })
     return feedHtml;
 }
