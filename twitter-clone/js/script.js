@@ -129,10 +129,10 @@ function getFeedHtml() {
                     </div>            
                 </div>
                 <div class="hidden" id="replies-${tweet.uuid}">
-                <div class="reply-input-container">
-                    <input class="reply-tweet-input" id="reply-tweet-input" type="text" placeholder="Post your reply!">
-                </div>
-                ${repliesHtml}
+                    <div class="reply-input-container">
+                        <input class="reply-tweet-input" id="reply-tweet-input" type="text" placeholder="Post your reply!">
+                    </div>
+                    ${repliesHtml}
                 </div> 
             </div>
         `;
@@ -144,4 +144,4 @@ function render() {
     document.getElementById('feed').innerHTML = getFeedHtml();
 }
 
-render()
+render();

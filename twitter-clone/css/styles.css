@@ -110,12 +110,16 @@ button{
     width: 80%;
 }
 
+.reply-input-container {
+    display: flex;
+}
+
 .reply-tweet-input {
     border: 1px solid #aaaaaa;
     border-radius: 20px;
     padding: 5px 10px;
     font-size: 14px;
-    margin-left: auto;
+    margin: 15px 0 0 60px;
 }
 
 .handle{
