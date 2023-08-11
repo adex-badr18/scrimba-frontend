@@ -29,7 +29,7 @@ Challenge:
 function handleTweetBtnClick() {
     const tweetObj = {
         handle: `@Scrimba`,
-        profilePic: `scrimbalogo.png`,
+        profilePic: `./images/scrimbalogo.png`,
         likes: 0,
         retweets: 0,
         tweetText: tweetInput.value,
@@ -38,7 +38,9 @@ function handleTweetBtnClick() {
         isRetweeted: false,
         uuid: uuidv4(),
     }
-    console.log(tweetObj);
+    tweetsData.push(tweetObj);
+
+    render();
 }
 
 function handleReplyClick(replyId) {
