@@ -105,17 +105,12 @@ function getFeedHtml() {
                         </div>   
                     </div>            
                 </div>
-                <div id="replies-${tweet.uuid}">
+                <div class="hidden" id="replies-${tweet.uuid}">
                     <!-- REPLIES HERE -->
                     ${repliesHtml}
                 </div> 
             </div>
-        `
-
-        /*Challenge:
-2. Place repliesHtml in its parent div remembering 
-   to update that divs id.
-*/
+        `;
     })
     return feedHtml;
 }
