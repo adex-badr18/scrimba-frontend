@@ -129,8 +129,10 @@ function getFeedHtml() {
                     </div>            
                 </div>
                 <div class="hidden" id="replies-${tweet.uuid}">
+                <div class="reply-input-container">
                     <input class="reply-tweet-input" id="reply-tweet-input" type="text" placeholder="Post your reply!">
-                    ${repliesHtml}
+                </div>
+                ${repliesHtml}
                 </div> 
             </div>
         `;
