@@ -110,6 +110,14 @@ button{
     width: 80%;
 }
 
+.reply-tweet-input {
+    border: 1px solid #aaaaaa;
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-size: 14px;
+    margin-left: auto;
+}
+
 .handle{
     font-size: 12px;
     font-weight: 500;
