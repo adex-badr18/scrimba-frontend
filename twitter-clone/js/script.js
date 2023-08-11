@@ -15,7 +15,7 @@ document.addEventListener('click', (e) => {
 
 function handleTweetBtnClick() {
     const tweetInput = document.getElementById('tweet-input');
-    
+
     if (tweetInput.value) {
         const tweetObj = {
             handle: `@Scrimba`,
@@ -129,6 +129,7 @@ function getFeedHtml() {
                     </div>            
                 </div>
                 <div class="hidden" id="replies-${tweet.uuid}">
+                    <input class="reply-tweet-input" id="reply-tweet-input" type="text" placeholder="Post your reply!">
                     ${repliesHtml}
                 </div> 
             </div>
