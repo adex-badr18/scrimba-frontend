@@ -3,10 +3,12 @@ import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
 
 let tweetsData = [];
 
-localStorage.setItem("tweetsData", JSON.stringify(initialTweetsData));
+storeTweetsInLocalStorage();
+// localStorage.setItem("tweetsData", JSON.stringify(initialTweetsData));
 
 if (localStorage.getItem('tweetsData')) {
-    tweetsData = JSON.parse(localStorage.getItem("tweetsData"));   
+    retrieveTweetsFromLocalStorage();
+    // tweetsData = JSON.parse(localStorage.getItem("tweetsData"));   
 }
 
 document.addEventListener('click', (e) => {
@@ -20,6 +22,14 @@ document.addEventListener('click', (e) => {
         handleTweetBtnClick();
     }
 });
+
+function storeTweetsInLocalStorage() {
+    localStorage.setItem("tweetsData", JSON.stringify(initialTweetsData));
+}
+
+function retrieveTweetsFromLocalStorage() {
+    tweetsData = JSON.parse(localStorage.getItem("tweetsData")); 
+}
 
 function handleTweetBtnClick() {
     const tweetInput = document.getElementById('tweet-input');
@@ -37,7 +47,7 @@ function handleTweetBtnClick() {
             uuid: uuidv4(),
         }
         tweetsData.unshift(tweetObj);
-
+        storeTweetsInLocalStorage()
         render();
 
         tweetInput.value = '';
