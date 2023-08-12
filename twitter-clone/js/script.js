@@ -4,11 +4,9 @@ import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
 let tweetsData = [];
 
 storeTweetsInLocalStorage();
-// localStorage.setItem("tweetsData", JSON.stringify(initialTweetsData));
 
 if (localStorage.getItem('tweetsData')) {
     retrieveTweetsFromLocalStorage();
-    // tweetsData = JSON.parse(localStorage.getItem("tweetsData"));   
 }
 
 document.addEventListener('click', (e) => {
@@ -28,7 +26,7 @@ function storeTweetsInLocalStorage() {
 }
 
 function retrieveTweetsFromLocalStorage() {
-    tweetsData = JSON.parse(localStorage.getItem("tweetsData")); 
+    tweetsData = JSON.parse(localStorage.getItem("tweetsData"));
 }
 
 function handleTweetBtnClick() {
@@ -47,7 +45,7 @@ function handleTweetBtnClick() {
             uuid: uuidv4(),
         }
         tweetsData.unshift(tweetObj);
-        storeTweetsInLocalStorage()
+        storeTweetsInLocalStorage();
         render();
 
         tweetInput.value = '';
@@ -72,7 +70,8 @@ function handleReplyClick(replyId) {
                 tweetText: replyInput.value
             });
         }
-        
+
+        storeTweetsInLocalStorage();
         render();
         toggleReplyView(replyId);
     });
@@ -97,6 +96,7 @@ function handleLikeClick(tweetId) {
 
     targetTweetObj.isLiked = !targetTweetObj.isLiked;
 
+    storeTweetsInLocalStorage();
     render();
 }
 
@@ -113,12 +113,15 @@ function handleRetweetClick(tweetId) {
 
     targetTweetObj.isRetweeted = !targetTweetObj.isRetweeted;
 
+    storeTweetsInLocalStorage();
     render();
 }
 
 function getFeedHtml() {
     let feedHtml = '';
 
+    retrieveTweetsFromLocalStorage();
+    
     tweetsData.forEach(tweet => {
         let likeIconClass = '';
         let retweetedIconClass = '';
