@@ -54,17 +54,17 @@ function handleReplyClick(replyId) {
                 tweetText: replyInput.value
             });
         }
+        
         render();
-        document.getElementById(`replies-${replyId}`).classList.toggle('hidden');
-        // toggleReplyView(replyId);
+        toggleReplyView(replyId);
     });
 
-    document.getElementById(`replies-${replyId}`).classList.toggle('hidden');
+    toggleReplyView(replyId);
 }
 
-// function toggleReplyView(replyId) {
-//     document.getElementById(`replies-${replyId}`).classList.toggle('hidden');
-// }
+function toggleReplyView(replyId) {
+    document.getElementById(`replies-${replyId}`).classList.toggle('hidden');
+}
 
 function handleLikeClick(tweetId) {
     const targetTweetObj = tweetsData.filter((tweet) => {
