@@ -55,7 +55,7 @@ function handleReplyClick(replyId) {
             });
         }
         render();
-        // document.getElementById(`replies-${replyId}`).classList.toggle('hidden');
+        document.getElementById(`replies-${replyId}`).classList.toggle('hidden');
         // toggleReplyView(replyId);
     });
 
