@@ -5,7 +5,9 @@ let tweetsData = [];
 
 localStorage.setItem("tweetsData", JSON.stringify(initialTweetsData));
 
-tweetsData = JSON.parse(localStorage.getItem("tweetsData"));
+if (localStorage.getItem('tweetsData')) {
+    tweetsData = JSON.parse(localStorage.getItem("tweetsData"));   
+}
 
 document.addEventListener('click', (e) => {
     if (e.target.dataset.like) {
