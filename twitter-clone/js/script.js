@@ -13,6 +13,10 @@ document.addEventListener('click', (e) => {
     }
 });
 
+function replyTweet() {
+
+}
+
 function handleTweetBtnClick() {
     const tweetInput = document.getElementById('tweet-input');
 
@@ -37,7 +41,28 @@ function handleTweetBtnClick() {
 }
 
 function handleReplyClick(replyId) {
+    const replyInput = document.getElementById('reply-tweet-input');
+    replyInput.focus();
     document.getElementById(`replies-${replyId}`).classList.toggle('hidden');
+
+    replyInput.addEventListener('keyup', e => {
+        e.preventDefault();
+
+        if (e.key === 'Enter') {
+            const targetTweetObj = tweetsData.filter(tweet => {
+                return tweet.uuid === replyId;
+            })[0];
+
+            if (replyInput.value) {
+                targetTweetObj.replies.unshift({
+                    handle: `@Scrimba`,
+                    profilePic: `./images/scrimbalogo.png`,
+                    tweetText: replyInput.value
+                });
+            }
+        }
+        render();
+    });
 }
 
 function handleLikeClick(tweetId) {
@@ -131,6 +156,7 @@ function getFeedHtml() {
                 <div class="hidden" id="replies-${tweet.uuid}">
                     <div class="reply-input-container">
                         <input class="reply-tweet-input" id="reply-tweet-input" type="text" placeholder="Post your reply!">
+                        <div class="reply-btn" id="reply-btn"><i class="fa-solid fa-arrow-right"></i></div>
                     </div>
                     ${repliesHtml}
                 </div> 
@@ -145,3 +171,7 @@ function render() {
 }
 
 render();
+
+// document.getElementById('reply-tweet-input').addEventListener('keyup', (e) => {
+//     console.log(typeof e.key);
+// })
