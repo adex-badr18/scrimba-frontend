@@ -152,7 +152,7 @@ function getFeedHtml() {
                     <div>
                         <div class="tweet-header">
                             <p class="handle">${tweet.handle}</p>
-                            <i class="fa-solid fa-ellipsis-vertical" id="tweet-ellipsis"></i>
+                            <i class="fa-solid fa-ellipsis-vertical" id="ellipsis-${tweet.uuid}"></i>
                         </div>
 
                         <p class="tweet-text">${tweet.tweetText}</p>
