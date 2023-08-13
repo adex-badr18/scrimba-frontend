@@ -3,16 +3,12 @@ import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
 
 let tweetsData = [];
 
-// console.log('Before', tweetsData);
-
 if (localStorage.getItem('tweetsData')) {
     retrieveTweetsFromLocalStorage();
 } else {
     localStorage.setItem("tweetsData", JSON.stringify(initialTweetsData));
     tweetsData = initialTweetsData;
 }
-
-console.log('After', tweetsData)
 
 document.addEventListener('click', (e) => {
     if (e.target.dataset.like) {
@@ -154,7 +150,11 @@ function getFeedHtml() {
                 <div class="tweet-inner">
                     <img src="${tweet.profilePic}" class="profile-pic">
                     <div>
-                        <p class="handle">${tweet.handle}</p>
+                        <div class="tweet-header">
+                            <p class="handle">${tweet.handle}</p>
+                            <i class="fa-solid fa-ellipsis-vertical" id="tweet-ellipsis"></i>
+                        </div>
+
                         <p class="tweet-text">${tweet.tweetText}</p>
                         <div class="tweet-details">
                             <span class="tweet-detail">
