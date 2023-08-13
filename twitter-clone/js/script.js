@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
 
 let tweetsData = [];
 
-storeTweetsInLocalStorage();
+localStorage.setItem("tweetsData", JSON.stringify(initialTweetsData));
 
 if (localStorage.getItem('tweetsData')) {
     retrieveTweetsFromLocalStorage();
@@ -20,14 +20,6 @@ document.addEventListener('click', (e) => {
         handleTweetBtnClick();
     }
 });
-
-function storeTweetsInLocalStorage() {
-    localStorage.setItem("tweetsData", JSON.stringify(initialTweetsData));
-}
-
-function retrieveTweetsFromLocalStorage() {
-    tweetsData = JSON.parse(localStorage.getItem("tweetsData"));
-}
 
 function handleTweetBtnClick() {
     const tweetInput = document.getElementById('tweet-input');
@@ -121,7 +113,7 @@ function getFeedHtml() {
     let feedHtml = '';
 
     retrieveTweetsFromLocalStorage();
-    
+
     tweetsData.forEach(tweet => {
         let likeIconClass = '';
         let retweetedIconClass = '';
@@ -190,6 +182,14 @@ function getFeedHtml() {
 
 function render() {
     document.getElementById('feed').innerHTML = getFeedHtml();
+}
+
+function storeTweetsInLocalStorage() {
+    localStorage.setItem("tweetsData", JSON.stringify(tweetsData));
+}
+
+function retrieveTweetsFromLocalStorage() {
+    tweetsData = JSON.parse(localStorage.getItem("tweetsData"));
 }
 
 render();
