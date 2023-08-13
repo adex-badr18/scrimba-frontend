@@ -3,11 +3,16 @@ import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
 
 let tweetsData = [];
 
-localStorage.setItem("tweetsData", JSON.stringify(initialTweetsData));
+// console.log('Before', tweetsData);
 
 if (localStorage.getItem('tweetsData')) {
     retrieveTweetsFromLocalStorage();
+} else {
+    localStorage.setItem("tweetsData", JSON.stringify(initialTweetsData));
+    tweetsData = initialTweetsData;
 }
+
+console.log('After', tweetsData)
 
 document.addEventListener('click', (e) => {
     if (e.target.dataset.like) {
