@@ -19,6 +19,8 @@ document.addEventListener('click', (e) => {
         handleReplyClick(e.target.dataset.reply);
     } else if (e.target.id === 'tweet-btn') {
         handleTweetBtnClick();
+    } else if (e.target.dataset.ellipsis) {
+        handleReplyClick(e.target.dataset.reply);
     }
 });
 
@@ -153,7 +155,7 @@ function getFeedHtml() {
                         <div class="tweet-header">
                             <p class="handle">${tweet.handle}</p>
                             <div class="pop-up">
-                                <i class="fa-solid fa-ellipsis-vertical" data-ellipsis="${tweet.uuid}"></i>
+                                <i class="fa-solid fa-ellipsis-vertical" id="ellipsis-${tweet.uuid}" data-ellipsis="${tweet.uuid}"></i>
                                 <div class="pop-up-menu hidden" id="pop-up-menu-${tweet.uuid}">
                                     <div class="menu-item" id="menu-item-${tweet.uuid}">
                                         <i class="fa-regular fa-trash-can menu-icon"></i>
