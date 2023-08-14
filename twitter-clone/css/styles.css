@@ -117,6 +117,10 @@ button{
     padding: 10px;
 }
 
+.menu-item:hover {
+    background-color: #e6e6e6;
+}
+
 .tweet-details{
     display: flex;
     font-size: 13px;
