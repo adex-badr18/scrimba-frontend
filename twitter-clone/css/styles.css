@@ -73,11 +73,6 @@ button{
 
 /* tweet */
 
-/* .feed {
-    display: flex;
-    flex-direction: column-reverse;
-} */
-
 .tweet{
     border-top: 1px solid lightgray;
     padding: 20px 0 0 0;

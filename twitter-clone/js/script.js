@@ -24,19 +24,12 @@ document.addEventListener('click', (e) => {
     }
 });
 
-function handleEllipsisClick(id) {
-    document.getElementById(`pop-up-menu-${id}`).classList.toggle('hidden');
+function storeTweetsInLocalStorage() {
+    localStorage.setItem("tweetsData", JSON.stringify(tweetsData));
+}
 
-    document.getElementById(`menu-item-${id}`).addEventListener('click', () => {
-        const targetTweetObj = tweetsData.filter(tweet => {
-            return tweet.uuid === id;
-        })[0];
-
-        tweetsData = tweetsData.filter(tweet => tweet != targetTweetObj);
-        
-        storeTweetsInLocalStorage();
-        render();
-    })
+function retrieveTweetsFromLocalStorage() {
+    tweetsData = JSON.parse(localStorage.getItem("tweetsData"));
 }
 
 function handleTweetBtnClick() {
@@ -127,6 +120,21 @@ function handleRetweetClick(tweetId) {
     render();
 }
 
+function handleEllipsisClick(id) {
+    document.getElementById(`pop-up-menu-${id}`).classList.toggle('hidden');
+
+    document.getElementById(`menu-item-${id}`).addEventListener('click', () => {
+        const targetTweetObj = tweetsData.filter(tweet => {
+            return tweet.uuid === id;
+        })[0];
+
+        tweetsData = tweetsData.filter(tweet => tweet != targetTweetObj);
+        
+        storeTweetsInLocalStorage();
+        render();
+    })
+}
+
 function getFeedHtml() {
     let feedHtml = '';
 
@@ -214,16 +222,4 @@ function render() {
     document.getElementById('feed').innerHTML = getFeedHtml();
 }
 
-function storeTweetsInLocalStorage() {
-    localStorage.setItem("tweetsData", JSON.stringify(tweetsData));
-}
-
-function retrieveTweetsFromLocalStorage() {
-    tweetsData = JSON.parse(localStorage.getItem("tweetsData"));
-}
-
 render();
-
-// document.getElementById('reply-container').addEventListener('click', (e) => {
-//     console.log(e.target);
-// })
