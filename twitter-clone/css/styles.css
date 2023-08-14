@@ -109,6 +109,11 @@ button{
     z-index: 1;
 }
 
+.menu-item {
+    display: flex;
+    justify-content: space-around;
+}
+
 .tweet-details{
     display: flex;
     font-size: 13px;
