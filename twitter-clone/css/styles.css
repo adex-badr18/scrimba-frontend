@@ -101,7 +101,6 @@ button{
 }
 
 .pop-up-menu {
-    /* display: none; */
     position: absolute;
     right: 0;
     min-width: 100px;

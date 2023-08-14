@@ -156,7 +156,7 @@ function getFeedHtml() {
                             <p class="handle">${tweet.handle}</p>
                             <div class="pop-up">
                                 <i class="fa-solid fa-ellipsis-vertical" id="ellipsis-${tweet.uuid}"></i>
-                                <div class="pop-up-menu" id="pop-up-menu-${tweet.uuid}">
+                                <div class="pop-up-menu hidden" id="pop-up-menu-${tweet.uuid}">
                                     <div class="menu-item" id="menu-item-${tweet.uuid}">
                                         <i class="fa-regular fa-trash-can menu-icon"></i>
                                         <span class="menu-text">Delete</span>
