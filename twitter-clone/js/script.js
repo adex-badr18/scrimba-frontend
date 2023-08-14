@@ -21,16 +21,8 @@ document.addEventListener('click', (e) => {
         handleTweetBtnClick();
     } else if (e.target.dataset.ellipsis) {
         handleEllipsisClick(e.target.dataset.ellipsis);
-    }
+    } 
 });
-
-function storeTweetsInLocalStorage() {
-    localStorage.setItem("tweetsData", JSON.stringify(tweetsData));
-}
-
-function retrieveTweetsFromLocalStorage() {
-    tweetsData = JSON.parse(localStorage.getItem("tweetsData"));
-}
 
 function handleTweetBtnClick() {
     const tweetInput = document.getElementById('tweet-input');
@@ -129,10 +121,10 @@ function handleEllipsisClick(id) {
         })[0];
 
         tweetsData = tweetsData.filter(tweet => tweet != targetTweetObj);
-        
+
         storeTweetsInLocalStorage();
         render();
-    })
+    });
 }
 
 function getFeedHtml() {
@@ -220,6 +212,14 @@ function getFeedHtml() {
 
 function render() {
     document.getElementById('feed').innerHTML = getFeedHtml();
+}
+
+function storeTweetsInLocalStorage() {
+    localStorage.setItem("tweetsData", JSON.stringify(tweetsData));
+}
+
+function retrieveTweetsFromLocalStorage() {
+    tweetsData = JSON.parse(localStorage.getItem("tweetsData"));
 }
 
 render();
