@@ -20,9 +20,13 @@ document.addEventListener('click', (e) => {
     } else if (e.target.id === 'tweet-btn') {
         handleTweetBtnClick();
     } else if (e.target.dataset.ellipsis) {
-        handleReplyClick(e.target.dataset.reply);
+        handleEllipsisClick(e.target.dataset.ellipsis);
     }
 });
+
+function handleEllipsisClick(id) {
+    document.getElementById(`pop-up-menu-${id}`).classList.toggle('hidden');
+}
 
 function handleTweetBtnClick() {
     const tweetInput = document.getElementById('tweet-input');
