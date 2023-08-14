@@ -25,13 +25,18 @@ document.addEventListener('click', (e) => {
 });
 
 function handleEllipsisClick(id) {
-    const targetTweetObj = tweetsData.filter(tweet => {
-        return tweet.uuid === id;
-    })[0];
-
     document.getElementById(`pop-up-menu-${id}`).classList.toggle('hidden');
 
-    console.log(targetTweetObj);
+    document.getElementById(`menu-item-${id}`).addEventListener('click', () => {
+        const targetTweetObj = tweetsData.filter(tweet => {
+            return tweet.uuid === id;
+        })[0];
+
+        tweetsData = tweetsData.filter(tweet => tweet != targetTweetObj);
+        
+        storeTweetsInLocalStorage();
+        render();
+    })
 }
 
 function handleTweetBtnClick() {
