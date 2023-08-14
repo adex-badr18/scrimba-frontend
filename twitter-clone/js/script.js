@@ -145,6 +145,8 @@ function getFeedHtml() {
             });
         }
 
+        let dropdownMenu = '';
+
         feedHtml += `
             <div class="tweet">
                 <div class="tweet-inner">
@@ -152,7 +154,15 @@ function getFeedHtml() {
                     <div>
                         <div class="tweet-header">
                             <p class="handle">${tweet.handle}</p>
-                            <i class="fa-solid fa-ellipsis-vertical" id="ellipsis-${tweet.uuid}"></i>
+                            <div class="pop-up">
+                                <i class="fa-solid fa-ellipsis-vertical" id="ellipsis-${tweet.uuid}"></i>
+                                <div class="pop-up-menu" id="pop-up-menu-${tweet.uuid}">
+                                    <div class="menu-item" id="menu-item-${tweet.uuid}">
+                                        <i class="fa-regular fa-trash-can menu-icon"></i>
+                                        <span class="menu-text">Delete</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <p class="tweet-text">${tweet.tweetText}</p>
