@@ -25,7 +25,13 @@ document.addEventListener('click', (e) => {
 });
 
 function handleEllipsisClick(id) {
+    const targetTweetObj = tweetsData.filter(tweet => {
+        return tweet.uuid === id;
+    })[0];
+
     document.getElementById(`pop-up-menu-${id}`).classList.toggle('hidden');
+
+    console.log(targetTweetObj);
 }
 
 function handleTweetBtnClick() {
