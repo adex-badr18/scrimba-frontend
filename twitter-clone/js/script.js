@@ -22,7 +22,18 @@ document.addEventListener('click', (e) => {
     } else if (e.target.dataset.ellipsis) {
         handleEllipsisClick(e.target.dataset.ellipsis);
     } else if (e.target.dataset.replyBtn) {
+        console.log(e.target.className.includes('right'));
         replyTweet(e.target.dataset.replyBtn);
+    } else if (!e.target.className.includes('pop-up')) {
+        const popupElements = [...document.querySelectorAll('.pop-up-menu')];
+
+        const targetPopups = popupElements.filter(element => {
+            return !element.classList.contains('hidden');
+        });
+
+        targetPopups.forEach(element => {
+            element.classList.add('hidden');
+        })
     }
 });
 
