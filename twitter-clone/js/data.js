@@ -33,7 +33,7 @@ export const tweetsData = [
         isRetweeted: false,
         uuid: '3c23454ee-c0f5-9g9g-9c4b-77835tgs2',
     },
-        {
+    {
         handle: `@NoobCoder12`,
         profilePic: `images/flower.png`,
         likes: 10,
@@ -54,5 +54,5 @@ export const tweetsData = [
         isLiked: false,
         isRetweeted: false,
         uuid: '8hy671sff-c0f5-4545-9c4b-1237gyys45',
-    },     
+    }     
 ]

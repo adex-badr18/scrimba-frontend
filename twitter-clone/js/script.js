@@ -21,7 +21,9 @@ document.addEventListener('click', (e) => {
         handleTweetBtnClick();
     } else if (e.target.dataset.ellipsis) {
         handleEllipsisClick(e.target.dataset.ellipsis);
-    } 
+    } else if (e.target.dataset.replyBtn) {
+        replyTweet(e.target.dataset.replyBtn);
+    }
 });
 
 function handleTweetBtnClick() {
@@ -47,30 +49,26 @@ function handleTweetBtnClick() {
     }
 }
 
-function handleReplyClick(replyId) {
+function replyTweet(replyId) {
     const replyInput = document.getElementById(`reply-input-${replyId}`);
-    const replyBtn = document.getElementById(`reply-${replyId}`);
+    const targetTweetObj = tweetsData.filter(tweet => {
+        return tweet.uuid === replyId;
+    })[0];
 
-    replyBtn.addEventListener('click', e => {
-        e.preventDefault();
+    if (replyInput.value) {
+        targetTweetObj.replies.unshift({
+            handle: `@Scrimba`,
+            profilePic: `./images/scrimbalogo.png`,
+            tweetText: replyInput.value
+        });
+    }
 
-        const targetTweetObj = tweetsData.filter(tweet => {
-            return tweet.uuid === replyId;
-        })[0];
+    storeTweetsInLocalStorage();
+    render();
+    toggleReplyView(replyId);
+}
 
-        if (replyInput.value) {
-            targetTweetObj.replies.unshift({
-                handle: `@Scrimba`,
-                profilePic: `./images/scrimbalogo.png`,
-                tweetText: replyInput.value
-            });
-        }
-
-        storeTweetsInLocalStorage();
-        render();
-        toggleReplyView(replyId);
-    });
-
+function handleReplyClick(replyId) {
     toggleReplyView(replyId);
 }
 
@@ -130,7 +128,9 @@ function handleEllipsisClick(id) {
 function getFeedHtml() {
     let feedHtml = '';
 
-    retrieveTweetsFromLocalStorage();
+    if (localStorage.getItem('tweetsData')) {
+        retrieveTweetsFromLocalStorage();
+    }
 
     tweetsData.forEach(tweet => {
         let likeIconClass = '';
@@ -200,7 +200,7 @@ function getFeedHtml() {
                 <div class="hidden" id="replies-${tweet.uuid}">
                     <div class="reply-input-container">
                         <input class="reply-tweet-input" id="reply-input-${tweet.uuid}" type="text" placeholder="Post your reply!">
-                        <div class="reply-btn"><i id="reply-${tweet.uuid}" class="fa-solid fa-arrow-right"></i></div>
+                        <div class="reply-btn"><i id="reply-${tweet.uuid}" data-reply-btn="${tweet.uuid}" class="fa-solid fa-arrow-right"></i></div>
                     </div>
                     ${repliesHtml}
                 </div> 
