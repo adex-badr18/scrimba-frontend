@@ -10,12 +10,12 @@ header {
     background: url('../images/burger-bg.png');
     background-repeat: no-repeat;
     background-size: cover;
+    padding: 60px 45px;
 }
 
 header, main {
     width: 570px;
     margin: 0 auto;
-    border: 1px solid limegreen;
 }
 
 main {
