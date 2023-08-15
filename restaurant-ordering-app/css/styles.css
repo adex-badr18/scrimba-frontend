@@ -9,7 +9,7 @@ body, * {
 header {
     background: url('../images/burger-bg.png');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     padding: 60px 45px;
     color: #FFFFFF;
 }
@@ -21,4 +21,15 @@ header, main {
 
 main {
     padding: 45px;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    border: 1px solid blue;
+}
+
+p {
+    font-size: 22px;
 }
