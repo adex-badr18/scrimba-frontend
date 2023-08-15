@@ -4,7 +4,7 @@ body, * {
     font-family: 'Smythe', cursive;
     font-size: 18px;
     background-color: #FFFFFF;
-    
+    box-sizing: border-box;
 }
 
 header {
