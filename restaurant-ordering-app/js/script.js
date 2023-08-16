@@ -35,6 +35,7 @@ function addMenu(menuId) {
                 <input type="text" class="qty-input" id="qty-${order.id}" value="${order.qty}" min="1" readonly>
             </div>
             <h4>$${order.price}</h4>
+            <h4>= $${order.price * order.qty}</h4>
         </div>
     `;
 
