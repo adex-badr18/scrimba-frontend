@@ -119,10 +119,14 @@ h4 {
 }
 
 .qty-input {
-    width: 50px;
+    width: 35px;
     padding: 5px;
     font-size: 16px;
     font-family: Verdana, sans-serif;
+    text-align: center;
+    background-color: #EFEFEF;
+    border: none;
+
 }
 
 .increase-qty, 
