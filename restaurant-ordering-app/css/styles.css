@@ -135,6 +135,7 @@ button {
     border-radius: 5px;
     box-shadow: 0 0 250px 0 #757575;
     margin: 0 auto;
+    position: relative;
 }
 
 .modal h2 {
@@ -142,6 +143,15 @@ button {
     text-align: center;
     font-size: 24px;
     margin: 20px;
+}
+
+.close-modal {
+    color: red;
+    font-size: 26px;
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    cursor: pointer;
 }
 
 .modal form {
