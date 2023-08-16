@@ -104,10 +104,8 @@ h4 {
     margin-bottom: 8px;
 }
 
-.order-item span {
-    font-family: Verdana, sans-serif;
-    font-size: 12px;
-    color: #BBBBBB;
+.delete-order {
+    color: #FF0000;
     cursor: pointer;
 }
 
