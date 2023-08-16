@@ -132,6 +132,7 @@ button {
 }
 
 .modal {
+    display: none;
     padding: 30px 15px 15px;
     width: 510px;
     border-radius: 5px;
@@ -182,6 +183,7 @@ button {
 }
 
 .order-message {
+    display: none;
     background-color: #ECFDF5;
     color: #065F46;
     text-align: center;
