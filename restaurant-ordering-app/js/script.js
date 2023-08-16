@@ -15,8 +15,9 @@ function addMenu(menuId) {
         return menu.id === Number(menuId);
     })[0];
 
-    orderArray.push(targetMenuObj);
-    console.log(orderArray)
+    if (!orderArray.includes(targetMenuObj)) {
+        orderArray.push(targetMenuObj);
+    }
 
     orderArray.forEach(order => {
         orderHtml += `
