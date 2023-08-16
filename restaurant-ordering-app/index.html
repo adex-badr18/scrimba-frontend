@@ -58,17 +58,43 @@
                 <h3>Your order</h3>
 
                 <div class="order-list" id="order-list">
-                    <!-- <div class="order-item">
-                        <h3>Pizza</h3>
-                        <span>remove</span>
-                        <h4>$14</h4>
-                    </div>
+                    <table>
+                        <tr>
+                            <td>
+                                <h3>Hamburger</h3>
+                            </td>
+                            <td>
+                                <h4>$12</h4>
+                            </td>
+                            <td class="qty-col">
+                                <i class="fa-solid fa-minus decrease-qty"></i>
+                                <input type="text" class="qty-input" id="qty-${order.id}" value="" min="1" readonly>
+                                <i class="fa-regular fa-plus increase-qty"></i>
+                            </td>
+                            <td>
+                                <h4>$60</h4>
+                            </td>
+                            <td><i class="fa-solid fa-trash-can delete-order"></i></td>
+                        </tr>
 
-                    <div class="order-item">
-                        <h3>Hamburger</h3>
-                        <span>remove</span>
-                        <h4>$14</h4>
-                    </div> -->
+                        <tr>
+                            <td>
+                                <h3>Hamburger</h3>
+                            </td>
+                            <td>
+                                <h4>$12</h4>
+                            </td>
+                            <td class="qty-col">
+                                <i class="fa-solid fa-minus decrease-qty"></i>
+                                <input type="text" class="qty-input" id="qty-${order.id}" value="" min="1" readonly>
+                                <i class="fa-regular fa-plus increase-qty"></i>
+                            </td>
+                            <td>
+                                <h4>$60</h4>
+                            </td>
+                            <td><i class="fa-solid fa-trash-can delete-order"></i></td>
+                        </tr>
+                    </table>
                 </div>
 
                 <div class="order-amount">
