@@ -1,8 +1,42 @@
 import { menuArray } from "./data.js";
 
 let menuData = menuArray;
+let orderHtml = '';
 
+document.addEventListener('click', e => {
+    if (e.target.dataset.add) {
+        addMenu(e.target.dataset.add);
+    }
+});
 
+function addMenu(menuId) {
+    const targetMenuObj = menuData.filter(menu => {
+        return menu.id === Number(menuId);
+    })[0];
+
+    orderHtml += `
+        <div class="order-item">
+            <h3>${targetMenuObj.name}</h3>
+            <span>remove</span>
+            <h4>$${targetMenuObj.price}</h4>
+        </div>
+    `;
+
+    document.getElementById('order-list').innerHTML = orderHtml;
+}
+
+function getOrderHtml(menuObj) {
+    let orderHtml = `
+        <div class="order-item">
+            <h3>${menuObj.name}</h3>
+            <span>remove</span>
+            <h4>$${menuObj.price}</h4>
+        </div>
+    `;
+
+    console.log(orderHtml)
+    return orderHtml;
+}
 
 function getMenuHtml() {
     let menuHtml = '';
