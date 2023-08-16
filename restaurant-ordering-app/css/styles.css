@@ -20,7 +20,7 @@ header, main {
 }
 
 main {
-    padding: 45px;
+    padding: 10px 45px 45px;
 }
 
 h1 {
@@ -34,14 +34,14 @@ h1 {
 }
 
 .menu-list {
-    margin: 15px 0 40px 0;
+    margin: 5px 0 40px 0;
 }
 
 .menu-item {
     display: flex;
     align-items: center;
     gap: 25px;
-    padding: 20px 0;
+    padding: 45px 0;
     border-bottom: 1px solid #D2D2D2;
 }
 
