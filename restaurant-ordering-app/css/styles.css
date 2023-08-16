@@ -36,7 +36,7 @@ h1 {
 .menu-item {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 25px;
 }
 
 .add-icon {
