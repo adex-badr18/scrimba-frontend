@@ -164,3 +164,18 @@ button {
     font-size: 20px;
     margin-top: 20px;
 }
+
+.order-message {
+    background-color: #ECFDF5;
+    color: #065F46;
+    text-align: center;
+    width: 510px;
+    padding: 40px;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+.order-message h2 {
+    font-size: 32px;
+    font-weight: 400;
+}
