@@ -97,10 +97,6 @@ h4 {
     text-align: center;
 }
 
-.orders h4 {
-    margin-left: auto;
-}
-
 .order-item {
     display: flex;
     align-items: center;
@@ -119,6 +115,7 @@ h4 {
     display: flex;
     align-items: center;
     gap: 10px;
+    margin-left: auto;
 }
 
 .qty-input {
@@ -145,6 +142,10 @@ h4 {
     display: flex;
     padding-top: 20px;
     margin-bottom: 40px;
+}
+
+.order-amount h4 {
+    margin-left: auto;
 }
 
 button {
