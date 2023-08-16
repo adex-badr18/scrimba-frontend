@@ -21,6 +21,8 @@ header, main {
 
 main {
     padding: 10px 45px 45px;
+    position: relative;
+    user-select: none;
 }
 
 h1 {
@@ -133,9 +135,13 @@ button {
     padding: 30px 15px 15px;
     width: 510px;
     border-radius: 5px;
-    box-shadow: 0 0 250px 0 #757575;
+    box-shadow: 0 0 250px 10px #757575;
     margin: 0 auto;
-    position: relative;
+    position: fixed;
+    top: 100px;
+    right: 0;
+    left: 0;
+    background-color: #FFFFFF;
 }
 
 .modal h2 {
