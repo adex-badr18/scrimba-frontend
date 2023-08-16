@@ -128,3 +128,19 @@ button {
     color: #FFFFFF;
     border: none;
 }
+
+#modal {
+    font-family: Verdana, sans-serif;
+    padding: 30px 15px 15px;
+    width: 510px;
+    border-radius: 5px;
+    box-shadow: 0 0 250px 0 #757575;
+    margin: 0 auto;
+}
+
+.modal form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+}
