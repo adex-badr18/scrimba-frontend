@@ -110,3 +110,9 @@ h4 {
     color: #BBBBBB;
     cursor: pointer;
 }
+
+.order-amount {
+    display: flex;
+    padding-top: 20px;
+    margin-bottom: 40px;
+}
