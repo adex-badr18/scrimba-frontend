@@ -127,6 +127,19 @@ h4 {
     font-family: Verdana, sans-serif;
 }
 
+.increase-qty, 
+.decrease-qty {
+    cursor: pointer;
+}
+
+.increase-qty {
+    color: #065F46;
+}
+
+.decrease-qty {
+    color: #FF0000;
+}
+
 .order-amount {
     display: flex;
     padding-top: 20px;
