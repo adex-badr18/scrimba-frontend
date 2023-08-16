@@ -6,7 +6,7 @@ let orderArray = [];
 document.addEventListener('click', e => {
     if (e.target.dataset.add) {
         addMenu(e.target.dataset.add);
-    } 
+    }
     // else if (e.target.dataset.increaseQty) {
     //     incrementQty(e.target.dataset.increaseQty);
     // } else if (e.target.dataset.decreaseQty) {
@@ -31,18 +31,24 @@ function addMenu(menuId) {
 
     orderArray.forEach(order => {
         orderHtml += `
-        <div class="order-item">
-            <h3>${order.name}</h3>
-            <h4>$${order.price}</h4>
-            <div class="order-qty">
-                <i class="fa-solid fa-minus decrease-qty"></i>
-                <input type="text" class="qty-input" id="qty-${order.id}" value="${order.qty}" min="1" readonly>
-                <i class="fa-regular fa-plus increase-qty"></i>
-            </div>
-            <h4>$${order.price * order.qty}</h4>
-            <i class="fa-solid fa-trash-can delete-order"></i>
-        </div>
-    `;
+            <tr>
+                <td>
+                    <h3>${order.name}</h3>
+                </td>
+                <td>
+                    <h4>$${order.price}</h4>
+                </td>
+                <td class="qty-col">
+                    <i class="fa-solid fa-minus decrease-qty"></i>
+                    <input type="text" class="qty-input" id="qty-${order.id}" value="${order.qty}" min="1" readonly>
+                    <i class="fa-regular fa-plus increase-qty"></i>
+                </td>
+                <td>
+                    <h4>$${order.price * order.qty}</h4>
+                </td>
+                <td><i class="fa-solid fa-trash-can delete-order"></i></td>
+            </tr>
+        `;
 
     })
 
