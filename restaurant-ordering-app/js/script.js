@@ -1,7 +1,7 @@
 import { menuArray } from "./data.js";
 
 let menuData = menuArray;
-let orderHtml = '';
+let orderArray = [];
 
 document.addEventListener('click', e => {
     if (e.target.dataset.add) {
@@ -10,17 +10,24 @@ document.addEventListener('click', e => {
 });
 
 function addMenu(menuId) {
+    let orderHtml = '';
     const targetMenuObj = menuData.filter(menu => {
         return menu.id === Number(menuId);
     })[0];
 
-    orderHtml += `
+    orderArray.push(targetMenuObj);
+    console.log(orderArray)
+
+    orderArray.forEach(order => {
+        orderHtml += `
         <div class="order-item">
-            <h3>${targetMenuObj.name}</h3>
+            <h3>${order.name}</h3>
             <span>remove</span>
-            <h4>$${targetMenuObj.price}</h4>
+            <h4>$${order.price}</h4>
         </div>
     `;
+
+    })
 
     document.getElementById('order-list').innerHTML = orderHtml;
 }
