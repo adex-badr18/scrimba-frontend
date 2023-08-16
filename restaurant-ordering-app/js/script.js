@@ -7,7 +7,7 @@ function getMenuHtml() {
 
     menuData.forEach(menu => {
         const ingredients = menu.ingredients.join(', ');
-        menuHtml = `
+        menuHtml += `
             <div class="menu-item">
                 <div class="menu-image">${menu.emoji}</div>
                 <div class="menu-details">
@@ -25,3 +25,8 @@ function getMenuHtml() {
     return menuHtml;
 }
 
+function render() {
+    document.getElementById('menu-list').innerHTML = getMenuHtml();
+}
+
+render();
