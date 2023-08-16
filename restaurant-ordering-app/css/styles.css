@@ -61,6 +61,7 @@ h1 {
 .add-icon {
     font-size: 20px;
     color: #3C3C3C;
+    cursor: pointer;
 }
 
 .menu-image {
