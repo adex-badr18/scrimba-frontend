@@ -6,7 +6,12 @@ let orderArray = [];
 document.addEventListener('click', e => {
     if (e.target.dataset.add) {
         addMenu(e.target.dataset.add);
-    }
+    } 
+    // else if (e.target.dataset.increaseQty) {
+    //     incrementQty(e.target.dataset.increaseQty);
+    // } else if (e.target.dataset.decreaseQty) {
+    //     incrementQty(e.target.dataset.decreaseQty);
+    // }
 });
 
 function addMenu(menuId) {
@@ -28,14 +33,14 @@ function addMenu(menuId) {
         orderHtml += `
         <div class="order-item">
             <h3>${order.name}</h3>
-            <span>remove</span>
-            <div class="order-qty">
-                <i class="fa-solid fa-plus increase-qty"></i>
-                <i class="fa-solid fa-minus decrease-qty"></i>
-                <input type="text" class="qty-input" id="qty-${order.id}" value="${order.qty}" min="1" readonly>
-            </div>
             <h4>$${order.price}</h4>
-            <h4>= $${order.price * order.qty}</h4>
+            <div class="order-qty">
+                <i class="fa-solid fa-circle-minus decrease-qty"></i>
+                <input type="text" class="qty-input" id="qty-${order.id}" value="${order.qty}" min="1" readonly>
+                <i class="fa-regular fa-circle-plus increase-qty"></i>
+            </div>
+            <h4>$${order.price * order.qty}</h4>
+            <span>remove</span>
         </div>
     `;
 
@@ -53,7 +58,6 @@ function getOrderHtml(menuObj) {
         </div>
     `;
 
-    console.log(orderHtml)
     return orderHtml;
 }
 
