@@ -2,6 +2,8 @@ import { menuArray } from "./data.js";
 
 let menuData = menuArray;
 
+
+
 function getMenuHtml() {
     let menuHtml = '';
 
@@ -25,8 +27,8 @@ function getMenuHtml() {
     return menuHtml;
 }
 
-function render() {
-    document.getElementById('menu-list').innerHTML = getMenuHtml();
+function render(markupFunction, elementId) {
+    document.getElementById(elementId).innerHTML = markupFunction();
 }
 
-render();
+render(getMenuHtml, 'menu-list');
