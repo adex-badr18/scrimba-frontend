@@ -35,12 +35,12 @@ function addMenu(menuId) {
             <h3>${order.name}</h3>
             <h4>$${order.price}</h4>
             <div class="order-qty">
-                <i class="fa-solid fa-circle-minus decrease-qty"></i>
+                <i class="fa-solid fa-minus decrease-qty"></i>
                 <input type="text" class="qty-input" id="qty-${order.id}" value="${order.qty}" min="1" readonly>
-                <i class="fa-regular fa-circle-plus increase-qty"></i>
+                <i class="fa-regular fa-plus increase-qty"></i>
             </div>
             <h4>$${order.price * order.qty}</h4>
-            <span>remove</span>
+            <i class="fa-solid fa-trash-can delete-order"></i>
         </div>
     `;
 
