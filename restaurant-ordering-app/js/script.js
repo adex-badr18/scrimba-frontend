@@ -16,7 +16,12 @@ function addMenu(menuId) {
     })[0];
 
     if (!orderArray.includes(targetMenuObj)) {
+        targetMenuObj.qty = 1;
         orderArray.push(targetMenuObj);
+        console.log(orderArray)
+    } else {
+        targetMenuObj.qty++;
+        console.log(targetMenuObj)
     }
 
     orderArray.forEach(order => {
