@@ -114,6 +114,11 @@ h4 {
     cursor: pointer;
 }
 
+.order-qty {
+    display: flex;
+    gap: 10px;
+}
+
 .order-amount {
     display: flex;
     padding-top: 20px;
