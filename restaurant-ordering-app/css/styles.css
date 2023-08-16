@@ -2,7 +2,7 @@ body, * {
     margin: 0;
     padding: 0;
     font-family: 'Smythe', cursive;
-    font-size: 18px;
+    font-size: 16px;
     box-sizing: border-box;
 }
 
@@ -29,7 +29,7 @@ h1 {
     letter-spacing: 1px;
 }
 
-p {
+.tagline {
     font-size: 23px;
 }
 
@@ -53,4 +53,20 @@ p {
 
 .menu-image {
     font-size: 78px;
+}
+
+.menu-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+h3 {
+    font-size: 28px;
+    font-weight: 400;
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: 400;
 }
