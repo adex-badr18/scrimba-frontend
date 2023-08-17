@@ -113,6 +113,10 @@ tr:last-of-type {
     border-bottom: 2px solid #3C3C3C;
 }
 
+.meal-name {
+    width: 30%;
+}
+
 .qty-col {
     display: flex;
     align-items: center;

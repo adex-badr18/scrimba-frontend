@@ -32,7 +32,7 @@ function addMenu(menuId) {
     orderArray.forEach(order => {
         orderHtml += `
             <tr>
-                <td>
+                <td class="meal-name">
                     <h3>${order.name}</h3>
                 </td>
                 <td>
