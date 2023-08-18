@@ -19,11 +19,7 @@ function removeOrder(orderId) {
         return order.id != orderId;
     });
     
-    renderOrder();
-
-    if (!orderArray) {
-        ordersContainer.style.display = 'none';
-    }
+    renderOrders();
 }
 
 function addOrder(menuId) {
@@ -35,11 +31,11 @@ function addOrder(menuId) {
     if (!orderArray.includes(targetMenuObj)) {
         orderArray.push(targetMenuObj);
         
-        renderOrder();
+        renderOrders();
     }
 }
 
-function renderOrder() {
+function renderOrders() {
     let orderHtml = '';
     amount = 0;
     orderArray.forEach(order => {
