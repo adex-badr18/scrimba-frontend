@@ -17,6 +17,8 @@ document.addEventListener('click', e => {
         }
     } else if (e.target.id === 'checkout-btn') {
         modal.style.display = 'block';
+    } else if (e.target.id === 'close-modal-btn' || e.target.localName === 'main' || e.target.localName === 'header' || e.target.localName === 'body') {
+        modal.style.display = 'none';
     }
 });
 
