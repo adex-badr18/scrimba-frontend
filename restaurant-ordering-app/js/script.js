@@ -12,6 +12,9 @@ document.addEventListener('click', e => {
         addOrder(e.target.dataset.add);
     } else if (e.target.dataset.removeOrder) {
         removeOrder(e.target.dataset.removeOrder);
+        if (orderArray.length === 0) {
+            ordersContainer.style.display = 'none';
+        }
     } else if (e.target.id === 'checkout-btn') {
         modal.style.display = 'block';
     }
@@ -21,7 +24,7 @@ function removeOrder(orderId) {
     orderArray = orderArray.filter(order => {
         return order.id != orderId;
     });
-    
+
     renderOrders();
 }
 
@@ -33,7 +36,7 @@ function addOrder(menuId) {
 
     if (!orderArray.includes(targetMenuObj)) {
         orderArray.push(targetMenuObj);
-        
+
         renderOrders();
     }
 }
