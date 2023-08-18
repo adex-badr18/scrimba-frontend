@@ -2,6 +2,7 @@ import { menuArray } from "./data.js";
 
 let menuData = menuArray;
 let orderArray = [];
+let amount = 0;
 
 document.addEventListener('click', e => {
     if (e.target.dataset.add) {
@@ -17,6 +18,7 @@ function addOrder(menuId) {
 
     if (!orderArray.includes(targetMenuObj)) {
         orderArray.push(targetMenuObj);
+        amount += targetMenuObj.price
     }
 
     orderArray.forEach(order => {
@@ -27,10 +29,10 @@ function addOrder(menuId) {
             <h4>$${order.price}</h4>
         </div>
     `;
-
     })
 
     document.getElementById('order-list').innerHTML = orderHtml;
+    document.getElementById('total-amount').textContent = `$${amount}`;
 }
 
 function getOrderHtml(menuObj) {
