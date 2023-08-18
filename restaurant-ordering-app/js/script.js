@@ -40,6 +40,8 @@ function handlePayClick() {
 
     successMsg.style.display = 'block';
     orderArray = [];
+
+    document.getElementById('payment-form').reset();
 }
 
 function removeOrder(orderId) {
