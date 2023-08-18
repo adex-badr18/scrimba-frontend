@@ -109,8 +109,8 @@ tr:first-of-type {
 }
 
 tr:last-of-type {
-    padding-bottom: 30px;
-    border-bottom: 2px solid #3C3C3C;
+    padding-top: 30px;
+    border-top: 2px solid #3C3C3C;
 }
 
 .meal-name {
