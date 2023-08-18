@@ -135,6 +135,7 @@ button {
     background-color: #16DB99;
     color: #FFFFFF;
     border: none;
+    cursor: pointer;
 }
 
 .modal {
