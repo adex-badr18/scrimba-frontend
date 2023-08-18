@@ -3,13 +3,28 @@ import { menuArray } from "./data.js";
 let menuData = menuArray;
 let orderArray = [];
 let amount = 0;
+const ordersContainer = document.getElementById('orders');
 
 document.addEventListener('click', e => {
     if (e.target.dataset.add) {
-        document.getElementById('orders').style.display = 'block';
+        ordersContainer.style.display = 'block';
         addOrder(e.target.dataset.add);
+    } else if (e.target.dataset.removeOrder) {
+        removeOrder(e.target.dataset.removeOrder);
     }
 });
+
+function removeOrder(orderId) {
+    orderArray = orderArray.filter(order => {
+        return order.id != orderId;
+    });
+    
+    renderOrder();
+
+    if (!orderArray) {
+        ordersContainer.style.display = 'none';
+    }
+}
 
 function addOrder(menuId) {
     let orderHtml = '';
@@ -19,34 +34,27 @@ function addOrder(menuId) {
 
     if (!orderArray.includes(targetMenuObj)) {
         orderArray.push(targetMenuObj);
-        amount += targetMenuObj.price
+        
+        renderOrder();
     }
+}
 
+function renderOrder() {
+    let orderHtml = '';
+    amount = 0;
     orderArray.forEach(order => {
         orderHtml += `
-        <div class="order-item">
-            <h3>${order.name}</h3>
-            <span>remove</span>
-            <h4>$${order.price}</h4>
-        </div>
-    `;
+            <div class="order-item">
+                <h3>${order.name}</h3>
+                <span data-remove-order="${order.id}">remove</span>
+                <h4>$${order.price}</h4>
+            </div>
+        `;
+        amount += order.price
     })
 
     document.getElementById('order-list').innerHTML = orderHtml;
     document.getElementById('total-amount').textContent = `$${amount}`;
-}
-
-function getOrderHtml(menuObj) {
-    let orderHtml = `
-        <div class="order-item">
-            <h3>${menuObj.name}</h3>
-            <span>remove</span>
-            <h4>$${menuObj.price}</h4>
-        </div>
-    `;
-
-    console.log(orderHtml)
-    return orderHtml;
 }
 
 function getMenuHtml() {
