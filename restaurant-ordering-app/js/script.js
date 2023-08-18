@@ -5,10 +5,12 @@ let orderArray = [];
 let amount = 0;
 const ordersContainer = document.getElementById('orders');
 const modal = document.getElementById('modal');
+const successMsg = document.getElementById('success-msg')
 
 document.addEventListener('click', e => {
     if (e.target.dataset.add) {
         ordersContainer.style.display = 'block';
+        successMsg.style.display = 'none';
         addOrder(e.target.dataset.add);
     } else if (e.target.dataset.removeOrder) {
         removeOrder(e.target.dataset.removeOrder);
@@ -19,8 +21,26 @@ document.addEventListener('click', e => {
         modal.style.display = 'block';
     } else if (e.target.id === 'close-modal-btn' || e.target.localName === 'main' || e.target.localName === 'header' || e.target.localName === 'body') {
         modal.style.display = 'none';
+    } else if (e.target.id === 'pay-btn') {
+        e.preventDefault();
+        handlePayClick();
     }
 });
+
+function handlePayClick() {
+    const name = document.getElementById('full-name').value;
+
+    modal.style.display = 'none';
+
+    ordersContainer.style.display = 'none'
+
+    successMsg.innerHTML = `
+        <h2>Thanks, ${name}! Your order is on its way! 🎉</h2>
+    `;
+
+    successMsg.style.display = 'block';
+    orderArray = [];
+}
 
 function removeOrder(orderId) {
     orderArray = orderArray.filter(order => {
