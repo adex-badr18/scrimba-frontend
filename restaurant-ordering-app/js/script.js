@@ -4,6 +4,7 @@ let menuData = menuArray;
 let orderArray = [];
 let amount = 0;
 const ordersContainer = document.getElementById('orders');
+const modal = document.getElementById('modal');
 
 document.addEventListener('click', e => {
     if (e.target.dataset.add) {
@@ -11,6 +12,8 @@ document.addEventListener('click', e => {
         addOrder(e.target.dataset.add);
     } else if (e.target.dataset.removeOrder) {
         removeOrder(e.target.dataset.removeOrder);
+    } else if (e.target.id === 'checkout-btn') {
+        modal.style.display = 'block';
     }
 });
 
