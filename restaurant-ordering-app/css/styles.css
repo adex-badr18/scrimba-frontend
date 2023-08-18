@@ -184,6 +184,14 @@ button {
     border-radius: 5px;
 }
 
+.modal input:valid {
+    border: 3px solid #008000;
+}
+
+.modal input:invalid {
+    border: 3px solid #FF0000;
+}
+
 .modal button {
     font-size: 20px;
     margin-top: 20px;
