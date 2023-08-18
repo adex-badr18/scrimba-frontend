@@ -6,6 +6,7 @@ let amount = 0;
 
 document.addEventListener('click', e => {
     if (e.target.dataset.add) {
+        document.getElementById('orders').style.display = 'block';
         addOrder(e.target.dataset.add);
     }
 });
