@@ -61,7 +61,6 @@ h1 {
 .add-icon {
     font-size: 20px;
     color: #3C3C3C;
-    cursor: pointer;
 }
 
 .menu-image {
@@ -88,78 +87,37 @@ h4 {
     color: #8B8B8B;
 }
 
+.order-list {
+    border-bottom: 2px solid #393333;
+    padding-bottom: 20px;
+}
+
 .orders h3 {
     text-align: center;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
+.orders h4 {
+    margin-left: auto;
 }
 
-tr {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px 0;
-}
-
-tr:first-of-type {
-    margin-top: 30px;
-}
-
-tr:last-of-type {
-    padding-top: 30px;
-    border-top: 2px solid #3C3C3C;
-}
-
-.meal-name {
-    width: 30%;
-}
-
-.qty-col {
+.order-item {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
+    margin-bottom: 8px;
 }
 
-.delete-order {
-    color: #FF0000;
-    cursor: pointer;
-}
-
-.qty-input {
-    width: 35px;
-    padding: 5px;
-    font-size: 16px;
+.order-item span {
     font-family: Verdana, sans-serif;
-    text-align: center;
-    background-color: #EFEFEF;
-    border: none;
-
-}
-
-.increase-qty, 
-.decrease-qty {
+    font-size: 12px;
+    color: #BBBBBB;
     cursor: pointer;
-}
-
-.increase-qty {
-    color: #065F46;
-}
-
-.decrease-qty {
-    color: #FF0000;
 }
 
 .order-amount {
     display: flex;
     padding-top: 20px;
     margin-bottom: 40px;
-}
-
-.order-amount h4 {
-    margin-left: auto;
 }
 
 button {

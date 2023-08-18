@@ -7,56 +7,29 @@ document.addEventListener('click', e => {
     if (e.target.dataset.add) {
         addMenu(e.target.dataset.add);
     }
-    // else if (e.target.dataset.increaseQty) {
-    //     incrementQty(e.target.dataset.increaseQty);
-    // } else if (e.target.dataset.decreaseQty) {
-    //     incrementQty(e.target.dataset.decreaseQty);
-    // }
 });
 
 function addMenu(menuId) {
-    let orderData = '';
-    const totalRow = document.getElementById('total');
+    let orderHtml = '';
     const targetMenuObj = menuData.filter(menu => {
         return menu.id === Number(menuId);
     })[0];
 
-    if (!orderArray.includes(targetMenuObj)) {
-        targetMenuObj.qty = 1;
-        orderArray.push(targetMenuObj);
+    orderArray.push(targetMenuObj);
+    console.log(orderArray)
 
-        orderArray.forEach(order => {
-            orderData = `
-                <tr>
-                    <td class="meal-name">
-                        <h3>${order.name}</h3>
-                    </td>
-                    <td>
-                        <h4>$${order.price}</h4>
-                    </td>
-                    <td class="qty-col">
-                        <i class="fa-solid fa-minus decrease-qty"></i>
-                        <input type="text" class="qty-input" id="qty-${order.id}" value="${order.qty}" min="1" readonly>
-                        <i class="fa-regular fa-plus increase-qty"></i>
-                    </td>
-                    <td>
-                        <h4>$${order.price * order.qty}</h4>
-                    </td>
-                    <td><i class="fa-solid fa-trash-can delete-order"></i></td>
-                </tr>
-            `;
-        });
-        totalRow.insertAdjacentHTML('beforebegin', orderData);
-    } else {
-        targetMenuObj.qty++;
-        const quantityInputsArray = [...document.querySelectorAll('input.qty-input')];
+    orderArray.forEach(order => {
+        orderHtml += `
+        <div class="order-item">
+            <h3>${order.name}</h3>
+            <span>remove</span>
+            <h4>$${order.price}</h4>
+        </div>
+    `;
 
-        for (const input of quantityInputsArray) {
-            if (input.id === `qty-${menuId}`) {
-                input.value = targetMenuObj.qty
-            }
-        }
-    }
+    })
+
+    document.getElementById('order-list').innerHTML = orderHtml;
 }
 
 function getOrderHtml(menuObj) {
@@ -68,6 +41,7 @@ function getOrderHtml(menuObj) {
         </div>
     `;
 
+    console.log(orderHtml)
     return orderHtml;
 }
 
