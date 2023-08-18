@@ -5,18 +5,19 @@ let orderArray = [];
 
 document.addEventListener('click', e => {
     if (e.target.dataset.add) {
-        addMenu(e.target.dataset.add);
+        addOrder(e.target.dataset.add);
     }
 });
 
-function addMenu(menuId) {
+function addOrder(menuId) {
     let orderHtml = '';
     const targetMenuObj = menuData.filter(menu => {
         return menu.id === Number(menuId);
     })[0];
 
-    orderArray.push(targetMenuObj);
-    console.log(orderArray)
+    if (!orderArray.includes(targetMenuObj)) {
+        orderArray.push(targetMenuObj);
+    }
 
     orderArray.forEach(order => {
         orderHtml += `
