@@ -104,6 +104,7 @@ footer {
     width: 90%;
     max-width: 800px;
     margin: 0 auto;
+    border: 2px solid tomato;
 }
 
 section:nth-of-type(even) {
@@ -112,7 +113,9 @@ section:nth-of-type(even) {
 
 .main-image{
     width: 100%;
-    margin-bottom: 32px;
+    display: block;
+    max-width: 640px;
+    margin: 0 auto 32px;
 }
 
 .feature-image {
