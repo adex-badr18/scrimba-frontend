@@ -56,10 +56,11 @@ a:hover, a:active {
     font-size: 1.125rem;
     font-weight: 500;
     text-decoration: none;
-    display: inline-block;
+    text-align: center;
+    display: block;
     padding: 0.56em 1.11em;
     border-radius: 4.6px;
-    margin: 0 0.5em 1em 0;
+    margin-bottom: 1em;
 }
 
 .btn-dark{
@@ -141,5 +142,10 @@ section:nth-of-type(even) {
     section,
     footer {
         padding: 2.875em 0;
+    }
+
+    .btn {
+        display: inline-block;
+        margin-right: 0.5em;
     }
 }
