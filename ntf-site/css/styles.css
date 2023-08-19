@@ -37,6 +37,10 @@ p {
     color: #d0aaff;
 }
 
+.section-two h2 {
+    color: inherit;
+}
+
 /* Links */
 
 a {
