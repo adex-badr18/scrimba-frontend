@@ -53,12 +53,13 @@ a:hover, a:active {
 }
 
 .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 4.6px;
+    font-size: 1.125em;
     font-weight: 500;
-    font-size: 18px;
     text-decoration: none;
+    display: inline-block;
+    padding: 0.56em 1.11em;
+    border-radius: 4.6px;
+    margin: 0 0.5em 1em 0;
 }
 
 .btn-dark{
@@ -87,7 +88,7 @@ a:hover, a:active {
 header,
 section,
 footer {
-    padding: 46px 0;
+    padding: 2.875em 0;
 }
 
 header, section:nth-of-type(even){
@@ -103,7 +104,6 @@ footer {
     width: 90%;
     max-width: 800px;
     margin: 0 auto;
-    border: 2px solid tomato;
 }
 
 section:nth-of-type(even) {
@@ -114,7 +114,7 @@ section:nth-of-type(even) {
     width: 100%;
     display: block;
     max-width: 640px;
-    margin: 0 auto 32px;
+    margin: 0 auto 2em;
 }
 
 .feature-image {
