@@ -122,8 +122,9 @@ section:nth-of-type(even) {
     border-radius: 4.6px;
 }
 
-.feature-images-container {
+.section-two-image-container {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 
@@ -131,5 +132,5 @@ section:nth-of-type(even) {
 /* MEDIA QUERIES */
 
 @media (min-width: 480px) {
-    
+
 }
