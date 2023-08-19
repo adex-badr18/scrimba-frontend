@@ -126,3 +126,10 @@ section:nth-of-type(even) {
     display: flex;
     justify-content: space-between;
 }
+
+
+/* MEDIA QUERIES */
+
+@media (min-width: 480px) {
+    
+}
