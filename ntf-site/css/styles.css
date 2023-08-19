@@ -118,7 +118,6 @@ section:nth-of-type(even) {
 }
 
 .feature-image {
-    width: 48.8%;
     border-radius: 4.6px;
     margin-bottom: 1.125em;
 }
@@ -126,7 +125,6 @@ section:nth-of-type(even) {
 .section-two-image-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 
@@ -135,5 +133,10 @@ section:nth-of-type(even) {
 @media (min-width: 480px) {
     .section-two-image-container {
         flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .feature-image {
+        width: 48.8%;
     }
 }
