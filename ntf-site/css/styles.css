@@ -31,6 +31,12 @@ p {
     line-height: 23px;
 }
 
+.subheading {
+    display: block;
+    font-size: 20px;
+    color: #d0aaff;
+}
+
 /* Links */
 
 a {
