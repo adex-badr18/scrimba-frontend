@@ -120,6 +120,7 @@ section:nth-of-type(even) {
 .feature-image {
     width: 48.8%;
     border-radius: 4.6px;
+    margin-bottom: 1.125em;
 }
 
 .section-two-image-container {
