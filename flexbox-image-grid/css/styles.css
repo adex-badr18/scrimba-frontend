@@ -1,0 +1,21 @@
+.image-container {
+    display: flex;
+    max-width: 800px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    gap: 0.5em;
+}
+
+.pet-item {
+    flex: 1 220px;
+}
+
+.expand {
+    flex-basis: 300px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
