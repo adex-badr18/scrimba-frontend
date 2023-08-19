@@ -136,6 +136,14 @@ section:nth-of-type(even) {
     margin-bottom: 1.125em;
 }
 
+.featured-item-text {
+    padding: 0 0.75em;
+}
+
+.featured-item-text p {
+    text-align: justify;
+}
+
 /* ----- NAVIGATION ----- */
 
 nav a {
