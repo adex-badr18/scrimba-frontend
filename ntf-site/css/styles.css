@@ -133,5 +133,7 @@ section:nth-of-type(even) {
 /* MEDIA QUERIES */
 
 @media (min-width: 480px) {
-
+    .section-two-image-container {
+        flex-direction: row;
+    }
 }
