@@ -45,18 +45,14 @@ function handlePayClick() {
 }
 
 function removeOrder(orderId) {
-    orderArray = orderArray.filter(order => {
-        return order.id != orderId;
-    });
+    orderArray = orderArray.filter(order => order.id !== orderId);
 
     renderOrders();
 }
 
 function addOrder(menuId) {
     let orderHtml = '';
-    const targetMenuObj = menuData.filter(menu => {
-        return menu.id === Number(menuId);
-    })[0];
+    const targetMenuObj = menuData.filter(menu => menu.id === Number(menuId))[0];
 
     if (!orderArray.includes(targetMenuObj)) {
         orderArray.push(targetMenuObj);
