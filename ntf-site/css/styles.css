@@ -130,6 +130,8 @@ section:nth-of-type(even) {
 
 .feature-image {
     width: 100%;
+    height: 50%;
+    object-fit: cover;
     border-radius: 4.6px;
     margin-bottom: 1.125em;
 }
