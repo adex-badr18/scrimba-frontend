@@ -88,7 +88,7 @@ a:hover, a:active {
 header,
 section,
 footer {
-    padding: 45px 0;
+    padding: 46px 0;
 }
 
 header, section:nth-of-type(even){
