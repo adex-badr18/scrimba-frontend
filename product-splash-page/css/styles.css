@@ -12,7 +12,7 @@ h1 {
     font-weight: 400;
 }
 
-.beta-text { 
+.beta-text {
     font-weight: 900;
 }
 
@@ -22,12 +22,20 @@ h1 {
 }
 
 /* =================
-    Intro
+    Flex Containers
    ================= */
-   
-.intro { 
+
+.intro,
+.main-content {
     display: flex;
     flex-direction: column;
+}
+
+/* =================
+    Intro
+   ================= */
+
+.intro {
     justify-content: center;
     min-height: 250px;
     text-align: center;
@@ -39,11 +47,26 @@ h1 {
     Main content
    ==================== */
 
+.main-content {
+    align-items: center;
+
+    padding-top: 2.5em;
+    /* 40 / 16 = 2.5 */
+    padding-left: 2em;
+    /* 32 / 16 = 2 */
+    padding-right: 2em;
+}
+
+.img-main {
+    width: 120px;
+    border-radius: 50%;
+}
+
 
 /* =================
     Form
    ================= */
-   
+
 
 /* =================
     Media queries 
