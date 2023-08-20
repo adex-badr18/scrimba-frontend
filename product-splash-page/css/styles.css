@@ -89,19 +89,39 @@ p {
     Form
    ================= */
 
-   input {
+   input,
+button {
     font-family: inherit;
-    width: 100%;
+    width: 100%; 
+    border-radius: 5px;   
+}
+
+input {
     padding: 0.5em;
     margin-bottom: 0.75em;
-    border: 2px solid #D1D5DB;
-    border-radius: 5px;
+    border: 2px solid #d1d5db;
 }
 
 input:focus {
     outline: none;
-    border-color: #8A71EC;
-    background-color: #E6E8EC;
+    border-color: #8a71ec;
+    background-color: #e6e8ec;
+}
+
+.btn {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 1px;
+    padding: 1em 0;
+    background-color: #8a71ec;
+    margin-top: 1em;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #b7a7f6;
 }
 
 /* =================
