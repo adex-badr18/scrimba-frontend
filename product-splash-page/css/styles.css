@@ -39,6 +39,12 @@ p {
     text-transform: uppercase;
 }
 
+.fine-print {
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    color: #858585;
+}
+
 /* =================
     Flex Containers
    ================= */
