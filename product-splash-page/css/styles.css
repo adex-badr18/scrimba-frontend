@@ -8,17 +8,30 @@ body {
     Typography 
    ================= */
 
-h1 {
+   h1 {
+    font-size: 2.5rem;
     font-weight: 400;
+    text-shadow: 0 2px #816fca;
 }
 
-.beta-text {
+h2 {
+    font-size: 2.25rem;
+    margin: 0.167em 0;
+}
+
+p {
+    font-size: 1.125rem;
+    line-height: 1.35;
+}
+
+.beta-text { 
     font-weight: 900;
 }
 
 .subheading {
     color: #575757;
     font-weight: 900;
+    margin-bottom: 0.5em;
 }
 
 /* =================
