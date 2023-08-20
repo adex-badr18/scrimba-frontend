@@ -71,7 +71,7 @@ p {
    ================= */
 
 .intro {
-    justify-content: center;
+    justify-content: space-between;
     min-height: 250px;
     text-align: center;
     color: #fff;
