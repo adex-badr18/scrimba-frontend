@@ -45,6 +45,7 @@ p {
     font-weight: 900;
     padding-top: 0.25em;
     border-top: 5px solid;
+    order: -1;
 }
 
 .fine-print {
