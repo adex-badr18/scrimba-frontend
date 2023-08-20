@@ -47,6 +47,8 @@ p {
 .main-content {
     display: flex;
     flex-direction: column;
+    padding-left: 2em; /* 32 / 16 = 2 */
+    padding-right: 2em;
 }
 
 /* =================
@@ -68,8 +70,6 @@ p {
 .main-content {
     align-items: center;
     padding-top: 2.5em;
-    padding-left: 2em; /* 32 / 16 = 2 */
-    padding-right: 2em;
 }
 
 .img-main {
