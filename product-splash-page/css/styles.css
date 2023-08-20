@@ -95,6 +95,11 @@ p {
     border-radius: 50%;
 }
 
+.main-content p,
+form {
+    max-width: 450px;
+}
+
 
 /* =================
     Form
