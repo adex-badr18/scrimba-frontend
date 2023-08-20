@@ -35,8 +35,16 @@ p {
 }
 
 .beta-text,
-.subheading {
+.subheading,
+.top-text {
     text-transform: uppercase;
+}
+
+.top-text {
+    font-size: 0.875rem;
+    font-weight: 900;
+    padding-top: 0.25em;
+    border-top: 5px solid;
 }
 
 .fine-print {
