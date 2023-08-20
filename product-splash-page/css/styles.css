@@ -109,18 +109,22 @@ input:focus {
 }
 
 .btn {
-    color: white;
     text-transform: uppercase;
     font-weight: 900;
     letter-spacing: 1px;
     padding: 1em 0;
-    background-color: #8a71ec;
-    margin-top: 1em;
     border: none;
     cursor: pointer;
 }
 
-.btn:hover {
+.btn-primary {
+    color: white;
+    background-color: #8a71ec;
+    margin-top: 1em;    
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
     background-color: #b7a7f6;
 }
 
