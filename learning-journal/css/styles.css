@@ -2,15 +2,69 @@
 *::after,
 *::before {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html, 
 body {
-    margin: 0;
-    padding: 0;
     font-family: 'Source Sans 3', sans-serif;
     font-size: 16px;
 
 }
 
+.container {
+    padding: 20px;
+}
 
+header {
+    box-shadow: 0 0.5px 7px 0px #090909;
+}
+
+header > .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+}
+
+.logo-img {
+    width: 11%;
+    height: 11%;
+    object-fit: cover;
+}
+
+.logo-text {
+    color: #0E0E0E;
+    font-weight: 700;
+    font-size: 0.875rem;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1.725em;
+}
+
+ul li a {
+    color: #090909;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+ul li a:hover {
+    cursor: pointer;
+}
+
+article > img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
