@@ -6,7 +6,7 @@
     padding: 0;
 }
 
-html, 
+html,
 body {
     font-family: 'Source Sans 3', sans-serif;
     font-size: 1em;
@@ -83,7 +83,7 @@ nav ul li a:hover {
 .hero time {
     font-size: 0.75rem;
     grid-row: 2;
-    
+
 }
 
 .hero h1 {
@@ -116,7 +116,7 @@ main article {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     transition: transform 0.3s ease-in-out,
-    box-shadow 0.3s ease-in-out;
+        box-shadow 0.3s ease-in-out;
 }
 
 main article:hover {
@@ -212,13 +212,17 @@ footer .copyright {
     nav ul li a {
         font-size: 0.9rem;
     }
+
+    time {
+        font-size: 0.9rem;
+    }
 }
 
-/* @media screen and (min-width: 576px) {
+@media screen and (min-width: 576px) {
     header {
         padding: 1.5em 3.3125em;
     }
-    
+
     .logo-img {
         width: 18.04%;
     }
@@ -230,4 +234,27 @@ footer .copyright {
     nav ul li a {
         font-size: 1rem;
     }
-} */
+
+    /* HERO */
+
+    .hero {
+        display: grid;
+        grid-template-columns: 53px auto 53px;
+        grid-template-rows: 15.93em auto auto auto 3.7em;
+        gap: 9px;
+    }
+
+    .hero p {
+        max-width: 70ch;
+    }
+
+    .hero time {
+        font-size: 1rem;
+
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+        line-height: 1.082;
+    }
+}
