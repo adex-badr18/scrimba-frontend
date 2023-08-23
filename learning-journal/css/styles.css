@@ -139,3 +139,12 @@ article p {
     line-height: 1.25;
     grid-row: 4;
 }
+
+.view-more-wrapper {
+    text-align: center;
+}
+
+.view-more-link {
+    color: #000000;
+    font-weight: 700;
+}
