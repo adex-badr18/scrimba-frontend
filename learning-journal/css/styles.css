@@ -267,4 +267,10 @@ footer .copyright {
         column-gap: 24px;
         row-gap: 46px;
     }
+
+    /* FOOTER */
+
+    footer h4 {
+        font-size: 1rem;
+    }
 }
