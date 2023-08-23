@@ -140,6 +140,8 @@ article p {
     grid-row: 4;
 }
 
+/* VIEW MORE */
+
 .view-more-wrapper {
     text-align: center;
 }
@@ -147,4 +149,25 @@ article p {
 .view-more-link {
     color: #000000;
     font-weight: 700;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #202020;
+    padding: 2.3125em 0;
+    text-align: center;
+}
+
+footer h4 {
+    color: #ECECEC;
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+footer .copyright {
+    display: block;
+    color: #D7D7D7;
+    font-weight: 400;
 }
