@@ -125,7 +125,7 @@ main article:hover {
 }
 
 article img {
-    max-width: 100%;
+    width: 100%;
     height: 100%;
     object-fit: cover;
     grid-column: 1 / -1;
@@ -238,7 +238,6 @@ footer .copyright {
     /* HERO */
 
     .hero {
-        display: grid;
         grid-template-columns: 53px auto 53px;
         grid-template-rows: 15.93em auto auto auto 3.7em;
         gap: 9px;
@@ -256,5 +255,16 @@ footer .copyright {
     .hero h1 {
         font-size: 2.5rem;
         line-height: 1.082;
+    }
+
+
+    /* MAIN */
+
+    main {
+        padding: 0 50px;
+        margin-top: 3.125em;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        column-gap: 24px;
+        row-gap: 46px;
     }
 }
