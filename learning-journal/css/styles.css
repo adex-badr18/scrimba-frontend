@@ -9,12 +9,12 @@
 html, 
 body {
     font-family: 'Source Sans 3', sans-serif;
-    font-size: 16px;
+    font-size: 1em;
 
 }
 
 .container {
-    padding: 20px;
+    padding: 1.25em;
 }
 
 /* HEADER */
@@ -36,8 +36,8 @@ header > .container {
 }
 
 .logo-img {
-    width: 11%;
-    height: 11%;
+    width: 11.98%;
+    height: 11.98%;
     object-fit: cover;
 }
 
