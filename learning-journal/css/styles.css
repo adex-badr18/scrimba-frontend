@@ -14,16 +14,13 @@ body {
 
 }
 
-.container {
-    padding: 1.25em;
-}
-
 /* HEADER */
 
-header > .container {
+header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 1.25em;
 }
 
 .logo-wrapper {
@@ -44,7 +41,7 @@ header > .container {
     font-size: 0.85rem;
 }
 
-.fa-bars {
+nav i.fa-bars {
     cursor: pointer;
     font-size: 1.3rem;
 }
@@ -192,7 +189,7 @@ footer .copyright {
 
 /* MEDIA QUERIES */
 @media screen and (min-width: 480px) {
-    .fa-bars {
+    nav i.fa-bars {
         display: none;
     }
 
