@@ -74,7 +74,7 @@ ul li a:hover {
     gap: 5px;
     background-image: url("../images/hero.png");
     background-size: cover;
-    color: white;
+    color: #FFFFFF;
 }
 
 .hero-col {
@@ -95,6 +95,8 @@ ul li a:hover {
 
 .hero p {
     grid-row: 4;
+    color: inherit;
+    line-height: 1.25;
 }
 
 /* MAIN */
