@@ -140,7 +140,7 @@ article p {
 
 .view-more-wrapper {
     text-align: center;
-    margin-bottom: 2.6875em;
+    padding: 2.6875em 0;
 }
 
 .view-more-link {
