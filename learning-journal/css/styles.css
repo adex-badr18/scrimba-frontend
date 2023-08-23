@@ -192,3 +192,12 @@ footer .copyright {
 
 
 /* MEDIA QUERIES */
+@media screen and (min-width: 480px) {
+    .fa-bars {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+    }
+}
