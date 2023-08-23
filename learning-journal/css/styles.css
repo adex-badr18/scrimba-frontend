@@ -44,13 +44,19 @@ header > .container {
     font-size: 0.85rem;
 }
 
-ul {
+nav i {
+    cursor: pointer;
+    color: #000000;
+    font-size: 1.3rem;
+}
+
+nav ul {
     list-style-type: none;
-    display: flex;
+    display: none;
     gap: 1.725em;
 }
 
-ul li a {
+nav ul li a {
     color: #090909;
     font-size: 0.75rem;
     font-weight: 600;
@@ -58,7 +64,7 @@ ul li a {
     text-transform: uppercase;
 }
 
-ul li a:hover {
+nav ul li a:hover {
     cursor: pointer;
 }
 
@@ -183,3 +189,6 @@ footer .copyright {
     color: #D7D7D7;
     font-weight: 400;
 }
+
+
+/* MEDIA QUERIES */
