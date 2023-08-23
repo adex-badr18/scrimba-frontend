@@ -196,4 +196,38 @@ footer .copyright {
     nav ul {
         display: flex;
     }
+
+    header {
+        padding: 1.3em 3em;
+    }
+
+    .logo-img {
+        width: 14%;
+    }
+
+    .logo-text {
+        font-size: 1.1rem;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+    }
 }
+
+/* @media screen and (min-width: 576px) {
+    header {
+        padding: 1.5em 3.3125em;
+    }
+    
+    .logo-img {
+        width: 18.04%;
+    }
+
+    .logo-text {
+        font-size: 1.2525rem;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+} */
