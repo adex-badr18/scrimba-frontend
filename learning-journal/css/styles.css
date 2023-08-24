@@ -215,7 +215,8 @@ footer .copyright {
     margin: 2em 1.25em 3.1875em 1.25em;
 }
 
-.post-details {
+.post-details,
+.wrapper {
     display: flex;
     flex-direction: column;
     gap: 0.94em;
@@ -320,9 +321,21 @@ footer .copyright {
         margin: 4.4375em 3.125em 3.1875em 3.125em;
     }
 
+    .wrapper {
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+    } 
+
     /* FOOTER */
 
     footer h4 {
         font-size: 1rem;
     }
+}
+
+@media screen and (min-width: 768px) {
+    .wrapper {
+        margin-left: 2.5em;
+        margin-right: 2.5em;
+    }    
 }
