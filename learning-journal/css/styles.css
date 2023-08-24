@@ -336,8 +336,8 @@ footer .copyright {
     }
 
     .wrapper {
-        margin-left: 1.5em;
-        margin-right: 1.5em;
+        margin-left: 3.5em;
+        margin-right: 3.5em;
     }
 
     /* FOOTER */
@@ -349,7 +349,7 @@ footer .copyright {
 
 @media screen and (min-width: 768px) {
     .wrapper {
-        margin-left: 2.5em;
-        margin-right: 2.5em;
+        margin-left: 7.5625em;
+        margin-right: 7.5625em;
     }    
 }
