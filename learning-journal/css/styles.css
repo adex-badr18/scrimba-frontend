@@ -186,6 +186,17 @@ footer .copyright {
     font-weight: 400;
 }
 
+/* POST DETAILS VIEW PAGE */
+
+.post-view-wrapper {
+    margin: 2em 1.25em 3.1875em 1.25em;
+}
+
+.post-details {
+    display: grid;
+    grid-template-columns: 20px auto 20px;
+}
+
 
 /* MEDIA QUERIES */
 @media screen and (min-width: 480px) {
