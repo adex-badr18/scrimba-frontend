@@ -146,6 +146,7 @@ nav ul li a:hover {
     border-radius: 10px;
     transition: transform 0.3s ease-in-out,
         box-shadow 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .articles article:hover {
@@ -175,6 +176,10 @@ article h2 {
 article .article-description {
     color: #505050;
     grid-row: 4;
+}
+
+.post>* {
+    pointer-events: none;
 }
 
 /* VIEW MORE */
