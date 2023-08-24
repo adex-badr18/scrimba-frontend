@@ -236,7 +236,7 @@ footer .copyright {
     content: "";
     display: block;
     margin: 0 auto;
-    width: 130px;
+    width: 132px;
     border-bottom: 5px solid #505050;
 }
 
@@ -305,7 +305,7 @@ footer .copyright {
         max-width: 75ch;
     }
 
-    .post-details p {
+    .wrapper:first-of-type {
         max-width: 80ch;
     }
 
@@ -339,10 +339,6 @@ footer .copyright {
         margin-left: 1.5em;
         margin-right: 1.5em;
     }
-    
-    /* .recent-post-header {
-        border: 2px solid salmon;
-    } */
 
     /* FOOTER */
 
