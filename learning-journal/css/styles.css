@@ -216,8 +216,13 @@ footer .copyright {
 }
 
 .post-details {
-    display: grid;
-    grid-template-columns: 20px auto 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.94em;
+}
+
+.post-details img {
+    margin: 1.25em 0;
 }
 
 
