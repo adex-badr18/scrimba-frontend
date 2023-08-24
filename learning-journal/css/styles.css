@@ -299,7 +299,8 @@ footer .copyright {
 
     }
 
-    h1 {
+    h1,
+    .post-details h1 {
         font-size: 2.5rem;
         line-height: 1.082;
     }
