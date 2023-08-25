@@ -26,12 +26,17 @@
         </div>
 
 
-        <nav>
-            <ul>
+        <nav id="nav">
+            <ul id="nav-menu">
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./about.html">About Me</a></li>
             </ul>
-            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-bars" id="mobile-menu-btn"></i>
+            <i class="fa-solid fa-xmark hidden" id="close-menu-btn"></i>
+            <div id="mobile-menu" class="mobile-menu hidden">
+                <a href="./index.html" class="mobile-menu-link">Home</a>
+                <a href="./about.html" class="mobile-menu-link">About Me</a>
+            </div>
         </nav>
     </header>
 
