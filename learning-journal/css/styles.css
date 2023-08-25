@@ -74,9 +74,14 @@ header {
     font-size: 0.85rem;
 }
 
-nav i.fa-bars {
+nav i.fa-bars,
+nav i.fa-xmark {
     cursor: pointer;
     font-size: 1.3rem;
+}
+
+nav i.fa-xmark {
+    display: none;
 }
 
 nav ul {
