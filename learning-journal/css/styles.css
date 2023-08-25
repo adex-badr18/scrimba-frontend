@@ -137,6 +137,7 @@ nav ul li a:hover {
     color: #505050;
 }
 
+.articles article.hidden,
 .hidden {
     display: none;
 }
