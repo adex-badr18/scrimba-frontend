@@ -10,7 +10,7 @@ last3Posts.forEach(post => {
 document.addEventListener('click', (e) => {
     if (e.target.classList.contains('post')) {
         if (window.location.protocol === 'https:') {
-            window.location.href = '/scrimba-frontend/learning-journal/post-view.html';
+            window.location.href = '/post-view.html';
         } else if (window.location.protocol === 'http:') {
             window.location.href = '/learning-journal/post-view.html';
         }
@@ -27,7 +27,7 @@ document.addEventListener('click', (e) => {
         closeMenuBtn.style.display = 'none';
     } else if (e.target.classList.contains('logo-wrapper')) {
         if (window.location.protocol === 'https:') {
-            window.location.href = '/scrimba-frontend/learning-journal/index.html';
+            window.location.href = '/index.html';
         } else if (window.location.protocol === 'http:') {
             window.location.href = '/learning-journal/index.html';
         }
