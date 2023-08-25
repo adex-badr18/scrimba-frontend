@@ -18,5 +18,12 @@ document.addEventListener('click', (e) => {
         closeMenuBtn.style.display = 'none';
     } else if (e.target.classList.contains('logo-wrapper')) {
         window.location.href = '/learning-journal/index.html';
+    } else if (e.target.classList.contains('view-more-link')) {
+        e.preventDefault();
+        const posts = [...document.querySelectorAll('article.hidden')];
+
+        posts.forEach(post => {
+            post.classList.toggle('hidden');
+        })
     }
-})
+}) 

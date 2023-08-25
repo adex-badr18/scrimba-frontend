@@ -137,11 +137,6 @@ nav ul li a:hover {
     color: #505050;
 }
 
-.articles article.hidden,
-.hidden {
-    display: none;
-}
-
 /* HERO */
 
 .hero {
@@ -314,8 +309,12 @@ footer .copyright {
     border-bottom: 5px solid #505050;
 }
 
+/* UTILITIES */
 
-
+.articles article.hidden,
+.hidden {
+    display: none;
+}
 
 /* MEDIA QUERIES */
 @media screen and (min-width: 480px) {
