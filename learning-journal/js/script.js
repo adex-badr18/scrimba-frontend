@@ -4,7 +4,7 @@ const closeMenuBtn = document.getElementById('close-menu-btn');
 
 document.addEventListener('click', (e) => {
     if (e.target.classList.contains('post')) {
-        window.location.href = '/learning-journal/pages/post-view.html';
+        window.location.href = '/learning-journal/post-view.html';
     } else if (e.target.classList.contains('fa-bars')) {
         mobileMenu.classList.toggle('hidden');
 
