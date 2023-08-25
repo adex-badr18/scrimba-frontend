@@ -9,7 +9,11 @@ last3Posts.forEach(post => {
 
 document.addEventListener('click', (e) => {
     if (e.target.classList.contains('post')) {
-        window.location.href = '/learning-journal/post-view.html';
+        if (window.location.protocol === 'https:') {
+            window.location.href = 'scrimba-frontend/learning-journal/post-view.html';
+        } else if (window.location.protocol === 'http:') {
+            window.location.href = '/learning-journal/post-view.html';
+        }
     } else if (e.target.classList.contains('fa-bars')) {
         mobileMenu.classList.toggle('hidden');
 
@@ -22,7 +26,11 @@ document.addEventListener('click', (e) => {
         mobileMenuBtn.style.display = 'block';
         closeMenuBtn.style.display = 'none';
     } else if (e.target.classList.contains('logo-wrapper')) {
-        window.location.href = '/learning-journal/index.html';
+        if (window.location.protocol === 'https:') {
+            window.location.href = 'scrimba-frontend/learning-journal/index.html';
+        } else if (window.location.protocol === 'http:') {
+            window.location.href = '/learning-journal/index.html';
+        }
     } else if (e.target.classList.contains('view-more-link')) {
         const viewMore = document.querySelector('a.view-more-link');
 
@@ -43,3 +51,8 @@ document.addEventListener('click', (e) => {
         }
     }
 }) 
+
+
+
+// https://adex-badr18.github.io/learning-journal/post-view.html
+// http://127.0.0.1:5500/learning-journal/index.html
