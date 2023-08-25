@@ -16,5 +16,7 @@ document.addEventListener('click', (e) => {
 
         mobileMenuBtn.style.display = 'block';
         closeMenuBtn.style.display = 'none';
+    } else if (e.target.classList.contains('logo-wrapper')) {
+        window.location.href = '/learning-journal/index.html';
     }
 })
