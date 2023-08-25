@@ -69,10 +69,6 @@ header {
     cursor: pointer;
 }
 
-.logo-wrapper > * {
-    pointer-events: none;
-}
-
 .logo-img {
     width: 11.98%;
     height: 11.98%;
@@ -223,10 +219,6 @@ article .article-description {
     grid-row: 4;
 }
 
-.post>* {
-    pointer-events: none;
-}
-
 /* VIEW MORE */
 
 .view-more-wrapper {
@@ -311,9 +303,13 @@ footer .copyright {
 
 /* UTILITIES */
 
-.articles article.hidden,
 .hidden {
     display: none;
+}
+
+.logo-wrapper > *,
+.post > * {
+    pointer-events: none;
 }
 
 /* MEDIA QUERIES */
