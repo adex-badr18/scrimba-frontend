@@ -138,9 +138,7 @@ nav ul li a:hover {
 
 /* HERO */
 
-.hero,
-.about-me-wrapper,
-.post-view-wrapper {
+.hero {
     margin-top: 59px;
 }
 
@@ -264,7 +262,7 @@ footer .copyright {
 
 .post-view-wrapper,
 .about-me-wrapper {
-    margin: 2em 1.25em 3.1875em 1.25em;
+    margin: 5.3125em 1.25em 3.1875em 1.25em;
 }
 
 .post-details,
@@ -279,7 +277,6 @@ footer .copyright {
 
 .about-header {
     margin-bottom: 3.125em;
-    margin-top: 5.3125em;
     align-items: center;
 }
 
@@ -330,7 +327,7 @@ footer .copyright {
     .hero,
     .about-me-wrapper,
     .post-view-wrapper {
-        margin-top: 69px;
+        margin-top: 7.3125em;
     }
 
     .logo-img {
@@ -351,7 +348,8 @@ footer .copyright {
 
     .post-view-wrapper,
     .about-me-wrapper {
-        margin: 3em;
+        margin-left: 3em;
+        margin-right: 3em;
     }
 }
 
@@ -360,10 +358,8 @@ footer .copyright {
         padding: 1.214em 3.125em;
     }
 
-    .hero,
-    .about-me-wrapper,
-    .post-view-wrapper {
-        margin-top: 83px;
+    .hero {
+        margin-top: 5.3125em;
     }
 
     .logo-img {
@@ -423,11 +419,7 @@ footer .copyright {
 
     .post-view-wrapper,
     .about-me-wrapper {
-        margin: 4.4375em 3.125em 3.1875em 3.125em;
-    }
-
-    .about-header {
-        margin-top: 10.875em;
+        margin: 10.875em 3.125em 3.1875em 3.125em;
     }
 
     .wrapper {
