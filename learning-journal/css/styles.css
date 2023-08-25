@@ -53,7 +53,13 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 1.125em;
+    background-color: #FFFFFF;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 99999;
 }
 
 .logo-wrapper {
@@ -131,6 +137,12 @@ nav ul li a:hover {
 }
 
 /* HERO */
+
+.hero,
+.about-me-wrapper,
+.post-view-wrapper {
+    margin-top: 59px;
+}
 
 .hero {
     display: grid;
@@ -314,6 +326,12 @@ footer .copyright {
         padding: 1.185em 3em;
     }
 
+    .hero,
+    .about-me-wrapper,
+    .post-view-wrapper {
+        margin-top: 69px;
+    }
+
     .logo-img {
         width: 14%;
     }
@@ -339,6 +357,12 @@ footer .copyright {
 @media screen and (min-width: 576px) {
     header {
         padding: 1.214em 3.125em;
+    }
+
+    .hero,
+    .about-me-wrapper,
+    .post-view-wrapper {
+        margin-top: 83px;
     }
 
     .logo-img {
