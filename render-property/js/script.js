@@ -10,5 +10,7 @@ function getPropertyHtml(propertyArr = [placeholderPropertyObj]) {
             comment,
             image
          } = property;
+
+         const totalArea = roomsM2.reduce((total, roomSize) => total + roomSize);
     })
 }
