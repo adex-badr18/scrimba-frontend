@@ -20,7 +20,7 @@ function getPropertyHtml(propertyArr = [placeholderPropertyObj]) {
                     <h2>${propertyLocation}</h2>
                     <h3>${priceGBP}</h3>
                     <p>${comment}</p>
-                    <h3>${totalRoomSizeM2} m&sup2;</h3>
+                    <h3>${totalArea} m&sup2;</h3>
                 </div>
             </section>
          `;
