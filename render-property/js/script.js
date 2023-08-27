@@ -1,5 +1,5 @@
-import placeholderPropertyObj from "../properties/placeholderPropertyObj";
-import propertyForSaleArr from "../properties/propertyForSaleArr";
+import placeholderPropertyObj from "../properties/placeholderPropertyObj.js";
+import propertyForSaleArr from "../properties/propertyForSaleArr.js";
 
 function getPropertyHtml(propertyArr = [placeholderPropertyObj]) {
     return propertyArr.map(property => {
@@ -15,7 +15,7 @@ function getPropertyHtml(propertyArr = [placeholderPropertyObj]) {
 
          return `
             <section class="card">
-                <img src="/images/${image}">
+                <img src="../images/${image}">
                 <div class="card-right">
                     <h2>${propertyLocation}</h2>
                     <h3>${priceGBP}</h3>
