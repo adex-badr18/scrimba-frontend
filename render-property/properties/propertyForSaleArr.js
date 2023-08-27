@@ -27,6 +27,8 @@ const propertyForSaleArr = [
         comment: 'Lots of potential, snug, a must see!',
         image: 'shed.jpg'
     }
-]
+];
+
+export default propertyForSaleArr;
 
 
