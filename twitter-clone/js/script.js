@@ -144,18 +144,24 @@ function getFeedHtml() {
     }
 
     tweetsData.forEach(tweet => {
-        let likeIconClass = '';
-        let retweetedIconClass = '';
+        // let likeIconClass = '';
+        // let retweetedIconClass = '';
 
         // if (tweet.isLiked) {
         //     likeIconClass = 'liked';
         // }
-        tweet.isLiked && (likeIconClass = 'liked');
+        // ========== OR ==============
+        let likeIconClass = tweet.isLiked ? 'liked' : '';
+        // ========== OR ==============
+        // tweet.isLiked && (likeIconClass = 'liked');
 
         // if (tweet.isRetweeted) {
         //     retweetedIconClass = 'retweeted';
         // }
-        tweet.isRetweeted && (retweetedIconClass = 'retweeted');
+        // ========== OR ==============
+        let retweetedIconClass = tweet.isRetweeted ? 'retweeted' : '';
+        // ========== OR ==============
+        // tweet.isRetweeted && (retweetedIconClass = 'retweeted');
 
         let repliesHtml = '';
 
