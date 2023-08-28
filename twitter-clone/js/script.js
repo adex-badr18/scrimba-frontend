@@ -147,13 +147,15 @@ function getFeedHtml() {
         let likeIconClass = '';
         let retweetedIconClass = '';
 
-        if (tweet.isLiked) {
-            likeIconClass = 'liked';
-        }
+        // if (tweet.isLiked) {
+        //     likeIconClass = 'liked';
+        // }
+        tweet.isLiked && (likeIconClass = 'liked');
 
-        if (tweet.isRetweeted) {
-            retweetedIconClass = 'retweeted';
-        }
+        // if (tweet.isRetweeted) {
+        //     retweetedIconClass = 'retweeted';
+        // }
+        tweet.isRetweeted && (retweetedIconClass = 'retweeted');
 
         let repliesHtml = '';
 
