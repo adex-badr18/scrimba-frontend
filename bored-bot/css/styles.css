@@ -15,9 +15,9 @@ body {
 header,
 main,
 footer {
-    max-width: 420px;
+    max-width: 570px;
     margin: 0 auto;
-    border: 1px solid #999;
+    border: 1px solid #eaf4f4;
 }
 
 header {
