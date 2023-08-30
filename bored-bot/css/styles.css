@@ -18,7 +18,6 @@ main,
 footer {
     max-width: 570px;
     margin: 0 auto;
-    border: 1px solid #eaf4f4;
 }
 
 header {
@@ -35,23 +34,37 @@ header span {
     font-size: 3.5em;
 }
 
+main {
+    border: 1px solid #eaf4f4;
+}
+
 .activity-container {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     gap: 1.25em;
-    padding: 1.5em 0;
+    padding: 3.5em 0;
 }
 
 .activity-description {
     text-align: center;
-    font-size: 3em;
+    font-size: 2em;
+    font-weight: 400;
     padding: 1em 1.25em;
     background-color: #eaf4f4;
     color: #6b9080;
-    border: 2px solid #a4c3b2;
-    border-radius: 0.3125em;
     max-width: 90%;
     min-height: 3em;
+}
+
+.get-activity-btn {
+    width: 87%;
+    font-size: 1.2em;
+    font-weight: 700;
+    background-color: #6b9080;
+    color: #eaf4f4;
+    border: none;
+    border-radius: 0.3125em;
+    padding: 0.8em 0;
 }
