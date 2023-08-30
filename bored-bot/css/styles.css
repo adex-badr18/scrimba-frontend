@@ -27,16 +27,17 @@ header {
     gap: 0.625em;
     padding: 1.5em 0;
     background-color: #6f1d1b;
-    color: #ffe6a7;
+    /* box-shadow: 0 1px 6px #1d1c1c; */
+    color: #f6fff8;
 }
 
 header span {
     font-size: 3.5em;
 }
 
-main,
-footer {
-    border: 1px solid #bb9457;
+main {
+    /* border: 1px solid #bb9457; */
+    background-color: #b1514f;
 }
 
 .activity-container {
