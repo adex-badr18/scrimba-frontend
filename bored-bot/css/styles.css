@@ -19,3 +19,17 @@ footer {
     margin: 0 auto;
     border: 1px solid #999;
 }
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625em;
+    padding: 2.8125em 0;
+    background-color: #6b9080;
+    color: #f6fff8;
+}
+
+header span {
+    font-size: 3.5em;
+}
