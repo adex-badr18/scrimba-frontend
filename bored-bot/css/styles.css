@@ -68,3 +68,9 @@ main {
     border-radius: 0.3125em;
     padding: 0.8em 0;
 }
+
+footer {
+    text-align: center;
+    padding: 1.5em 0;
+    color: #6b9080;
+}
