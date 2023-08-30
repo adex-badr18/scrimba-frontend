@@ -26,8 +26,8 @@ header {
     align-items: center;
     gap: 0.625em;
     padding: 1.5em 0;
-    background-color: #92b9a4;
-    color: #f6fff8;
+    background-color: #6f1d1b;
+    color: #ffe6a7;
 }
 
 header span {
@@ -36,7 +36,7 @@ header span {
 
 main,
 footer {
-    border: 1px solid #eaf4f4;
+    border: 1px solid #bb9457;
 }
 
 .activity-container {
@@ -53,8 +53,8 @@ footer {
     font-size: 2em;
     font-weight: 400;
     padding: 1em 1.25em;
-    background-color: #eaf4f4;
-    color: #6b9080;
+    background-color: #ffe6a7;
+    color: #6f1d1b;
     max-width: 90%;
     min-height: 3em;
 }
@@ -63,8 +63,8 @@ footer {
     width: 90%;
     font-size: 1.2em;
     font-weight: 700;
-    background-color: #92b9a4;
-    color: #f6fff8;
+    background-color: #6f1d1b;
+    color: #ffe6a7;
     border: none;
     border-radius: 0.3125em;
     padding: 0.8em 0;
@@ -74,5 +74,5 @@ footer {
 footer {
     text-align: center;
     padding: 1.5em 0;
-    color: #6b9080;
+    color: #6f1d1b;
 }
