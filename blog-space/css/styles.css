@@ -53,6 +53,27 @@ main {
     margin-top: 5em;
 }
 
+section.post-form {
+    background-color: #cf8bc6;
+    padding: 2em;
+    margin-bottom: 1em;
+    border-radius: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+input,
+textarea,
+button {
+    padding: 0.825em;
+    border: none;
+    border-radius: 5px;
+}
+
 .post {
     margin-bottom: 1em;
 }
