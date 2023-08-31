@@ -25,6 +25,7 @@ header,
 main,
 footer {
     max-width: 570px;
+    margin: 0 auto;
 }
 
 header,
@@ -35,10 +36,21 @@ footer {
 
 header {
     border-bottom: 1px solid #F5F5F5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.header {
+    background-color: #8d3a55;
+    border-bottom: none;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 main {
     padding: 2em 1.25em;
+    margin-top: 5em;
 }
 
 .post {

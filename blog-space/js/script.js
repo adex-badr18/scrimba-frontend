@@ -1,4 +1,5 @@
 const postsContainer = document.getElementById('posts-container');
+const header = document.querySelector('header');
 
 fetch('https://apis.scrimba.com/jsonplaceholder/posts', {method: 'GET'})
     .then(res => res.json())
@@ -18,3 +19,11 @@ fetch('https://apis.scrimba.com/jsonplaceholder/posts', {method: 'GET'})
 
         postsContainer.innerHTML = postsHtml;
     });
+
+window.onscroll = () => {
+    if (window.scrollY > 20) {
+        header.className = 'header';
+    } else {
+        header.classList.remove('header');
+    }
+}
