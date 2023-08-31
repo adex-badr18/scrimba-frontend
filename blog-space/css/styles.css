@@ -26,3 +26,17 @@ main,
 footer {
     max-width: 570px;
 }
+
+header,
+footer {
+    padding: 1.5em 0;
+    text-align: center;
+}
+
+header {
+    border-bottom: 1px solid #F5F5F5;
+}
+
+footer {
+    border-top: 1px solid #F5F5F5;
+}
