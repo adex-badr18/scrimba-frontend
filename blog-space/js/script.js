@@ -1,13 +1,11 @@
 const postsContainer = document.getElementById('posts-container');
 const header = document.querySelector('header');
-const postTitle = document.getElementById('post-title');
-const postBody = document.getElementById('post-body');
 
-fetch('https://apis.scrimba.com/jsonplaceholder/posts', {method: 'GET'})
+fetch('https://apis.scrimba.com/jsonplaceholder/posts', { method: 'GET' })
     .then(res => res.json())
     .then(data => {
         const postsArray = data.slice(0, 5);
-        
+
         const postsHtml = postsArray.map((post, index) => {
             return `
                 <div class="post">
@@ -25,19 +23,16 @@ fetch('https://apis.scrimba.com/jsonplaceholder/posts', {method: 'GET'})
 document.querySelector('form').addEventListener('submit', (e) => {
     e.preventDefault();
 
+    const postTitle = document.getElementById('post-title').value;
+    const postBody = document.getElementById('post-body').value;
+
     const postObj = {
-        title: '',
-        body: ''
+        title: postTitle,
+        body: postBody
     };
 
-    if (postTitle.value && postBody.value) {
-        postObj.title = postTitle.value;
-        postObj.body = postBody.value;
-
-        console.log(postObj);
-    }
-
-})
+    console.log(postObj);
+});
 
 window.onscroll = () => {
     if (window.scrollY > 20) {
