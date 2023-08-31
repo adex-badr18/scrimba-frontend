@@ -1,5 +1,7 @@
 const postsContainer = document.getElementById('posts-container');
 const header = document.querySelector('header');
+const postTitle = document.getElementById('post-title');
+const postBody = document.getElementById('post-body');
 
 fetch('https://apis.scrimba.com/jsonplaceholder/posts', {method: 'GET'})
     .then(res => res.json())
@@ -19,6 +21,23 @@ fetch('https://apis.scrimba.com/jsonplaceholder/posts', {method: 'GET'})
 
         postsContainer.innerHTML = postsHtml;
     });
+
+document.querySelector('form').addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const postObj = {
+        title: '',
+        body: ''
+    };
+
+    if (postTitle.value && postBody.value) {
+        postObj.title = postTitle.value;
+        postObj.body = postBody.value;
+
+        console.log(postObj);
+    }
+
+})
 
 window.onscroll = () => {
     if (window.scrollY > 20) {
