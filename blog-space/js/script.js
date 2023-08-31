@@ -31,7 +31,17 @@ document.querySelector('form').addEventListener('submit', (e) => {
         body: postBody
     };
 
-    console.log(postObj);
+    // Send a new post to the server with fetch API
+    fetch('https://apis.scrimba.com/jsonplaceholder/todos', {
+        method: 'POST',
+        body: JSON.stringify(postObj),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(res => res.json())
+    .then(data => console.log(data))
+
     clearForm();
 });
 
