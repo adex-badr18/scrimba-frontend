@@ -32,7 +32,13 @@ document.querySelector('form').addEventListener('submit', (e) => {
     };
 
     console.log(postObj);
+    clearForm();
 });
+
+function clearForm() {
+    document.getElementById('post-title').value = '';
+    document.getElementById('post-body').value = '';
+}
 
 window.onscroll = () => {
     if (window.scrollY > 20) {
