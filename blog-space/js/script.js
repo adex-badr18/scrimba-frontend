@@ -40,7 +40,7 @@ document.querySelector('form').addEventListener('submit', (e) => {
         }
     })
     .then(res => res.json())
-    .then(data => console.log(data))
+    .then(data => postsContainer.prepend(createPostElement(data.title, data.body)))
 
     clearForm();
 });
@@ -48,6 +48,25 @@ document.querySelector('form').addEventListener('submit', (e) => {
 function clearForm() {
     document.getElementById('post-title').value = '';
     document.getElementById('post-body').value = '';
+}
+
+function createPostElement(title, body) {
+    const postTitleEl = document.createElement('h2');
+    postTitleEl.className = 'post-title';
+    postTitleEl.textContent = title;
+
+    const postBodyEl = document.createElement('p');
+    postBodyEl.className = 'post-body';
+    postBodyEl.textContent = body;
+
+    const divider = document.createElement('div');
+    divider.className = 'divider';
+
+    const postContainer = document.createElement('div');
+    postContainer.className = 'post';
+    postContainer.append(postTitleEl, postBodyEl, divider);
+
+    return postContainer;
 }
 
 window.onscroll = () => {
