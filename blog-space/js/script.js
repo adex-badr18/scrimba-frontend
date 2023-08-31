@@ -1,5 +1,9 @@
 const postsContainer = document.getElementById('posts-container');
 const header = document.querySelector('header');
+const titleInput = document.getElementById('post-title');
+const bodyInput = document.getElementById('post-body');
+const postForm = document.getElementById('post-form');
+
 let postsArray = [];
 
 fetch('https://apis.scrimba.com/jsonplaceholder/posts', { method: 'GET' })
@@ -9,15 +13,12 @@ fetch('https://apis.scrimba.com/jsonplaceholder/posts', { method: 'GET' })
         renderPosts();
     });
 
-document.querySelector('form').addEventListener('submit', (e) => {
+postForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const postTitle = document.getElementById('post-title').value;
-    const postBody = document.getElementById('post-body').value;
-
     const postObj = {
-        title: postTitle,
-        body: postBody
+        title: titleInput.value,
+        body: bodyInput.value
     };
 
     // Send a new post to the server with fetch API
@@ -28,11 +29,11 @@ document.querySelector('form').addEventListener('submit', (e) => {
             'Content-Type': 'application/json'
         }
     })
-    .then(res => res.json())
-    .then(post => {
-        postsArray.unshift(post);
-        renderPosts();
-    })
+        .then(res => res.json())
+        .then(post => {
+            postsArray.unshift(post);
+            renderPosts();
+        })
 
     clearForm();
 });
@@ -53,8 +54,7 @@ function renderPosts() {
 }
 
 function clearForm() {
-    document.getElementById('post-title').value = '';
-    document.getElementById('post-body').value = '';
+    postForm.reset();
 }
 
 window.onscroll = () => {
