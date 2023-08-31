@@ -63,7 +63,7 @@ section.post-form {
 form {
     display: flex;
     flex-direction: column;
-    gap: 0.5em;
+    gap: 0.8em;
 }
 
 input,
@@ -72,6 +72,13 @@ button {
     padding: 0.825em;
     border: none;
     border-radius: 5px;
+    font-size: 1em;
+}
+
+.post-btn {
+    background-color: #642B73;
+    color: #F5F5F5;
+    font-weight: 700;
 }
 
 .post {
