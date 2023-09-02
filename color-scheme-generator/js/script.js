@@ -1,4 +1,5 @@
 const colorsContainer = document.getElementById('colors-container');
+const hexContainer = document.getElementById('hex-container');
 const modesDropdown = document.getElementById('modes-dropdown');
 const colorInput = document.getElementById('color-input');
 const getColorBtn = document.getElementById('get-colors-btn');
@@ -24,6 +25,9 @@ getSchemeModes().then(modes => {
 getColorBtn.addEventListener('click', () => {
     const seedColor = colorInput.value.substring(1);
     const schemeMode = modesDropdown.value;
+
+    colorsContainer.innerHTML = '';
+    hexContainer.innerHTML = '';
     
     // Fetch color schemes from the color API
     fetch(`https://www.thecolorapi.com/scheme?hex=${seedColor}&mode=${schemeMode}&count=5`)
@@ -33,6 +37,7 @@ getColorBtn.addEventListener('click', () => {
 
             hexValues.forEach(hexValue => {
                 const colorPlaceholder = document.createElement('div');
+                const hexPlaceholder = document.createElement('div');
 
                 // Set colorPlaceholder properties
                 colorPlaceholder.id = hexValue;
@@ -44,6 +49,16 @@ getColorBtn.addEventListener('click', () => {
                 colorsContainer.style.display = 'flex';
                 colorsContainer.append(colorPlaceholder);
 
+                // Set colorPlaceholder properties
+                hexPlaceholder.textContent = hexValue;
+                hexPlaceholder.className = hexValue;
+                hexPlaceholder.style.backgroundColor = '#FFFFFF';
+                hexPlaceholder.style.textAlign = 'center';
+                hexPlaceholder.style.height = '2.875em';
+                hexPlaceholder.style.width = '6.875em';
+
+                hexContainer.style.display = 'flex';
+                hexContainer.append(hexPlaceholder);
             })
         })
 });
