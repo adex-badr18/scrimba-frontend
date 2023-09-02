@@ -13,3 +13,7 @@ body {
     grid-template-columns: 1fr 570px 1fr;
     gap: 1em;
 }
+
+header, main, footer {
+    grid-column: 2;
+}
