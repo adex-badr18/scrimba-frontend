@@ -117,36 +117,45 @@ header p span {
     max-height: 200px;
     overflow-y: auto;
     transition: 0.5s ease;
-  }
-  
-  .modes-dropdown:focus-within {
+}
+
+.modes-dropdown:focus-within {
     box-shadow: 0 10px 25px rgba(94, 108, 233, 0.6);
-  }
-  
-  .modes-dropdown li {
+}
+
+.modes-dropdown li {
     position: relative;
     cursor: pointer;
     display: flex;
     gap: 1em;
     align-items: center;
-  }
-  
-  .modes-dropdown li label {
+}
+
+.modes-dropdown li label {
     width: 100%;
     padding: 8px 10px;
     cursor: pointer;
-  }
-  
-  .modes-dropdown::-webkit-scrollbar {
-    width: 7px;
-  }
+}
 
-  .modes-dropdown::-webkit-scrollbar-track {
+.modes-dropdown::-webkit-scrollbar {
+    width: 7px;
+}
+
+.modes-dropdown::-webkit-scrollbar-track {
     background: #f1f1f1;
     border-radius: 25px;
-  }
-  
-  .modes-dropdown::-webkit-scrollbar-thumb {
+}
+
+.modes-dropdown::-webkit-scrollbar-thumb {
     background: #ccc;
     border-radius: 25px;
-  }
+}
+
+.modes-dropdown li:hover,
+.modes-dropdown input:checked ~ label {
+    background-color: #f2f2f2;
+}
+
+.modes-dropdown input:focus ~ label {
+    background-color: #dfdfdf;
+}
