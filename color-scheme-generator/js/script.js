@@ -68,11 +68,14 @@ async function getSchemeModes() {
 }
 
 getSchemeModes().then(modes => {
-    const optionsHtml = modes.map(mode => {
+    const optionsHtml = modes.map((mode, i) => {
         const modeTitleCase = mode.substring(0, 1).toUpperCase() + mode.substring(1).toLowerCase();
 
         return `
-            <option value="${mode}">${modeTitleCase}</option>
+            <li>
+                <input type="radio" id="${mode}-${i}" name="social-account" />
+                <label for="${mode}-${i}">${modeTitleCase}</label>
+            </li>
         `
     }).join(' ');
 
