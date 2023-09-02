@@ -45,6 +45,7 @@ getColorBtn.addEventListener('click', () => {
                 colorPlaceholder.style.backgroundColor = hexValue;
                 colorPlaceholder.style.height = '25.875em';
                 colorPlaceholder.style.width = '6.875em';
+                colorPlaceholder.setAttribute('data-hex', hexValue);
 
                 colorsContainer.style.display = 'flex';
                 colorsContainer.append(colorPlaceholder);
@@ -56,6 +57,7 @@ getColorBtn.addEventListener('click', () => {
                 hexPlaceholder.style.textAlign = 'center';
                 hexPlaceholder.style.height = '2.875em';
                 hexPlaceholder.style.width = '6.875em';
+                hexPlaceholder.setAttribute('data-hex', hexValue);
 
                 hexContainer.style.display = 'flex';
                 hexContainer.append(hexPlaceholder);
