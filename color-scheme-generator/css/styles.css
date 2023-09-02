@@ -169,3 +169,10 @@ header p span {
     left: 0;
     opacity: 0;
 }
+
+.custom-select.active .select-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: scaleY(1);
+}
+
