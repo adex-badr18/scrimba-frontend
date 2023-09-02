@@ -58,3 +58,8 @@ header p span {
     gap: 1em;
     padding: 2em 1.5em;
 }
+
+.color-input {
+    width: 3.8125em;
+    height: 2.625em;
+}
