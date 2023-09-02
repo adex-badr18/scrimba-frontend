@@ -5,3 +5,8 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+body {
+    font-size: 1em;
+    font-family: 'Inter', sans-serif;
+}
