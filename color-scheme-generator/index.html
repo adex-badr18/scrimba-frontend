@@ -23,7 +23,14 @@
     <main>
         <section id="controller" class="controller">
             <input type="color" name="color-input" id="color-input" class="color-input">
-            <select name="modes-dropdown" id="modes-dropdown" class="modes-dropdown"></select>
+            <!-- <select name="modes-dropdown" id="modes-dropdown" class="modes-dropdown"></select> -->
+            <div class="modes-select">
+                <button class="select-btn">
+                    <span class="selected-value">Select a scheme mode</span>
+                    <span class="arrow"></span>
+                </button>
+                <ul class="select-dropdown"></ul>
+            </div>
             <button id="get-colors-btn" class="get-colors-btn">Get color scheme</button>
         </section>
         <section id="color-canvas">
