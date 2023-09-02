@@ -1,3 +1,4 @@
+const colorCanvas = document.getElementById('color-canvas');
 const colorsContainer = document.getElementById('colors-container');
 const hexContainer = document.getElementById('hex-container');
 const modesDropdown = document.getElementById('modes-dropdown');
@@ -46,6 +47,16 @@ document.addEventListener('click', (e) => {
                     hexContainer.append(hexPlaceholder);
                 })
             })
+    } else if (e.target.dataset.hex) {
+        navigator.clipboard.writeText(e.target.dataset.hex).then(() => {
+            const copiedEl = document.createElement('span');
+            copiedEl.textContent = `Color (${e.target.dataset.hex}) Copied`;
+            colorCanvas.prepend(copiedEl);
+
+            setTimeout(() => {
+                copiedEl.remove();
+            }, 5000);
+        });
     }
 })
 
@@ -65,47 +76,4 @@ getSchemeModes().then(modes => {
     }).join(' ');
 
     modesDropdown.innerHTML = optionsHtml;
-});
-
-getColorBtn.addEventListener('click', () => {
-    // const seedColor = colorInput.value.substring(1);
-    // const schemeMode = modesDropdown.value;
-
-    // colorsContainer.innerHTML = '';
-    // hexContainer.innerHTML = '';
-
-    // // Fetch color schemes from the color API
-    // fetch(`https://www.thecolorapi.com/scheme?hex=${seedColor}&mode=${schemeMode}&count=5`)
-    //     .then(res => res.json())
-    //     .then(data => {
-    //         const hexValues = data.colors.map(color => color.hex.value);
-
-    //         hexValues.forEach(hexValue => {
-    //             const colorPlaceholder = document.createElement('div');
-    //             const hexPlaceholder = document.createElement('div');
-
-    //             // Set colorPlaceholder properties
-    //             colorPlaceholder.id = hexValue;
-    //             colorPlaceholder.className = hexValue;
-    //             colorPlaceholder.style.backgroundColor = hexValue;
-    //             colorPlaceholder.style.height = '25.875em';
-    //             colorPlaceholder.style.width = '6.875em';
-    //             colorPlaceholder.setAttribute('data-hex', hexValue);
-
-    //             colorsContainer.style.display = 'flex';
-    //             colorsContainer.append(colorPlaceholder);
-
-    //             // Set colorPlaceholder properties
-    //             hexPlaceholder.textContent = hexValue;
-    //             hexPlaceholder.className = hexValue;
-    //             hexPlaceholder.style.backgroundColor = '#FFFFFF';
-    //             hexPlaceholder.style.textAlign = 'center';
-    //             hexPlaceholder.style.height = '2.875em';
-    //             hexPlaceholder.style.width = '6.875em';
-    //             hexPlaceholder.setAttribute('data-hex', hexValue);
-
-    //             hexContainer.style.display = 'flex';
-    //             hexContainer.append(hexPlaceholder);
-    //         })
-    //     })
 });
