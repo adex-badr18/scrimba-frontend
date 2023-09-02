@@ -62,4 +62,6 @@ header p span {
 .color-input {
     width: 3.8125em;
     height: 2.625em;
+    cursor: pointer;
 }
+
