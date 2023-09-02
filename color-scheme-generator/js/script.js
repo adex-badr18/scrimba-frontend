@@ -73,7 +73,7 @@ getSchemeModes().then(modes => {
 
         return `
             <li role="option">
-                <input type="radio" id="${mode}-${i}" name="social-account" />
+                <input type="radio" id="${mode}-${i}" name="color-mode" />
                 <label for="${mode}-${i}">${modeTitleCase}</label>
             </li>
         `
