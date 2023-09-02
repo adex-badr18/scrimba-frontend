@@ -1,3 +1,4 @@
+const colorsContainer = document.getElementById('colors-container');
 const modesDropdown = document.getElementById('modes-dropdown');
 const colorInput = document.getElementById('color-input');
 const getColorBtn = document.getElementById('get-colors-btn');
@@ -30,6 +31,19 @@ getColorBtn.addEventListener('click', () => {
         .then(data => {
             const hexValues = data.colors.map(color => color.hex.value);
 
-            console.log(hexValues);
+            hexValues.forEach(hexValue => {
+                const colorPlaceholder = document.createElement('div');
+
+                // Set colorPlaceholder properties
+                colorPlaceholder.id = hexValue;
+                colorPlaceholder.className = hexValue;
+                colorPlaceholder.style.backgroundColor = hexValue;
+                colorPlaceholder.style.height = '25.875em';
+                colorPlaceholder.style.width = '6.875em';
+
+                colorsContainer.style.display = 'flex';
+                colorsContainer.append(colorPlaceholder);
+
+            })
         })
 });
