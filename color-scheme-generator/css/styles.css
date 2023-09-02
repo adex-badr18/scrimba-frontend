@@ -11,9 +11,35 @@ body {
     font-family: 'Inter', sans-serif;
     display: grid;
     grid-template-columns: 1fr 570px 1fr;
-    gap: 1em;
 }
 
-header, main, footer {
+header,
+main,
+footer {
     grid-column: 2;
+}
+
+header {
+    background: #1E9600;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FF0000, #FFF200, #1E9600);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FF0000, #FFF200, #1E9600);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 1.5em;
+    color: #FFFFFF;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 0.3em;
+    text-shadow: 1px 0px 4px rgba(0, 0, 0, 0.5);
+}
+
+header p {
+    font-size: 1.125em;
+    font-weight: 600;
+    text-shadow: 2px 0px 4px rgba(0, 0, 0, 0.5);
 }
