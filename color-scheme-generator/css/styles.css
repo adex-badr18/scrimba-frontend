@@ -176,3 +176,6 @@ header p span {
     transform: scaleY(1);
 }
 
+.modes-select.active .arrow {
+    transform: rotate(180deg);
+}
