@@ -152,10 +152,16 @@ header p span {
 }
 
 .modes-dropdown li:hover,
-.modes-dropdown input:checked ~ label {
+.modes-dropdown input:checked~label {
     background-color: #f2f2f2;
 }
 
-.modes-dropdown input:focus ~ label {
+.modes-dropdown input:focus~label {
     background-color: #dfdfdf;
+}
+
+.modes-dropdown input[type="radio"] {
+    position: absolute;
+    left: 0;
+    opacity: 0;
 }
