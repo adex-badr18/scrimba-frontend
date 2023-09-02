@@ -72,7 +72,7 @@ getSchemeModes().then(modes => {
         const modeTitleCase = mode.substring(0, 1).toUpperCase() + mode.substring(1).toLowerCase();
 
         return `
-            <li>
+            <li role="option">
                 <input type="radio" id="${mode}-${i}" name="social-account" />
                 <label for="${mode}-${i}">${modeTitleCase}</label>
             </li>
