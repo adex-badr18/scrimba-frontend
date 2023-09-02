@@ -4,6 +4,51 @@ const modesDropdown = document.getElementById('modes-dropdown');
 const colorInput = document.getElementById('color-input');
 const getColorBtn = document.getElementById('get-colors-btn');
 
+document.addEventListener('click', (e) => {
+    if (e.target.id === 'get-colors-btn') {
+        const seedColor = colorInput.value.substring(1);
+        const schemeMode = modesDropdown.value;
+
+        colorsContainer.innerHTML = '';
+        hexContainer.innerHTML = '';
+
+        // Fetch color schemes from the color API
+        fetch(`https://www.thecolorapi.com/scheme?hex=${seedColor}&mode=${schemeMode}&count=5`)
+            .then(res => res.json())
+            .then(data => {
+                const hexValues = data.colors.map(color => color.hex.value);
+
+                hexValues.forEach(hexValue => {
+                    const colorPlaceholder = document.createElement('div');
+                    const hexPlaceholder = document.createElement('div');
+
+                    // Set colorPlaceholder properties
+                    colorPlaceholder.id = hexValue;
+                    colorPlaceholder.className = hexValue;
+                    colorPlaceholder.style.backgroundColor = hexValue;
+                    colorPlaceholder.style.height = '25.875em';
+                    colorPlaceholder.style.width = '6.875em';
+                    colorPlaceholder.setAttribute('data-hex', hexValue);
+
+                    colorsContainer.style.display = 'flex';
+                    colorsContainer.append(colorPlaceholder);
+
+                    // Set colorPlaceholder properties
+                    hexPlaceholder.textContent = hexValue;
+                    hexPlaceholder.className = hexValue;
+                    hexPlaceholder.style.backgroundColor = '#FFFFFF';
+                    hexPlaceholder.style.textAlign = 'center';
+                    hexPlaceholder.style.height = '2.875em';
+                    hexPlaceholder.style.width = '6.875em';
+                    hexPlaceholder.setAttribute('data-hex', hexValue);
+
+                    hexContainer.style.display = 'flex';
+                    hexContainer.append(hexPlaceholder);
+                })
+            })
+    }
+})
+
 async function getSchemeModes() {
     const res = await fetch('https://www.thecolorapi.com/scheme?hex=000000');
     const data = await res.json();
@@ -23,44 +68,44 @@ getSchemeModes().then(modes => {
 });
 
 getColorBtn.addEventListener('click', () => {
-    const seedColor = colorInput.value.substring(1);
-    const schemeMode = modesDropdown.value;
+    // const seedColor = colorInput.value.substring(1);
+    // const schemeMode = modesDropdown.value;
 
-    colorsContainer.innerHTML = '';
-    hexContainer.innerHTML = '';
-    
-    // Fetch color schemes from the color API
-    fetch(`https://www.thecolorapi.com/scheme?hex=${seedColor}&mode=${schemeMode}&count=5`)
-        .then(res => res.json())
-        .then(data => {
-            const hexValues = data.colors.map(color => color.hex.value);
+    // colorsContainer.innerHTML = '';
+    // hexContainer.innerHTML = '';
 
-            hexValues.forEach(hexValue => {
-                const colorPlaceholder = document.createElement('div');
-                const hexPlaceholder = document.createElement('div');
+    // // Fetch color schemes from the color API
+    // fetch(`https://www.thecolorapi.com/scheme?hex=${seedColor}&mode=${schemeMode}&count=5`)
+    //     .then(res => res.json())
+    //     .then(data => {
+    //         const hexValues = data.colors.map(color => color.hex.value);
 
-                // Set colorPlaceholder properties
-                colorPlaceholder.id = hexValue;
-                colorPlaceholder.className = hexValue;
-                colorPlaceholder.style.backgroundColor = hexValue;
-                colorPlaceholder.style.height = '25.875em';
-                colorPlaceholder.style.width = '6.875em';
-                colorPlaceholder.setAttribute('data-hex', hexValue);
+    //         hexValues.forEach(hexValue => {
+    //             const colorPlaceholder = document.createElement('div');
+    //             const hexPlaceholder = document.createElement('div');
 
-                colorsContainer.style.display = 'flex';
-                colorsContainer.append(colorPlaceholder);
+    //             // Set colorPlaceholder properties
+    //             colorPlaceholder.id = hexValue;
+    //             colorPlaceholder.className = hexValue;
+    //             colorPlaceholder.style.backgroundColor = hexValue;
+    //             colorPlaceholder.style.height = '25.875em';
+    //             colorPlaceholder.style.width = '6.875em';
+    //             colorPlaceholder.setAttribute('data-hex', hexValue);
 
-                // Set colorPlaceholder properties
-                hexPlaceholder.textContent = hexValue;
-                hexPlaceholder.className = hexValue;
-                hexPlaceholder.style.backgroundColor = '#FFFFFF';
-                hexPlaceholder.style.textAlign = 'center';
-                hexPlaceholder.style.height = '2.875em';
-                hexPlaceholder.style.width = '6.875em';
-                hexPlaceholder.setAttribute('data-hex', hexValue);
+    //             colorsContainer.style.display = 'flex';
+    //             colorsContainer.append(colorPlaceholder);
 
-                hexContainer.style.display = 'flex';
-                hexContainer.append(hexPlaceholder);
-            })
-        })
+    //             // Set colorPlaceholder properties
+    //             hexPlaceholder.textContent = hexValue;
+    //             hexPlaceholder.className = hexValue;
+    //             hexPlaceholder.style.backgroundColor = '#FFFFFF';
+    //             hexPlaceholder.style.textAlign = 'center';
+    //             hexPlaceholder.style.height = '2.875em';
+    //             hexPlaceholder.style.width = '6.875em';
+    //             hexPlaceholder.setAttribute('data-hex', hexValue);
+
+    //             hexContainer.style.display = 'flex';
+    //             hexContainer.append(hexPlaceholder);
+    //         })
+    //     })
 });
