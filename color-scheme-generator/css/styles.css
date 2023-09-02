@@ -20,12 +20,13 @@ footer {
 }
 
 header {
-    background: #1E9600;
+    background: #000046;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #FF0000, #FFF200, #1E9600);
+    background: -webkit-linear-gradient(to right, #1CB5E0, #000046);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #FF0000, #FFF200, #1E9600);
+    background: linear-gradient(to right, #1CB5E0, #000046);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     padding: 1.5em;
     color: #FFFFFF;
 }
@@ -35,11 +36,11 @@ header h1 {
     font-weight: 900;
     line-height: 1.2;
     margin-bottom: 0.3em;
-    text-shadow: 1px 0px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.5);
 }
 
 header p {
     font-size: 1.125em;
     font-weight: 600;
-    text-shadow: 2px 0px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.5);
 }
