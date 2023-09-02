@@ -11,7 +11,7 @@ async function getSchemeModes() {
 getSchemeModes().then(modes => {
     const optionsHtml = modes.map(mode => {
         const modeTitleCase = mode.substring(0, 1).toUpperCase() + mode.substring(1).toLowerCase();
-        
+
         return `
             <option value="${mode}">${modeTitleCase}</option>
         `
@@ -27,5 +27,9 @@ getColorBtn.addEventListener('click', () => {
     // Fetch color schemes from the color API
     fetch(`https://www.thecolorapi.com/scheme?hex=${seedColor}&mode=${schemeMode}&count=5`)
         .then(res => res.json())
-        .then(data => console.log(data))
+        .then(data => {
+            const hexValues = data.colors.map(color => color.hex.value);
+
+            console.log(hexValues);
+        })
 });
