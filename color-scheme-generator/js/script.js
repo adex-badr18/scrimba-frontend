@@ -29,23 +29,17 @@ document.addEventListener('click', (e) => {
                     const hexPlaceholder = document.createElement('div');
 
                     // Set colorPlaceholder properties
-                    colorPlaceholder.id = hexValue;
-                    colorPlaceholder.className = hexValue;
+                    colorPlaceholder.className = 'color';
                     colorPlaceholder.style.backgroundColor = hexValue;
-                    colorPlaceholder.style.height = '25.875em';
-                    colorPlaceholder.style.width = '6.875em';
                     colorPlaceholder.setAttribute('data-hex', hexValue);
 
-                    colorsContainer.style.display = 'flex';
                     colorsContainer.append(colorPlaceholder);
 
                     // Set colorPlaceholder properties
                     hexPlaceholder.textContent = hexValue;
-                    hexPlaceholder.className = hexValue;
+                    hexPlaceholder.className = 'color-hex';
                     hexPlaceholder.style.backgroundColor = '#FFFFFF';
                     hexPlaceholder.style.textAlign = 'center';
-                    hexPlaceholder.style.height = '2.875em';
-                    hexPlaceholder.style.width = '6.875em';
                     hexPlaceholder.setAttribute('data-hex', hexValue);
 
                     hexContainer.style.display = 'flex';
