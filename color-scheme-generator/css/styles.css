@@ -215,6 +215,9 @@ header p span {
 }
 
 .color-hex {
+    background-color: #FFFFFF;
+    color: #2B283A;
+    font-size: 0.75rem;
     padding: 1em 0;
     height: 2.875em;
 }
