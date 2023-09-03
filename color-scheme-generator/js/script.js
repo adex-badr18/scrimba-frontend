@@ -4,8 +4,13 @@ const hexContainer = document.getElementById('hex-container');
 const modesDropdown = document.getElementById('modes-dropdown');
 const colorInput = document.getElementById('color-input');
 const getColorBtn = document.getElementById('get-colors-btn');
+const selectBtn = document.getElementById('select-btn');
+const modesSelect = document.getElementById('modes-select');
+const selectedValue = document.getElementById('selected-value');
+const optionsList = document.querySelectorAll('.modes-dropdown li');
 
 document.addEventListener('click', (e) => {
+    console.log(e.target)
     if (e.target.id === 'get-colors-btn') {
         const seedColor = colorInput.value.substring(1);
         const schemeMode = modesDropdown.value;
@@ -58,6 +63,26 @@ document.addEventListener('click', (e) => {
                 copiedEl.remove();
             }, 5000);
         });
+    } else if (e.target.id === 'select-btn') {
+        // add/remove active class on the container element
+        modesSelect.classList.toggle('active');
+
+        // update the aria-expanded attribute based on the current state
+        selectBtn.setAttribute(
+            'aria-expanded',
+            selectBtn.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');
+    } else if (e.target.dataset.mode) {
+        // Click Events
+        if (e.type === 'click' && e.clientX !== 0 && e.clientY !== 0) {
+            selectedValue.textContent = e.target.dataset.mode;
+            modesSelect.classList.remove('active');
+        }
+
+        // Key Events
+        if (e.key === 'Enter') {
+            selectedValue.textContent = e.target.dataset.mode;
+            modesSelect.classList.remove('active');
+        }
     }
 })
 
@@ -72,7 +97,7 @@ getSchemeModes().then(modes => {
         const modeTitleCase = mode.substring(0, 1).toUpperCase() + mode.substring(1).toLowerCase();
 
         return `
-            <li role="option">
+            <li role="option" data-mode=${mode}>
                 <input type="radio" id="${mode}-${i}" name="color-mode" />
                 <label for="${mode}-${i}">${modeTitleCase}</label>
             </li>

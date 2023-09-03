@@ -23,10 +23,9 @@
     <main>
         <section id="controller" class="controller">
             <input type="color" name="color-input" id="color-input" class="color-input">
-            <!-- <select name="modes-dropdown" id="modes-dropdown" class="modes-dropdown"></select> -->
-            <div class="modes-select">
-                <button class="select-btn" role="combobox" aria-labelledby="select button" aria-haspopup="listbox" aria-expanded="false" aria-controls="modes-dropdown">
-                    <span class="selected-value">Select a scheme mode</span>
+            <div class="modes-select" id="modes-select">
+                <button class="select-btn" id="select-btn" role="combobox" aria-labelledby="select button" aria-haspopup="listbox" aria-expanded="false" aria-controls="modes-dropdown">
+                    <span class="selected-value" id="selected-value">Select a scheme mode</span>
                     <span class="arrow"></span>
                 </button>
                 <ul class="modes-dropdown" id="modes-dropdown" role="listbox"></ul>

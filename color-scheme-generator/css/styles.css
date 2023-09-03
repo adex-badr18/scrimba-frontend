@@ -170,7 +170,7 @@ header p span {
     opacity: 0;
 }
 
-.custom-select.active .select-dropdown {
+.modes-select.active .modes-dropdown {
     opacity: 1;
     visibility: visible;
     transform: scaleY(1);
@@ -178,4 +178,9 @@ header p span {
 
 .modes-select.active .arrow {
     transform: rotate(180deg);
+}
+
+.select-btn>*,
+.modes-dropdown li>* {
+    pointer-events: none;
 }
