@@ -87,6 +87,7 @@ header p span {
     width: 100%;
     font-size: 1.15rem;
     background-color: #fff;
+    color: #111827;
     padding: 0.56em 0.8em;
     border: 1px solid #D1D5DB;
     border-radius: 0.25rem;
@@ -114,6 +115,7 @@ header p span {
     width: 100%;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     background-color: #fff;
+    color: #111827;
     border: 1px solid #D1D5DB;
     border-radius: 4px;
     padding: 10px;
