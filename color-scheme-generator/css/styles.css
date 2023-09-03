@@ -69,7 +69,7 @@ header p span {
 
 .color-input {
     width: 5em;
-    height: 3.1em;
+    height: 3.15em;
     cursor: pointer;
     border: 3px solid #D1D5DB;
 }
@@ -79,6 +79,7 @@ header p span {
 .modes-select {
     position: relative;
     width: 18.5em;
+    height: 2.625em;
     font-size: 1rem;
 }
 
@@ -97,6 +98,7 @@ header p span {
 
 .selected-value {
     text-align: left;
+    font-size: 1rem;
 }
 
 .arrow {
@@ -195,7 +197,9 @@ header p span {
     border: 1px solid #D1D5DB;
     border-radius: 0.25em;
     font-size: 0.75rem;
+    font-weight: 600;
     line-height: 1.3;
+    height: 3.5em;
 }
 
 /* Colors Grid Section */
