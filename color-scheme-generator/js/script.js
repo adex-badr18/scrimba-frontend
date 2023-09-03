@@ -12,7 +12,8 @@ const optionsList = document.querySelectorAll('.modes-dropdown li');
 document.addEventListener('click', (e) => {
     if (e.target.id === 'get-colors-btn') {
         const seedColor = colorInput.value.substring(1);
-        const schemeMode = modesDropdown.value;
+        const schemeMode = selectedValue.textContent.toLowerCase();
+
 
         colorsContainer.innerHTML = '';
         hexContainer.innerHTML = '';
@@ -71,7 +72,6 @@ document.addEventListener('click', (e) => {
             'aria-expanded',
             selectBtn.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');
     } else if (e.target.dataset.mode) {
-        console.log(e.target)
         // Click Events
         if (e.type === 'click' && e.clientX !== 0 && e.clientY !== 0) {
             selectedValue.textContent = e.target.children[1].textContent;
@@ -80,7 +80,7 @@ document.addEventListener('click', (e) => {
 
         // Key Events
         if (e.key === 'Enter') {
-            selectedValue.textContent = e.target.dataset.mode;
+            selectedValue.textContent = e.target.children[1].textContent;
             modesSelect.classList.remove('active');
         }
     }
