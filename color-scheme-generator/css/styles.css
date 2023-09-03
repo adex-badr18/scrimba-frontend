@@ -56,7 +56,7 @@ header p span {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 1em;
+    gap: 0.8em;
     padding: 2em 1.5em;
 }
 
@@ -64,11 +64,12 @@ header p span {
     width: 5em;
     height: 3.1em;
     cursor: pointer;
+    border: 3px solid #D1D5DB;
 }
 
 .modes-select {
     position: relative;
-    width: 19.5em;
+    width: 18.5em;
     font-size: 1rem;
 }
 
@@ -174,4 +175,14 @@ header p span {
 .select-btn>*,
 .modes-dropdown li>* {
     pointer-events: none;
+}
+
+.get-colors-btn {
+    padding: 13px 11px;
+    background-color: #FFFFFF;
+    color: #374151;
+    border: 1px solid #D1D5DB;
+    border-radius: 0.25em;
+    font-size: 0.75rem;
+    line-height: 1.3;
 }
