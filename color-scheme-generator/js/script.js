@@ -51,7 +51,6 @@ document.addEventListener('click', (e) => {
             const copiedEl = document.createElement('span');
             copiedEl.textContent = `Color (${e.target.dataset.hex}) Copied`;
             colorCanvas.prepend(copiedEl);
-            colorCanvas.style.border = `5px solid ${e.target.dataset.hex}`;
 
             setTimeout(() => {
                 copiedEl.remove();
