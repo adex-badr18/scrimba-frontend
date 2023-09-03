@@ -55,25 +55,16 @@ header p span {
 .controller {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     gap: 1em;
     padding: 2em 1.5em;
 }
 
 .color-input {
-    width: 3.8125em;
-    height: 2.625em;
+    width: 5em;
+    height: 3.1em;
     cursor: pointer;
 }
-
-/* select {
-    appearance: none;
-    padding: 0.5625em 0.8125em;
-    font-size: 1em;
-    line-height: 1.5;
-    border: 1px solid #D1D5DB;
-    border-radius: 5px;
-    width: 19.5em;
-} */
 
 .modes-select {
     position: relative;
