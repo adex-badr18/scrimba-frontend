@@ -224,6 +224,7 @@ header p span {
     background-color: #FFFFFF;
     color: #2B283A;
     font-size: 0.75rem;
+    font-weight: 600;
     padding: 1em 0;
     height: 2.875em;
 }
