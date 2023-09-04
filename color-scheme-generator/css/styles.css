@@ -10,7 +10,7 @@ body {
     font-size: 1em;
     font-family: 'Inter', sans-serif;
     display: grid;
-    grid-template-columns: 1fr 570px 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 header,
@@ -237,7 +237,7 @@ header p span {
 .copied-message {
     position: absolute;
     top: 60%;
-    left: 36%;
+    left: 50%;
     color: #111827;
     background-color: #FFFFFF;
     padding: 1em;
