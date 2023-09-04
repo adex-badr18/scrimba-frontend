@@ -206,6 +206,11 @@ header p span {
 
 /* Colors Grid Section */
 
+.color-canvas {
+    min-height: 20em;
+    background-color: #F1F1F1;
+}
+
 .colors-container {
     display: flex;
     width: 570px;
