@@ -244,3 +244,17 @@ header p span {
     border-radius: 5px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
 }
+
+.footer {
+    text-align: center;
+}
+
+.footer h4 {
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.footer span {
+    display: block;
+    font-size: 0.875rem;
+}
