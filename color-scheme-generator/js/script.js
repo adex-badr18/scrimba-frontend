@@ -11,7 +11,7 @@ const optionsList = document.querySelectorAll('.modes-dropdown li');
 let picker = new ColorPicker(colorInput, "#000000");
 let color = '#000000';
 
-colorInput.addEventListener('colorChange', function(e) {
+colorInput.addEventListener('colorChange', function (e) {
     color = e.detail.color.hexa;
 });
 
@@ -20,38 +20,39 @@ document.addEventListener('click', (e) => {
         const seedColor = color.substring(1);
         const schemeMode = selectedValue.textContent.toLowerCase();
 
-
         colorsContainer.innerHTML = '';
         hexContainer.innerHTML = '';
 
-        // Fetch color schemes from the color API
-        fetch(`https://www.thecolorapi.com/scheme?hex=${seedColor}&mode=${schemeMode}&count=5`)
-            .then(res => res.json())
-            .then(data => {
-                const hexValues = data.colors.map(color => color.hex.value);
+        if (seedColor && selectedValue.textContent !== 'Select a scheme mode') {
+            // Fetch color schemes from the color API
+            fetch(`https://www.thecolorapi.com/scheme?hex=${seedColor}&mode=${schemeMode}&count=5`)
+                .then(res => res.json())
+                .then(data => {
+                    const hexValues = data.colors.map(color => color.hex.value);
 
-                hexValues.forEach(hexValue => {
-                    const colorPlaceholder = document.createElement('div');
-                    const hexPlaceholder = document.createElement('div');
+                    hexValues.forEach(hexValue => {
+                        const colorPlaceholder = document.createElement('div');
+                        const hexPlaceholder = document.createElement('div');
 
-                    // Set colorPlaceholder properties
-                    colorPlaceholder.className = 'color';
-                    colorPlaceholder.style.backgroundColor = hexValue;
-                    colorPlaceholder.setAttribute('data-hex', hexValue);
+                        // Set colorPlaceholder properties
+                        colorPlaceholder.className = 'color';
+                        colorPlaceholder.style.backgroundColor = hexValue;
+                        colorPlaceholder.setAttribute('data-hex', hexValue);
 
-                    colorsContainer.append(colorPlaceholder);
+                        colorsContainer.append(colorPlaceholder);
 
-                    // Set colorPlaceholder properties
-                    hexPlaceholder.textContent = hexValue;
-                    hexPlaceholder.className = 'color-hex';
-                    hexPlaceholder.style.backgroundColor = '#FFFFFF';
-                    hexPlaceholder.style.textAlign = 'center';
-                    hexPlaceholder.setAttribute('data-hex', hexValue);
+                        // Set colorPlaceholder properties
+                        hexPlaceholder.textContent = hexValue;
+                        hexPlaceholder.className = 'color-hex';
+                        hexPlaceholder.style.backgroundColor = '#FFFFFF';
+                        hexPlaceholder.style.textAlign = 'center';
+                        hexPlaceholder.setAttribute('data-hex', hexValue);
 
-                    hexContainer.style.display = 'flex';
-                    hexContainer.append(hexPlaceholder);
+                        hexContainer.style.display = 'flex';
+                        hexContainer.append(hexPlaceholder);
+                    })
                 })
-            })
+        }
     } else if (e.target.dataset.hex) {
         navigator.clipboard.writeText(e.target.dataset.hex).then(() => {
             const copiedEl = document.createElement('span');
