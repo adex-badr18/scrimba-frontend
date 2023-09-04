@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+    <!-- Color-pickr CSS -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/@r-tek/colr_pickr@2.0.0/build/colr_pickr.min.css" />
     <!-- CSS -->
     <link rel="stylesheet" href="./css/styles.css">
     <title>Color Scheme Generator</title>
@@ -22,9 +25,11 @@
 
     <main>
         <section id="controller" class="controller">
-            <input type="color" name="color-input" id="color-input" class="color-input">
+            <!-- <input type="color" name="color-input" id="color-input" class="color-input"> -->
+            <button id="color-input" class="color-input"></button>
             <div class="modes-select" id="modes-select">
-                <button class="select-btn" id="select-btn" role="combobox" aria-labelledby="select button" aria-haspopup="listbox" aria-expanded="false" aria-controls="modes-dropdown">
+                <button class="select-btn" id="select-btn" role="combobox" aria-labelledby="select button"
+                    aria-haspopup="listbox" aria-expanded="false" aria-controls="modes-dropdown">
                     <span class="selected-value" id="selected-value">Select a scheme mode</span>
                     <span class="arrow"></span>
                 </button>
@@ -44,6 +49,9 @@
         </div>
     </footer>
 
+    <!-- Color-pickr JS -->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@r-tek/colr_pickr@2.0.0/build/colr_pickr.min.js"></script>
     <script src="./js/script.js"></script>
 </body>
 

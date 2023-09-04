@@ -8,10 +8,16 @@ const selectBtn = document.getElementById('select-btn');
 const modesSelect = document.getElementById('modes-select');
 const selectedValue = document.getElementById('selected-value');
 const optionsList = document.querySelectorAll('.modes-dropdown li');
+let picker = new ColorPicker(colorInput, "#000000");
+let color = '#000000';
+
+colorInput.addEventListener('colorChange', function(e) {
+    color = e.detail.color.hexa;
+});
 
 document.addEventListener('click', (e) => {
     if (e.target.id === 'get-colors-btn') {
-        const seedColor = colorInput.value.substring(1);
+        const seedColor = color.substring(1);
         const schemeMode = selectedValue.textContent.toLowerCase();
 
 
