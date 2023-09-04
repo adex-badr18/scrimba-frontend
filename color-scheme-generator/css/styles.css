@@ -10,7 +10,7 @@ body {
     font-size: 1em;
     font-family: 'Inter', sans-serif;
     display: grid;
-    grid-template-columns: repeat(1fr);
+    grid-template-columns: 1fr 570px 1fr;
 }
 
 header,
