@@ -55,6 +55,7 @@ document.addEventListener('click', (e) => {
     } else if (e.target.dataset.hex) {
         navigator.clipboard.writeText(e.target.dataset.hex).then(() => {
             const copiedEl = document.createElement('span');
+            copiedEl.className = 'copied-message';
             copiedEl.textContent = `Color (${e.target.dataset.hex}) Copied`;
             colorCanvas.prepend(copiedEl);
 

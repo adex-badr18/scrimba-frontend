@@ -228,3 +228,14 @@ header p span {
     padding: 1em 0;
     height: 2.875em;
 }
+
+.copied-message {
+    position: absolute;
+    top: 60%;
+    left: 36%;
+    color: #111827;
+    background-color: #FFFFFF;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
