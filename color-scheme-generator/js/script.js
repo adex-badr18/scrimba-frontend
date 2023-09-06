@@ -17,7 +17,7 @@ colorInput.addEventListener('colorChange', function (e) {
 
 document.addEventListener('click', (e) => {
     if (e.target.id === 'get-colors-btn') {
-        const seedColor = color.substring(1);
+        const seedColor = color.substring(1, 7);
         const schemeMode = selectedValue.textContent.toLowerCase();
 
         colorsContainer.innerHTML = '';
