@@ -12,7 +12,7 @@ let picker = new ColorPicker(colorInput, "#000000");
 let color = '#000000';
 
 colorInput.addEventListener('colorChange', function (e) {
-    color = e.detail.color.hexa;
+    color = e.detail.color.hex;
 });
 
 document.addEventListener('click', (e) => {
