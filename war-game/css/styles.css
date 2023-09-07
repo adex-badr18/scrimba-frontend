@@ -23,17 +23,11 @@ footer {
     padding: 2em 0;
 }
 
-header {}
-
-main {
-    
-}
-
 .app-content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
     max-width: 570px;
     margin: 0 auto;
     height: 66.5vh;
@@ -45,4 +39,10 @@ main {
     gap: 1em;
 }
 
-footer {}
+.get-deck-btn {
+    align-self: flex-start;
+}
+
+.draw-cards-btn {
+    align-self: center;
+}
