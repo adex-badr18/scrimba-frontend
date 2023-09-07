@@ -1,3 +1,4 @@
+const cardsContainer = document.getElementById('cards-container');
 let deckId;
 
 function getDeck() {
@@ -14,7 +15,19 @@ function drawCards() {
         .then(res => res.json())
         .then(data => {
             console.log(data);
+            renderCards(data);
         });
+}
+
+function renderCards(cardsObj) {
+    cardsContainer.innerHTML = '';
+
+    cardsObj.cards.forEach(card => {
+        const cardImage = document.createElement('img');
+        cardImage.src = card.image;
+
+        cardsContainer.append(cardImage);
+    })
 }
 
 document.getElementById('get-deck').addEventListener('click', getDeck);
