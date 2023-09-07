@@ -30,13 +30,14 @@ footer {
     /* align-items: center; */
     max-width: 570px;
     margin: 0 auto;
-    height: 66.5vh;
+    min-height: 66.5vh;
 }
 
 .cards-container {
     display: flex;
     justify-content: center;
     gap: 1em;
+    padding: 1.5em 0;
 }
 
 .get-deck-btn {
@@ -45,4 +46,13 @@ footer {
 
 .draw-cards-btn {
     align-self: center;
+}
+
+button {
+    padding: 0.6em 1em;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: #FFFF00;
+    border: none;
+    border-radius: 5px;
 }
