@@ -32,7 +32,7 @@ header h1 {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    max-width: 570px;
+    max-width: 500px;
     margin: 0 auto;
     min-height: 81.5vh;
 }
