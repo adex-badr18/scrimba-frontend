@@ -27,7 +27,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* align-items: center; */
+    align-items: center;
     max-width: 570px;
     margin: 0 auto;
     min-height: 66.5vh;
@@ -40,19 +40,20 @@ footer {
     padding: 1.5em 0;
 }
 
-.get-deck-btn {
+/* .get-deck-btn {
     align-self: flex-start;
 }
 
 .draw-cards-btn {
     align-self: center;
-}
+} */
 
 button {
     padding: 0.6em 1em;
-    font-size: 1em;
+    font-size: 1rem;
     font-weight: bold;
     background-color: #FFFF00;
     border: none;
     border-radius: 5px;
+    width: 11.25em;
 }
