@@ -39,13 +39,15 @@ header {
     padding: 1.5em 0;
 }
 
-/* .get-deck-btn {
+.get-deck-btn {
     align-self: flex-start;
 }
 
 .draw-cards-btn {
-    align-self: center;
-} */
+    border-radius: 0;
+    width: 100%;
+    padding: 1em 0;
+}
 
 button {
     padding: 0.6em 1em;
@@ -55,4 +57,5 @@ button {
     border: none;
     border-radius: 5px;
     width: 11.25em;
+    color: #008000;
 }
