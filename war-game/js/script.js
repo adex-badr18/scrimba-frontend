@@ -30,5 +30,5 @@ function renderCards(cardsObj) {
     })
 }
 
-document.getElementById('get-deck').addEventListener('click', getDeck);
-document.getElementById('draw-cards').addEventListener('click', drawCards);
+document.getElementById('get-deck-btn').addEventListener('click', getDeck);
+document.getElementById('draw-cards-btn').addEventListener('click', drawCards);
