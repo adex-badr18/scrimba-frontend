@@ -25,6 +25,7 @@ function renderCards(cardsObj) {
     cardsObj.cards.forEach(card => {
         const cardImage = document.createElement('img');
         cardImage.src = card.image;
+        cardImage.className = 'card-img';
 
         cardsContainer.append(cardImage);
     })
