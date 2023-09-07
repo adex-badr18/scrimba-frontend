@@ -17,3 +17,25 @@ body {
     text-align: center;
     min-height: 100vh;
 }
+
+header,
+footer {
+    padding: 2em 0;
+}
+
+header {}
+
+main {
+    
+}
+
+.app-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 570px;
+    margin: 0 auto;
+    height: 66.5vh;
+}
+
+footer {}
