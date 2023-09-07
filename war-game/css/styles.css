@@ -18,8 +18,7 @@ body {
     min-height: 100vh;
 }
 
-header,
-footer {
+header {
     padding: 2em 0;
 }
 
@@ -30,7 +29,7 @@ footer {
     align-items: center;
     max-width: 570px;
     margin: 0 auto;
-    min-height: 66.5vh;
+    min-height: 81.5vh;
 }
 
 .cards-container {
