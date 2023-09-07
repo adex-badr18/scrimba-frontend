@@ -33,9 +33,16 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     max-width: 570px;
     margin: 0 auto;
     height: 66.5vh;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
 }
 
 footer {}
