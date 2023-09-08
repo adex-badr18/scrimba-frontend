@@ -60,7 +60,7 @@ main {
 .card {
     height: 180px;
     width: calc(180px * 5 / 7);
-    border: 1px solid #fff100;
+    border: 1px solid #46bb03;
     border-radius: 5px;
 }
 
@@ -101,7 +101,5 @@ button {
     .card {
         height: 314px;
         width: calc(314px * 5 / 7);
-        border: 1px solid #FFF100;
-        border-radius: 5px;
     }
 }
