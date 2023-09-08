@@ -1,5 +1,6 @@
 const cardsContainer = document.getElementById('cards-container');
 const drawCardsBtn = document.getElementById('draw-cards-btn');
+const cardsCount = document.getElementById('cards-count');
 let deckId;
 
 function getDeck() {
@@ -14,10 +15,12 @@ function drawCards() {
     fetch(`https://apis.scrimba.com/deckofcards/api/deck/${deckId}/draw/?count=2`)
         .then(res => res.json())
         .then(data => {
+            console.log(data);
             const [card1, card2] = data.cards;
 
             renderCards(data);
             showResultModal(card1, card2);
+            cardsCount.textContent = `(${data.remaining} Cards)`;
 
             setTimeout(() => {
                 document.getElementById('in-game-result-modal').remove();
