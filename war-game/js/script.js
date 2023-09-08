@@ -94,8 +94,6 @@ function showScores() {
     userScore.textContent = `User: ${scores.user} point(s)`;
 
     scoresModal.style.display = 'flex';
-    // console.log(scores);
-    // console.log(scoresModal.getAttribute('display'));
 }
 
 function closeModal() {
@@ -106,7 +104,7 @@ getDeckBtn.addEventListener('click', getDeck);
 drawCardsBtn.addEventListener('click', drawCards);
 closeModalBtn.addEventListener('click', closeModal);
 scoresBtn.addEventListener('click', () => {
-    if (scores.computer && scores.user) {
+    if (scores.computer > 0 || scores.user > 0) {
         showScores();
     }
 });
