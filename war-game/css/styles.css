@@ -61,7 +61,7 @@ main {
     height: 180px;
     width: calc(180px * 5 / 7);
     border: 1px solid #46bb03;
-    border-radius: 5px;
+    border-radius: 12px;
 }
 
 .card img {
