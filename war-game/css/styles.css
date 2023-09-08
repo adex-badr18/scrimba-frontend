@@ -15,16 +15,27 @@ body {
     font-family: 'Oxygen Mono', monospace;
     font-size: 16px;
     text-align: center;
-    min-height: 100vh;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 header {
-    padding: 2em 0;
+    padding: 1em 0;
 }
 
 header h1 {
+    font-size: 1.5rem;
     font-weight: bold;
     color: #FFFF00;
+}
+
+main {
+    height: 100%;
 }
 
 .app-content {
@@ -34,7 +45,7 @@ header h1 {
     align-items: center;
     max-width: 500px;
     margin: 0 auto;
-    min-height: 81.5vh;
+    height: 100%;
 }
 
 .cards-container {
@@ -43,13 +54,13 @@ header h1 {
     align-items: center;
     justify-content: center;
     gap: 1em;
-    padding: 1.5em 0;
+    /* padding: 1.5em 0; */
     width: 100%;
 }
 
 .card {
-    height: 314px;
-    width: calc(314px * 5 / 7);
+    height: 160px;
+    width: calc(160px * 5 / 7);
     border: 1px solid #FFF100;
     border-radius: 5px;
 }
