@@ -139,6 +139,19 @@ button:disabled {
     text-align: center;
 }
 
+.scores-modal-content h2 {
+    font-size: 1.2rem;
+    color: #008000;
+    margin-bottom: 8px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #46bb03;
+}
+
+.scores-modal-content p {
+    color: #008000;
+    text-align: left;
+}
+
 .close {
     position: absolute;
     top: -3px;
