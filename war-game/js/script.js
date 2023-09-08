@@ -29,6 +29,7 @@ function drawCards() {
             cardsCount.textContent = `(${data.remaining} Cards)`;
             if (!data.remaining) {
                 drawCardsBtn.disabled = true;
+                showScores();
                 return;
             }
             const [card1, card2] = data.cards;
