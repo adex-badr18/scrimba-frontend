@@ -66,6 +66,7 @@ button {
     border-radius: 5px;
     width: 11.25em;
     color: #008000;
+    cursor: pointer;
 }
 
 /* MEDIA QUERIES */
