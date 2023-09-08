@@ -117,7 +117,7 @@ button:disabled {
     font-size: 0.8rem;
 }
 
-.modal {
+.scores-modal {
     display: none;
     position: fixed;
     top: 0;
@@ -130,7 +130,7 @@ button:disabled {
     z-index: 1;
 }
 
-.modal-content {
+.scores-modal-content {
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
