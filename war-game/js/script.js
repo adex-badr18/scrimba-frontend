@@ -1,6 +1,12 @@
 const cardsContainer = document.getElementById('cards-container');
+const getDeckBtn = document.getElementById('get-deck-btn');
 const drawCardsBtn = document.getElementById('draw-cards-btn');
 const cardsCount = document.getElementById('cards-count');
+const scoresBtn = document.getElementById('scores-btn');
+const scoresModal = document.getElementById('scores-modal');
+const computerScore = document.getElementById('computer-score');
+const userScore = document.getElementById('user-score');
+const closeModalBtn = document.getElementById('close-modal-btn');
 let deckId;
 const scores = {
     computer: 0,
@@ -80,7 +86,22 @@ function showResultModal(card1, card2) {
     `;
 
     document.getElementById('app-content').append(modal);
+    console.log(scores);
 }
 
-document.getElementById('get-deck-btn').addEventListener('click', getDeck);
-document.getElementById('draw-cards-btn').addEventListener('click', drawCards);
+function showScores() {
+    computerScore.textContent = scores.computer;
+    userScore.textContent = scores.user;
+
+    scoresModal.style.display = 'flex';
+    console.log(scores);
+    console.log(scoresModal.getAttribute('display'));
+}
+
+getDeckBtn.addEventListener('click', getDeck);
+drawCardsBtn.addEventListener('click', drawCards);
+scoresBtn.addEventListener('click', () => {
+    if (scores.computer && scores.user) {
+        showScores();
+    }
+});
