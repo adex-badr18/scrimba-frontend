@@ -44,10 +44,7 @@ header h1 {
     justify-content: center;
     gap: 1em;
     padding: 1.5em 0;
-}
-
-.card-img {
-    /* width: 47%; */
+    width: 100%;
 }
 
 .get-deck-btn {
@@ -75,5 +72,6 @@ button {
 @media (min-width: 500px) {
     .cards-container {
         flex-direction: row;
+        justify-content: space-between;
     }
 }
