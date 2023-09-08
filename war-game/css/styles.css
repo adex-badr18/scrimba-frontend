@@ -69,8 +69,11 @@ main {
     height: 100%;
 }
 
-.get-deck-btn {
+.control-buttons {
     align-self: center;
+    display: flex;
+    align-items: center;
+    gap: 1em;
 }
 
 .draw-cards-btn {
