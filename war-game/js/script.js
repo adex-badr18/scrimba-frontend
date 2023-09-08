@@ -90,12 +90,12 @@ function showResultModal(card1, card2) {
 }
 
 function showScores() {
-    computerScore.textContent = scores.computer;
-    userScore.textContent = scores.user;
+    computerScore.textContent = `Computer: ${scores.computer} point(s)`;
+    userScore.textContent = `User: ${scores.user} point(s)`;
 
     scoresModal.style.display = 'flex';
-    console.log(scores);
-    console.log(scoresModal.getAttribute('display'));
+    // console.log(scores);
+    // console.log(scoresModal.getAttribute('display'));
 }
 
 getDeckBtn.addEventListener('click', getDeck);
