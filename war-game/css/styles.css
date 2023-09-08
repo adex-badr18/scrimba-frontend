@@ -54,13 +54,12 @@ main {
     align-items: center;
     justify-content: center;
     gap: 1em;
-    /* padding: 1.5em 0; */
     width: 100%;
 }
 
 .card {
-    height: 160px;
-    width: calc(160px * 5 / 7);
+    height: 180px;
+    width: calc(180px * 5 / 7);
     border: 1px solid #FFF100;
     border-radius: 5px;
 }
@@ -92,5 +91,12 @@ button {
     .cards-container {
         flex-direction: row;
         justify-content: space-between;
+    }
+
+    .card {
+        height: 314px;
+        width: calc(314px * 5 / 7);
+        border: 1px solid #FFF100;
+        border-radius: 5px;
     }
 }
