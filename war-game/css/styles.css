@@ -117,6 +117,10 @@ button:disabled {
     font-size: 0.8rem;
 }
 
+.modal {
+    display: none;
+}
+
 /* MEDIA QUERIES */
 @media (min-width: 500px) {
     .cards-container {
