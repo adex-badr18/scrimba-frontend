@@ -2,6 +2,10 @@ const cardsContainer = document.getElementById('cards-container');
 const drawCardsBtn = document.getElementById('draw-cards-btn');
 const cardsCount = document.getElementById('cards-count');
 let deckId;
+const scores = {
+    computer: 0,
+    user: 0
+};
 
 function getDeck() {
     fetch('https://apis.scrimba.com/deckofcards/api/deck/new/shuffle/')
@@ -56,8 +60,10 @@ function IdentifyWinningCard(card1, card2) {
     const card2ValueIndex = cardValuesArray.indexOf(card2.value);
 
     if (card1ValueIndex > card2ValueIndex) {
+        scores.computer++;
         return `Computer wins!`;
     } else if (card1ValueIndex < card2ValueIndex) {
+        scores.user++;
         return `You win!`;
     } else {
         return `War!`;
