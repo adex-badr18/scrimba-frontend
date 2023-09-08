@@ -16,16 +16,19 @@ function drawCards() {
     fetch(`https://apis.scrimba.com/deckofcards/api/deck/${deckId}/draw/?count=2`)
         .then(res => res.json())
         .then(data => {
-            console.log(data);
+            cardsCount.textContent = `(${data.remaining} Cards)`;
+            if (!data.remaining) {
+                drawCardsBtn.disabled = true;
+                return;
+            }
             const [card1, card2] = data.cards;
 
             renderCards(data);
             showResultModal(card1, card2);
-            cardsCount.textContent = `(${data.remaining} Cards)`;
 
             setTimeout(() => {
                 document.getElementById('in-game-result-modal').remove();
-            }, 5000);
+            }, 1000);
         });
 }
 
