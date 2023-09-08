@@ -24,10 +24,16 @@ function renderCards(cardsObj) {
 
     cardsObj.cards.forEach(card => {
         const cardImage = document.createElement('img');
+        const cardContainer = document.createElement('div');
+
+        cardContainer.className = 'card';
+
         cardImage.src = card.image;
         cardImage.className = 'card-img';
 
-        cardsContainer.append(cardImage);
+        cardContainer.append(cardImage);
+
+        cardsContainer.append(cardContainer);
     })
 }
 
