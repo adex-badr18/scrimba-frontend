@@ -47,6 +47,13 @@ header h1 {
     width: 100%;
 }
 
+.card {
+    height: 314px;
+    width: calc(314px * 5 / 7);
+    border: 1px solid #FFF100;
+    border-radius: 5px;
+}
+
 .get-deck-btn {
     align-self: center;
 }
