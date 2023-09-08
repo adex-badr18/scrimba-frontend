@@ -1,11 +1,11 @@
 const cardsContainer = document.getElementById('cards-container');
+const drawCardsBtn = document.getElementById('draw-cards-btn');
 let deckId;
 
 function getDeck() {
     fetch('https://apis.scrimba.com/deckofcards/api/deck/new/shuffle/')
         .then(res => res.json())
         .then(data => {
-            // console.log(data);
             deckId = data.deck_id;
         });
 }
@@ -15,13 +15,13 @@ function drawCards() {
         .then(res => res.json())
         .then(data => {
             const [card1, card2] = data.cards;
-            // console.log(card1);
-            // console.log(card2);
-            // console.log(data);
-            renderCards(data);
 
-            // setTimeout(showResultModal(card1, card2), 3000);
-            IdentifyWinningCard(card1, card2);
+            renderCards(data);
+            showResultModal(card1, card2);
+
+            setTimeout(() => {
+                document.getElementById('in-game-result-modal').remove();
+            }, 5000);
         });
 }
 
@@ -49,15 +49,25 @@ function IdentifyWinningCard(card1, card2) {
     const card2ValueIndex = cardValuesArray.indexOf(card2.value);
 
     if (card1ValueIndex > card2ValueIndex) {
-        return `Card1(${card1.value}) is greater than Card2(${card2.value}), Computer wins!`;
+        return `Computer wins!`;
     } else if (card1ValueIndex < card2ValueIndex) {
-        return `Card2(${card2.value}) is greater than Card1(${card1.value}), You win!`;
+        return `You win!`;
     } else {
-        return `Card1(${card1.value}) is equal to Card2(${card2.value}), War!`;
+        return `War!`;
     }
 }
 
+function showResultModal(card1, card2) {
+    const modal = document.createElement('div');
+    modal.className = 'in-game-result-modal';
+    modal.id = 'in-game-result-modal';
 
+    modal.innerHTML = `
+        <h2 class="in-game-result">${IdentifyWinningCard(card1, card2)}</h2>
+    `;
+
+    document.getElementById('app-content').append(modal);
+}
 
 document.getElementById('get-deck-btn').addEventListener('click', getDeck);
 document.getElementById('draw-cards-btn').addEventListener('click', drawCards);
