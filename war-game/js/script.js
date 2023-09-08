@@ -8,6 +8,7 @@ function getDeck() {
         .then(res => res.json())
         .then(data => {
             deckId = data.deck_id;
+            cardsCount.textContent = `(${data.remaining} Cards)`;
         });
 }
 
