@@ -98,10 +98,16 @@ function showScores() {
     // console.log(scoresModal.getAttribute('display'));
 }
 
+function closeModal() {
+    scoresModal.style.display = 'none';
+}
+
 getDeckBtn.addEventListener('click', getDeck);
 drawCardsBtn.addEventListener('click', drawCards);
+closeModalBtn.addEventListener('click', closeModal);
 scoresBtn.addEventListener('click', () => {
     if (scores.computer && scores.user) {
         showScores();
     }
 });
+
