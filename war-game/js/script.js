@@ -104,11 +104,11 @@ function showScores(cardCount) {
         winnerText.style.marginBottom = '0.75em';
         winnerText.style.fontSize = '1rem';
         if (scores.computer > scores.user) {
-            winnerText.textContent = 'Computer Won!!!';
+            winnerText.textContent = 'The computer won the game!!!';
         } else if (scores.computer < scores.user) {
-            winnerText.textContent = 'User Won!!!';
+            winnerText.textContent = 'You won the game!!!';
         } else {
-            winnerText.textContent = 'War! Try again';
+            winnerText.textContent = 'It\'s a tie! Try again';
         }
     }
 
