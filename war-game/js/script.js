@@ -13,7 +13,12 @@ const scores = {
     user: 0
 };
 
+// 1. Enable draw button
+// 2. Reduce in-game-result container size to match draw button size
+// 3. Make control buttons responsive
+
 function getDeck() {
+    drawCardsBtn.disabled = false;
     fetch('https://apis.scrimba.com/deckofcards/api/deck/new/shuffle/')
         .then(res => res.json())
         .then(data => {
