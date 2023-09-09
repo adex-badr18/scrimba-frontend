@@ -31,9 +31,12 @@ async function drawCards() {
     const res = await fetch(`https://apis.scrimba.com/deckofcards/api/deck/${deckId}/draw/?count=2`);
     const data = await res.json();
 
+    getDeckBtn.disabled = true;
+
     cardsCount.textContent = `(${data.remaining} Cards)`;
     if (!data.remaining) {
         drawCardsBtn.disabled = true;
+        getDeckBtn.disabled = false;
         showScores(data.remaining);
         return;
     }
@@ -44,7 +47,7 @@ async function drawCards() {
 
     setTimeout(() => {
         document.getElementById('in-game-result-modal').remove();
-    }, 2000);
+    }, 100);
 }
 
 function renderCards(cardsObj) {
