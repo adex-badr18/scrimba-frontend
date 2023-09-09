@@ -50,7 +50,7 @@ async function drawCards() {
 
     setTimeout(() => {
         document.getElementById('in-game-result-modal').remove();
-    }, 100);
+    }, 2000);
 }
 
 function renderCards(cardsObj) {
