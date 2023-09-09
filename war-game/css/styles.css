@@ -176,3 +176,15 @@ button:disabled {
         width: calc(314px * 5 / 7);
     }
 }
+
+@media (max-width: 385px) {
+    .control-buttons {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+
+    .card {
+        height: 160px;
+        width: calc(160px * 5 / 7);
+    }
+}
