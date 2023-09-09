@@ -89,7 +89,6 @@ button {
     background-color: #FFFF00;
     border: none;
     border-radius: 5px;
-    width: 11.25em;
     color: #008000;
     cursor: pointer;
 }
@@ -105,18 +104,19 @@ button:disabled {
     left: 0;
     right: 0;
     border-radius: 0;
-    width: 500px;
-    padding: 1em 0;
+    max-width: 500px;
+    width: 100vw;
+    padding: 0.98em 0;
     color: #008000;
     font-weight: bold;
-    background-color: #FFFF00;
+    background-color: #FFFFFF;
     border: none;
     margin: 0 auto;
 }
 
 .in-game-result {
-    font-size: 0.8rem;
-    
+    font-size: 0.9rem;
+    text-align: center;
 }
 
 .scores-modal {
