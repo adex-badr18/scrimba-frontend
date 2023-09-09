@@ -17,10 +17,6 @@ window.onload = () => {
     drawCardsBtn.disabled = true;
 }
 
-// 1. Enable draw button
-// 2. Reduce in-game-result container size to match draw button size
-// 3. Make control buttons responsive
-
 function getDeck() {
     drawCardsBtn.disabled = false;
     fetch('https://apis.scrimba.com/deckofcards/api/deck/new/shuffle/')
@@ -38,7 +34,7 @@ function drawCards() {
             cardsCount.textContent = `(${data.remaining} Cards)`;
             if (!data.remaining) {
                 drawCardsBtn.disabled = true;
-                showScores();
+                showScores(data.remaining);
                 return;
             }
             const [card1, card2] = data.cards;
@@ -48,7 +44,7 @@ function drawCards() {
 
             setTimeout(() => {
                 document.getElementById('in-game-result-modal').remove();
-            }, 1000);
+            }, 100);
         });
 }
 
@@ -99,9 +95,22 @@ function showResultModal(card1, card2) {
     console.log(scores);
 }
 
-function showScores() {
+function showScores(cardCount) {
     computerScore.textContent = `Computer: ${scores.computer} point(s)`;
     userScore.textContent = `User: ${scores.user} point(s)`;
+    
+    if (cardCount === 0) {
+        const winnerText = document.querySelector('.scores-modal-content h3');
+        winnerText.style.marginBottom = '0.75em';
+        winnerText.style.fontSize = '1rem';
+        if (scores.computer > scores.user) {
+            winnerText.textContent = 'Computer Won!!!';
+        } else if (scores.computer < scores.user) {
+            winnerText.textContent = 'User Won!!!';
+        } else {
+            winnerText.textContent = 'War! Try again';
+        }
+    }
 
     scoresModal.style.display = 'flex';
 }

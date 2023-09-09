@@ -135,6 +135,7 @@ button:disabled {
 .scores-modal-content {
     position: relative;
     background-color: #fff;
+    color: #008000;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
@@ -143,14 +144,12 @@ button:disabled {
 
 .scores-modal-content h2 {
     font-size: 1.2rem;
-    color: #008000;
     margin-bottom: 8px;
     padding-bottom: 5px;
     border-bottom: 1px solid #46bb03;
 }
 
 .scores-modal-content p {
-    color: #008000;
     text-align: left;
 }
 
