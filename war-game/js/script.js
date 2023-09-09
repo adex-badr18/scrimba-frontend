@@ -20,6 +20,9 @@ window.onload = () => {
 async function getDeck() {
     drawCardsBtn.disabled = false;
 
+    scores.computer = 0;
+    scores.user = 0;
+
     const res = await fetch('https://apis.scrimba.com/deckofcards/api/deck/new/shuffle/');
     const data = await res.json();
 
