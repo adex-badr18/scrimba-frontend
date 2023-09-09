@@ -17,14 +17,14 @@ window.onload = () => {
     drawCardsBtn.disabled = true;
 }
 
-function getDeck() {
+async function getDeck() {
     drawCardsBtn.disabled = false;
-    fetch('https://apis.scrimba.com/deckofcards/api/deck/new/shuffle/')
-        .then(res => res.json())
-        .then(data => {
-            deckId = data.deck_id;
-            cardsCount.textContent = `(${data.remaining} Cards)`;
-        });
+
+    const res = await fetch('https://apis.scrimba.com/deckofcards/api/deck/new/shuffle/');
+    const data = await res.json();
+
+    deckId = data.deck_id;
+    cardsCount.textContent = `(${data.remaining} Cards)`;
 }
 
 function drawCards() {
@@ -98,7 +98,7 @@ function showResultModal(card1, card2) {
 function showScores(cardCount) {
     computerScore.textContent = `Computer: ${scores.computer} point(s)`;
     userScore.textContent = `User: ${scores.user} point(s)`;
-    
+
     if (cardCount === 0) {
         const winnerText = document.querySelector('.scores-modal-content h3');
         winnerText.style.marginBottom = '0.75em';
