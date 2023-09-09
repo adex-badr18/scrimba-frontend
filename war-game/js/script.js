@@ -13,6 +13,10 @@ const scores = {
     user: 0
 };
 
+window.onload = () => {
+    drawCardsBtn.disabled = true;
+}
+
 // 1. Enable draw button
 // 2. Reduce in-game-result container size to match draw button size
 // 3. Make control buttons responsive
