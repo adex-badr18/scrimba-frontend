@@ -27,25 +27,24 @@ async function getDeck() {
     cardsCount.textContent = `(${data.remaining} Cards)`;
 }
 
-function drawCards() {
-    fetch(`https://apis.scrimba.com/deckofcards/api/deck/${deckId}/draw/?count=2`)
-        .then(res => res.json())
-        .then(data => {
-            cardsCount.textContent = `(${data.remaining} Cards)`;
-            if (!data.remaining) {
-                drawCardsBtn.disabled = true;
-                showScores(data.remaining);
-                return;
-            }
-            const [card1, card2] = data.cards;
+async function drawCards() {
+    const res = await fetch(`https://apis.scrimba.com/deckofcards/api/deck/${deckId}/draw/?count=2`);
+    const data = await res.json();
 
-            renderCards(data);
-            showResultModal(card1, card2);
+    cardsCount.textContent = `(${data.remaining} Cards)`;
+    if (!data.remaining) {
+        drawCardsBtn.disabled = true;
+        showScores(data.remaining);
+        return;
+    }
+    const [card1, card2] = data.cards;
 
-            setTimeout(() => {
-                document.getElementById('in-game-result-modal').remove();
-            }, 100);
-        });
+    renderCards(data);
+    showResultModal(card1, card2);
+
+    setTimeout(() => {
+        document.getElementById('in-game-result-modal').remove();
+    }, 2000);
 }
 
 function renderCards(cardsObj) {
