@@ -183,6 +183,10 @@ button:disabled {
         gap: 0.5em;
     }
 
+    .control-buttons button {
+        width: calc(160px * 5 / 7);
+    }
+
     .card {
         height: 160px;
         width: calc(160px * 5 / 7);
