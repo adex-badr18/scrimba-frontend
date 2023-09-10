@@ -16,3 +16,27 @@
     border-radius: 4px 0 0 4px;
 }
 
+.search-input,
+.search-button {
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.25;
+}
+
+.search-input {
+    flex: 1;
+    padding: 12px 3px;
+    border: none;
+    border-right: 1px solid #D1D5DB;
+    border-radius: 0;
+}
+
+.search-button {
+    flex: 0 0 auto;
+    padding: 12px 20px;
+    background-color: #ffffff;
+    color: #374151;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
