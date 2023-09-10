@@ -12,6 +12,13 @@ body {
     font-size: 16px;
 }
 
+/* Header */
+
+header {
+    max-width: 550px;
+    margin: 0 auto;
+}
+
 /* Search form */
 
 .search-box {
