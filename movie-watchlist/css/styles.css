@@ -19,6 +19,13 @@ header {
     margin: 0 auto;
 }
 
+.header-text h1 {
+    font-size: 42.79px;
+    font-weight: 800;
+    color: #FFFFFF;
+    line-height: 1.4875;
+}
+
 /* Search form */
 
 .search-box {
