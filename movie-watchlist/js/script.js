@@ -7,9 +7,19 @@ document.addEventListener('click', (e) => {
         e.preventDefault();
         if (searchInput.value) {
             console.log(searchInput.value);
+            searchMovie();
         } else {
             searchForm.classList.add('required');
             searchInput.setAttribute('placeholder', 'Search for a movie - Field required');
         }
     }
 })
+
+async function searchMovie() {
+    const apiKey = '80182aef';
+    const searchTerm = searchInput.value;
+    const res = await fetch(`https://www.omdbapi.com/?apikey=${apiKey}&s=${searchTerm}`);
+    const searchResult = await res.json();
+
+    console.log(searchResult.Search);
+}
