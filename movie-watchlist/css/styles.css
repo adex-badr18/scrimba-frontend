@@ -153,3 +153,12 @@ main {
     width: 100%;
     /* border: 2px solid crimson; */
 }
+
+.film-icon {
+    font-size: 5rem;
+    margin-bottom: 8.75px;
+}
+
+.no-search-text {
+
+}
