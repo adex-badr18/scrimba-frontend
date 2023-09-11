@@ -210,3 +210,27 @@ img.movie-img {
     font-size: 13px;
     color: #FEC654;
 }
+
+.movie-sub-header {
+    display: flex;
+    gap: 20px;
+    color: #111827;
+    margin-bottom: 8px;
+}
+
+.movie-sub-header > * {
+    font-size: 12px;
+    line-height: 1.25;
+}
+
+.add {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.add i {
+    pointer-events: none;
+    font-size: 16px;
+}
