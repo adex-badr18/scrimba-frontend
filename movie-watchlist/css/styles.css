@@ -169,3 +169,16 @@ main {
     font-weight: 700;
     line-height: 1.25;
 }
+
+/* Movie */
+
+.movie-container {
+    width: 100%;
+    display: flex;
+    gap: 21px;
+}
+
+img.movie-img {
+    width: 100px;
+    height: 147.41px;
+}
