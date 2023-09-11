@@ -142,3 +142,8 @@ main {
     background-color: #FFFFFF;
     min-height: calc(100vh - 208px);
 }
+
+.movie-list {
+    height: 100%;
+    width: 100%;
+}
