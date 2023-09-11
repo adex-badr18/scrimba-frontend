@@ -150,5 +150,6 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 63px 44px;
     border: 2px solid crimson;
 }
