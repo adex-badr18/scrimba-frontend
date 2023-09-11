@@ -264,6 +264,7 @@ hr {
     font-weight: bold;
     color: #363636;
     margin-top: 15px;
+    text-decoration: none;
 }
 
 .add-watchlist i {
