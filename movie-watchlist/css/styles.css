@@ -136,6 +136,10 @@ header {
     cursor: pointer;
 }
 
+.required {
+    border: 2px solid #FF0000;
+}
+
 /* Main */
 
 main {
