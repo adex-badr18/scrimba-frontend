@@ -154,6 +154,10 @@ main {
     /* border: 2px solid crimson; */
 }
 
+#watchlist {
+    padding: 44px;
+}
+
 .film-icon,
 .no-search-text {
     color: #DFDDDD;
