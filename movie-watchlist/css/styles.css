@@ -186,3 +186,27 @@ img.movie-img {
     width: 99px;
     height: 147.41px;
 }
+
+.movie-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 11px;
+}
+
+.movie-title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.rating {
+    padding: 4px;
+    font-size: 12px;
+    line-height: 1.25;
+}
+
+.rating i {
+    font-size: 13px;
+    color: #FEC654;
+}
