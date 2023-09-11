@@ -146,7 +146,7 @@ main {
 .movie-list {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     padding: 63px 44px;
     min-height: calc(100vh - 208px);
@@ -239,4 +239,10 @@ img.movie-img {
     font-size: 14px;
     line-height: 1.5;
     color: #6B7280;
+}
+
+hr {
+    width: 100%;
+    border: 1px solid #E5E7EB;
+    margin-top: 24px;
 }
