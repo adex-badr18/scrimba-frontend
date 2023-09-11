@@ -227,14 +227,16 @@ img.movie-img {
     line-height: 1.25;
 }
 
-.add {
+.add,
+.remove {
     cursor: pointer;
     display: flex;
     align-items: center;
     gap: 5px;
 }
 
-.add i {
+.add i,
+.remove i {
     pointer-events: none;
     font-size: 16px;
 }
