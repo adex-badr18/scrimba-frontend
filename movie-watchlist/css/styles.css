@@ -178,7 +178,11 @@ main {
     gap: 21px;
 }
 
+.movie-info {
+    align-self: center;
+}
+
 img.movie-img {
-    width: 100px;
+    width: 99px;
     height: 147.41px;
 }
