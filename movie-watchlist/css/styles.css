@@ -122,6 +122,10 @@ header {
     border-radius: 0;
 }
 
+.search-input:focus {
+    outline: none;
+}
+
 .search-button {
     flex: 0 0 auto;
     padding: 12px 20px;
@@ -134,7 +138,7 @@ header {
 
 /* Main */
 
-#main {
+main {
     background-color: #FFFFFF;
     min-height: calc(100vh - 208px);
 }
