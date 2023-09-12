@@ -3,6 +3,8 @@ const searchBtn = document.getElementById('search-button');
 const searchForm = document.getElementById('search-form');
 const movieList = document.getElementById('movie-list');
 
+localStorage.setItem('watchlist', JSON.stringify([]));
+
 document.addEventListener('click', (e) => {
     if (e.target === searchBtn) {
         e.preventDefault();
@@ -13,6 +15,8 @@ document.addEventListener('click', (e) => {
             searchForm.classList.add('required');
             searchInput.setAttribute('placeholder', 'Search for a movie - Field required');
         }
+    } else if (e.target.dataset.id) {
+        addMovieToWatchlist(e.target.dataset.id);
     }
 })
 
@@ -96,3 +100,12 @@ function renderMovies(movies) {
     movieList.innerHTML = moviesHtml;
 }
 
+function addMovieToWatchlist(movieID) {
+    const moviesArr = JSON.parse(localStorage.getItem('movies'));
+    let moviesInLocalStorage = JSON.parse(localStorage.getItem('watchlist'));
+    const targetMovie = moviesArr.filter(movie => movie.id === movieID)[0];
+
+    moviesInLocalStorage.push(targetMovie);
+
+    localStorage.setItem('watchlist', JSON.stringify(moviesInLocalStorage));
+}
