@@ -57,7 +57,7 @@ function renderMovies(movies) {
     const moviesHtml = movies.map((movie, index) => {
         return `
             <div class="movie-container">
-                <img src="${movie.poster}" class="movie-img" alt="${movie.title} movie poster">
+                <img src="${movie.poster === "N/A" ? './images/No-Image-Placeholder.png' : movie.poster}" class="movie-img" alt="${movie.title}">
                 <div class="movie-info">
                     <div class="movie-header">
                         <h2 class="movie-title">${movie.title}</h2>
