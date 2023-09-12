@@ -27,7 +27,7 @@ async function searchMovies() {
     if (searchResult.Response === 'True') {
         let movies = await Promise.all(searchResult.Search.map(async (movie) => {
             // console.log(movie);
-            const movieResponse = await fetch(`http://www.omdbapi.com/?apikey=${apiKey}&t=${movie.Title}&plot=full`);
+            const movieResponse = await fetch(`http://www.omdbapi.com/?apikey=${apiKey}&i=${movie.imdbID}&plot=full`);
             const movieObj = await movieResponse.json();
 
             return {
@@ -39,6 +39,8 @@ async function searchMovies() {
                 rating: movieObj.imdbRating
             };
         }));
+
+        console.log(movies);
 
         renderMovies(movies);
     } else {
