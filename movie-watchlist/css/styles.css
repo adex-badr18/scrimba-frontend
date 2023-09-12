@@ -150,7 +150,7 @@ main {
 .movie-list {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
+    justify-content: center;
     align-items: center;
     padding: 63px 44px;
     min-height: calc(100vh - 208px);
