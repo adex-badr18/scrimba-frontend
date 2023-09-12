@@ -59,6 +59,10 @@ async function searchMovies() {
 
 function renderMovies(movies) {
     const moviesHtml = movies.map((movie, index) => {
+        const words = movie.plot.split(' ');
+        const truncatedWords = words.slice(0, 30);
+        const truncatedText = truncatedWords.join(' ') + '...';
+
         return `
             <div class="movie-container">
                 <img src="${movie.poster === "N/A" ? './images/No-Image-Placeholder.png' : movie.poster}" class="movie-img" alt="${movie.title}">
@@ -79,7 +83,7 @@ function renderMovies(movies) {
                     </div>
 
                     <p class="movie-description">
-                    ${movie.plot}
+                    ${words.length < 30 ? movie.plot : truncatedText}
                     </p>
                 </div>
             </div>
