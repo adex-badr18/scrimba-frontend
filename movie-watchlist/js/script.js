@@ -42,9 +42,8 @@ async function searchMovies() {
 
         const moviesArr = movies.filter(movie => movie.plot !== 'N/A');
 
-        console.log(moviesArr);
-
         renderMovies(moviesArr);
+        searchForm.reset();
     } else {
         const emptyResult = `
             <h3 class="no-search-text">
@@ -94,3 +93,4 @@ function renderMovies(movies) {
 
     movieList.innerHTML = moviesHtml;
 }
+
