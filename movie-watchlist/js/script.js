@@ -40,9 +40,11 @@ async function searchMovies() {
             };
         }));
 
-        console.log(movies);
+        const moviesArr = movies.filter(movie => movie.plot !== 'N/A');
 
-        renderMovies(movies);
+        console.log(moviesArr);
+
+        renderMovies(moviesArr);
     } else {
         const emptyResult = `
             <h3 class="no-search-text">
