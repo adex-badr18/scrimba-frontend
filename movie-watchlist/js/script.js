@@ -31,6 +31,7 @@ async function searchMovies() {
             const movieObj = await movieResponse.json();
 
             return {
+                id: movieObj.imdbID,
                 title: movieObj.Title,
                 runtime: movieObj.Runtime,
                 genre: movieObj.Genre,
