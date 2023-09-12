@@ -192,6 +192,8 @@ main {
 
 img.movie-img {
     width: 99px;
+    min-width: 99px;
+    max-width: 99px;
     height: 147.41px;
 }
 
