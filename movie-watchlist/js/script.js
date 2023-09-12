@@ -40,6 +40,9 @@ async function searchMovies() {
 }
 
 function renderMovies(movies) {
+    const emptyResult = `
+        <h3 class="no-search-text">Unable to find what you’re looking for. Please try another search.</h3>
+    `;
     const moviesHtml = movies.map((movie, index) => {
         return `
             <div class="movie-container">
@@ -70,5 +73,5 @@ function renderMovies(movies) {
         `
     }).join(' ');
 
-    movieList.innerHTML = moviesHtml;
+    moviesHtml ? movieList.innerHTML = moviesHtml : movieList.innerHTML = emptyResult;
 }
