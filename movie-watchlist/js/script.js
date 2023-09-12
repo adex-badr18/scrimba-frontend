@@ -42,6 +42,7 @@ async function searchMovies() {
         }));
 
         const moviesArr = movies.filter(movie => movie.plot !== 'N/A');
+        localStorage.setItem('movies', JSON.stringify(moviesArr));
 
         renderMovies(moviesArr);
         searchForm.reset();
@@ -77,7 +78,7 @@ function renderMovies(movies) {
                     <div class="movie-sub-header">
                         <span class="movie-runtime">${movie.runtime}</span>
                         <span class="genre">${movie.genre}</span>
-                        <span class="add">
+                        <span class="add" data-id="${movie.id}">
                             <i class="fa-solid fa-circle-plus"></i> Watchlist
                         </span>
                     </div>
