@@ -23,7 +23,8 @@ async function searchMovies() {
     const searchResult = await res.json();
 
     let movies = await Promise.all(searchResult.Search.map(async (movie) => {
-        const movieResponse = await fetch(`http://www.omdbapi.com/?apikey=${apiKey}&i=${movie.imdbID}&plot=full`);
+        // console.log(movie);
+        const movieResponse = await fetch(`http://www.omdbapi.com/?apikey=${apiKey}&t=${movie.Title}&plot=full`);
         const movieObj = await movieResponse.json();
 
         return {
