@@ -22,28 +22,38 @@ async function searchMovies() {
     const res = await fetch(`https://www.omdbapi.com/?apikey=${apiKey}&s=${searchTerm}`);
     const searchResult = await res.json();
 
-    let movies = await Promise.all(searchResult.Search.map(async (movie) => {
-        // console.log(movie);
-        const movieResponse = await fetch(`http://www.omdbapi.com/?apikey=${apiKey}&t=${movie.Title}&plot=full`);
-        const movieObj = await movieResponse.json();
+    // console.log(searchResult);
 
-        return {
-            title: movieObj.Title,
-            runtime: movieObj.Runtime,
-            genre: movieObj.Genre,
-            plot: movieObj.Plot,
-            poster: movieObj.Poster,
-            rating: movieObj.imdbRating
-        };
-    }));
+    if (searchResult.Response === 'True') {
+        let movies = await Promise.all(searchResult.Search.map(async (movie) => {
+            // console.log(movie);
+            const movieResponse = await fetch(`http://www.omdbapi.com/?apikey=${apiKey}&t=${movie.Title}&plot=full`);
+            const movieObj = await movieResponse.json();
 
-    renderMovies(movies);
+            return {
+                title: movieObj.Title,
+                runtime: movieObj.Runtime,
+                genre: movieObj.Genre,
+                plot: movieObj.Plot,
+                poster: movieObj.Poster,
+                rating: movieObj.imdbRating
+            };
+        }));
+
+        renderMovies(movies);
+    } else {
+        const emptyResult = `
+            <h3 class="no-search-text">
+                Unable to find what you’re looking for. Please try another search.
+            </h3>
+        `;
+
+        movieList.innerHTML = emptyResult;
+    }
+
 }
 
 function renderMovies(movies) {
-    const emptyResult = `
-        <h3 class="no-search-text">Unable to find what you’re looking for. Please try another search.</h3>
-    `;
     const moviesHtml = movies.map((movie, index) => {
         return `
             <div class="movie-container">
@@ -70,9 +80,9 @@ function renderMovies(movies) {
                 </div>
             </div>
 
-            ${ index !== movies.length - 1 ? '<hr>' : ''}
+            ${index !== movies.length - 1 ? '<hr>' : ''}
         `
     }).join(' ');
 
-    moviesHtml ? movieList.innerHTML = moviesHtml : movieList.innerHTML = emptyResult;
+    movieList.innerHTML = moviesHtml;
 }
