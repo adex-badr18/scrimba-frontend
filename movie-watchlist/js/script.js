@@ -36,6 +36,8 @@ document.addEventListener('click', (e) => {
         }
     } else if (e.target.dataset.id && e.target.classList.contains('add')) {
         addMovieToWatchlist(e.target.dataset.id);
+    } else if (e.target.dataset.id && e.target.classList.contains('remove')) {
+        removeMovieFromWatchlist(e.target.dataset.id);
     }
 })
 
@@ -144,4 +146,14 @@ function addMovieToWatchlist(movieID) {
     moviesInLocalStorage.push(targetMovie);
 
     localStorage.setItem('watchlist', JSON.stringify(moviesInLocalStorage));
+}
+
+function removeMovieFromWatchlist(movieID) {
+    let watchlistInLocalStorage = JSON.parse(localStorage.getItem('watchlist'));
+    const targetMovie = watchlistInLocalStorage.filter(movie => movie.id === movieID)[0];
+
+    watchlistInLocalStorage = watchlistInLocalStorage.filter(movie => movie.id !== targetMovie.id);
+    // console.log(watchlistInLocalStorage);
+    localStorage.setItem('watchlist', JSON.stringify(watchlistInLocalStorage));
+    renderMovies(watchlistInLocalStorage);
 }
