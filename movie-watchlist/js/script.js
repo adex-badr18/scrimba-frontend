@@ -143,10 +143,12 @@ function removeMovieFromWatchlist(movieID) {
     const targetMovie = watchlistInLocalStorage.filter(movie => movie.id === movieID)[0];
 
     watchlistInLocalStorage = watchlistInLocalStorage.filter(movie => movie.id !== targetMovie.id);
-    // console.log(watchlistInLocalStorage);
     localStorage.setItem('watchlist', JSON.stringify(watchlistInLocalStorage));
     renderMovies(watchlistInLocalStorage);
 
+    if (JSON.parse(localStorage.getItem('watchlist')).length === 0) {
+        showEmptyResult();
+    }
 }
 
 function showEmptyResult() {
