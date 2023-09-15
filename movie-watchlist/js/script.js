@@ -8,6 +8,7 @@ const watchlist = document.getElementById('watchlist');
 
 if (document.URL.includes('watchlist.html')) {
     if (localStorage.getItem('watchlist')) {
+        watchlist.style.justifyContent = 'flex-start';
         renderMovies(JSON.parse(localStorage.getItem('watchlist')));
     } else {
         watchlist.innerHTML = `
@@ -43,6 +44,7 @@ async function searchMovies() {
     // console.log(searchResult);
 
     if (searchResult.Response === 'True') {
+        movieList.style.justifyContent = 'flex-start';
         let movies = await Promise.all(searchResult.Search.map(async (movie) => {
             // console.log(movie);
             const movieResponse = await fetch(`http://www.omdbapi.com/?apikey=${apiKey}&i=${movie.imdbID}&plot=full`);
