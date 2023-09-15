@@ -4,7 +4,20 @@ const searchForm = document.getElementById('search-form');
 const movieList = document.getElementById('movie-list');
 const watchlist = document.getElementById('watchlist');
 
+// localStorage.removeItem('watchlist');
 
+if (document.URL.includes('watchlist.html')) {
+    if (localStorage.getItem('watchlist')) {
+        renderMovies(JSON.parse(localStorage.getItem('watchlist')));
+    } else {
+        watchlist.innerHTML = `
+            <h3 class="no-search-text">Your watchlist is looking a little empty...</h3>
+            <a href="./index.html" class="add-watchlist">
+                <i class="fa-solid fa-circle-plus"></i> Let's add some movies!
+            </a>
+        `
+    }
+}
 
 document.addEventListener('click', (e) => {
     if (e.target === searchBtn) {
@@ -57,7 +70,7 @@ async function searchMovies() {
                 Unable to find what you’re looking for. Please try another search.
             </h3>
         `;
-
+        
         movieList.innerHTML = emptyResult;
     }
 
@@ -98,7 +111,11 @@ function renderMovies(movies) {
         `
     }).join(' ');
 
-    movieList.innerHTML = moviesHtml;
+    if (document.URL.includes('index.html')) {
+        movieList.innerHTML = moviesHtml;
+    } else if (document.URL.includes('watchlist.html')) {
+        watchlist.innerHTML = moviesHtml;
+    }
 }
 
 function addMovieToWatchlist(movieID) {
