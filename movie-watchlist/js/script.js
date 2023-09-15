@@ -34,7 +34,7 @@ document.addEventListener('click', (e) => {
             searchForm.classList.add('required');
             searchInput.setAttribute('placeholder', 'Search for a movie - Field required');
         }
-    } else if (e.target.dataset.id) {
+    } else if (e.target.dataset.id && e.target.classList.contains('add')) {
         addMovieToWatchlist(e.target.dataset.id);
     }
 })
