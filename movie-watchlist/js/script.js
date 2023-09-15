@@ -147,6 +147,7 @@ function removeMovieFromWatchlist(movieID) {
     renderMovies(watchlistInLocalStorage);
 
     if (JSON.parse(localStorage.getItem('watchlist')).length === 0) {
+        watchlist.style.justifyContent = 'center';
         showEmptyResult();
     }
 }
