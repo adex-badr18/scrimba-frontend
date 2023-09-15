@@ -2,8 +2,9 @@ const searchInput = document.getElementById('search-input');
 const searchBtn = document.getElementById('search-button');
 const searchForm = document.getElementById('search-form');
 const movieList = document.getElementById('movie-list');
+const watchlist = document.getElementById('watchlist');
 
-localStorage.setItem('watchlist', JSON.stringify([]));
+
 
 document.addEventListener('click', (e) => {
     if (e.target === searchBtn) {
@@ -102,7 +103,14 @@ function renderMovies(movies) {
 
 function addMovieToWatchlist(movieID) {
     const moviesArr = JSON.parse(localStorage.getItem('movies'));
+
+    if (!localStorage.getItem('watchlist')) {
+        console.log('No watchlist in localStorage');
+        localStorage.setItem('watchlist', JSON.stringify([]));
+    }
+
     let moviesInLocalStorage = JSON.parse(localStorage.getItem('watchlist'));
+    
     const targetMovie = moviesArr.filter(movie => movie.id === movieID)[0];
 
     moviesInLocalStorage.push(targetMovie);
