@@ -303,4 +303,8 @@ hr {
     .header-text {
         left: 28px;
     }
+
+    .header-text h1 {
+        font-size: 1.875rem;
+    }
 }
