@@ -110,7 +110,7 @@ header {
 
 .search-input {
     flex: 1;
-    padding: 12px 3px;
+    padding: 0.85em 0.1875em;
     border: none;
     border-right: 1px solid #D1D5DB;
     border-radius: 0;
@@ -123,7 +123,7 @@ header {
 
 .search-button {
     flex: 0 0 auto;
-    padding: 12px 20px;
+    padding: 0.85em 1.25em;
     background-color: #ffffff;
     color: #374151;
     border: none;
@@ -148,14 +148,14 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 63px 44px;
+    padding: 3.9375em 2.75em;
     min-height: calc(100vh - 208px);
     width: 100%;
     /* border: 2px solid crimson; */
 }
 
 #watchlist {
-    padding: 44px;
+    padding: 2.75em;
 }
 
 .film-icon,
@@ -165,7 +165,7 @@ main {
 
 .film-icon {
     font-size: 5rem;
-    margin-bottom: 8.75px;
+    margin-bottom: 0.55em;
 }
 
 .no-search-text {
@@ -178,11 +178,10 @@ main {
 /* Movie */
 
 .movie-container {
-    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 21px;
+    gap: 1.3125em;
 }
 
 .movie-info {
@@ -190,15 +189,17 @@ main {
 }
 
 img.movie-img {
-    width: 30%;
+    width: 45%;
+    min-width: 6.1875em;
+    max-width: 45%;
     height: 9.2em;
 }
 
 .movie-header {
     display: flex;
     align-items: center;
-    gap: 8px;
-    margin-bottom: 11px;
+    gap: 0.5em;
+    margin-bottom: 0.6875em;
 }
 
 .movie-title {
@@ -208,7 +209,7 @@ img.movie-img {
 }
 
 .rating {
-    padding: 4px;
+    padding: 0.25em;
     font-size: 0.75rem;
     line-height: 1.25;
 }
@@ -220,13 +221,13 @@ img.movie-img {
 
 .movie-sub-header {
     display: flex;
-    gap: 20px;
+    gap: 1.25em;
     color: #111827;
-    margin-bottom: 8px;
+    margin-bottom: 0.5em;
 }
 
 .movie-sub-header > * {
-    font-size: 12px;
+    font-size: 0.75rem;
     line-height: 1.25;
 }
 
@@ -235,13 +236,13 @@ img.movie-img {
     cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 0.3125em;
 }
 
 .add i,
 .remove i {
     pointer-events: none;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .movie-description {
@@ -253,7 +254,7 @@ img.movie-img {
 hr {
     width: 100%;
     border: 1px solid #E5E7EB;
-    margin: 24px 0;
+    margin: 1.5em 0;
 }
 
 /* Watchlist Page */
@@ -262,17 +263,17 @@ hr {
     cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 7px;
-    font-size: 14px;
+    gap: 0.4375em;
+    font-size: 0.875rem;
     font-weight: bold;
     color: #363636;
-    margin-top: 15px;
+    margin-top: 0.9375em;
     text-decoration: none;
 }
 
 .add-watchlist i {
     pointer-events: none;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 /* MEDIA QUERIES */
@@ -284,8 +285,12 @@ hr {
     }
 
     .header-text h1 {
-        font-size: 38px;
+        font-size: 2.375rem;
         line-height: 1;
+    }
+
+    .movie-container {
+        gap: 1.125em;
     }
 
     .movie-title {
