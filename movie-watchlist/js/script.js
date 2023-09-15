@@ -50,7 +50,7 @@ async function searchMovies() {
     if (searchResult.Response === 'True') {
         let movies = await Promise.all(searchResult.Search.map(async (movie) => {
             // console.log(movie);
-            const movieResponse = await fetch(`http://www.omdbapi.com/?apikey=${apiKey}&i=${movie.imdbID}&plot=full`);
+            const movieResponse = await fetch(`https://www.omdbapi.com/?apikey=${apiKey}&i=${movie.imdbID}&plot=full`);
             const movieObj = await movieResponse.json();
 
             return {
