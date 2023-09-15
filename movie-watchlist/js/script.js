@@ -11,16 +11,12 @@ const isWatchlistPage = document.URL.includes('watchlist.html');
 
 if (isWatchlistPage) {
     const watchlistInLocalStorage = JSON.parse(localStorage.getItem('watchlist'));
+
     if (watchlistInLocalStorage && watchlistInLocalStorage.length !== 0) {
         watchlist.style.justifyContent = 'flex-start';
         renderMovies(watchlistInLocalStorage);
     } else {
-        watchlist.innerHTML = `
-            <h3 class="no-search-text">Your watchlist is looking a little empty...</h3>
-            <a href="./index.html" class="add-watchlist">
-                <i class="fa-solid fa-circle-plus"></i> Let's add some movies!
-            </a>
-        `
+        showEmptyResult();
     }
 }
 
@@ -73,13 +69,7 @@ async function searchMovies() {
         renderMovies(moviesArr);
         searchForm.reset();
     } else {
-        const emptyResult = `
-            <h3 class="no-search-text">
-                Unable to find what you’re looking for. Please try another search.
-            </h3>
-        `;
-        
-        movieList.innerHTML = emptyResult;
+        showEmptyResult();
     }
 
 }
@@ -156,4 +146,24 @@ function removeMovieFromWatchlist(movieID) {
     // console.log(watchlistInLocalStorage);
     localStorage.setItem('watchlist', JSON.stringify(watchlistInLocalStorage));
     renderMovies(watchlistInLocalStorage);
+
+}
+
+function showEmptyResult() {
+    if (isWatchlistPage) {
+        watchlist.innerHTML = `
+            <h3 class="no-search-text">Your watchlist is looking a little empty...</h3>
+            <a href="./index.html" class="add-watchlist">
+                <i class="fa-solid fa-circle-plus"></i> Let's add some movies!
+            </a>
+        `;
+    } else {
+        const emptyResult = `
+            <h3 class="no-search-text">
+                Unable to find what you’re looking for. Please try another search.
+            </h3>
+        `;
+        
+        movieList.innerHTML = emptyResult;
+    }
 }
