@@ -84,9 +84,7 @@ function renderMovies(movies) {
 
         return `
             <div class="movie-container">
-                <div class="image-container">
-                    <img src="${movie.poster === "N/A" ? './images/No-Image-Placeholder.png' : movie.poster}" class="movie-img" alt="${movie.title}">
-                </div>
+                <img src="${movie.poster === "N/A" ? './images/No-Image-Placeholder.png' : movie.poster}" class="movie-img" alt="${movie.title}">
                 <div class="movie-info">
                     <div class="movie-header">
                         <h2 class="movie-title">${movie.title}</h2>

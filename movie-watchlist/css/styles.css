@@ -72,18 +72,6 @@ header {
     cursor: pointer;
 }
 
-@media (max-width: 480px) {
-    .header-text {
-        flex-direction: column;
-        gap: 1.5em;
-    }
-
-    .header-text h1 {
-        font-size: 38px;
-        line-height: 1;
-    }
-}
-
 /* Search form */
 
 .search-box {
@@ -192,6 +180,8 @@ main {
 .movie-container {
     width: 100%;
     display: flex;
+    justify-content: space-around;
+    align-items: center;
     gap: 21px;
 }
 
@@ -200,10 +190,8 @@ main {
 }
 
 img.movie-img {
-    width: 99px;
-    min-width: 99px;
-    max-width: 99px;
-    height: 147.41px;
+    width: 30%;
+    height: 9.2em;
 }
 
 .movie-header {
@@ -214,19 +202,19 @@ img.movie-img {
 }
 
 .movie-title {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 600;
     line-height: 1.25;
 }
 
 .rating {
     padding: 4px;
-    font-size: 12px;
+    font-size: 0.75rem;
     line-height: 1.25;
 }
 
 .rating i {
-    font-size: 13px;
+    font-size: 0.8125rem;
     color: #FEC654;
 }
 
@@ -257,7 +245,7 @@ img.movie-img {
 }
 
 .movie-description {
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 1.5;
     color: #6B7280;
 }
@@ -285,4 +273,26 @@ hr {
 .add-watchlist i {
     pointer-events: none;
     font-size: 16px;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 480px) {
+    .header-text {
+        flex-direction: column;
+        gap: 1.5em;
+    }
+
+    .header-text h1 {
+        font-size: 38px;
+        line-height: 1;
+    }
+
+    .movie-title {
+        font-size: 1.1rem;
+    }
+
+    .movie-description {
+        font-size: 0.8rem;
+    }
 }
