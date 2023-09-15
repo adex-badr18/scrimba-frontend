@@ -278,3 +278,7 @@ hr {
     pointer-events: none;
     font-size: 16px;
 }
+
+.remove:disabled {
+    opacity: 0.3;
+}

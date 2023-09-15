@@ -32,6 +32,8 @@ document.addEventListener('click', (e) => {
         }
     } else if (e.target.dataset.id && e.target.classList.contains('add')) {
         addMovieToWatchlist(e.target.dataset.id);
+        e.target.textContent = 'Added to watchlist';
+        e.target.style.color = '#008000';
     } else if (e.target.dataset.id && e.target.classList.contains('remove')) {
         removeMovieFromWatchlist(e.target.dataset.id);
     }
