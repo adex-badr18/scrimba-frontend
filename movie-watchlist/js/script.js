@@ -133,8 +133,19 @@ function addMovieToWatchlist(movieID) {
     
     const targetMovie = moviesArr.filter(movie => movie.id === movieID)[0];
 
-    moviesInLocalStorage.push(targetMovie);
+    const isMovieFound = moviesInLocalStorage.some(movie => {
+        if (movie.id === targetMovie.id) {
+            return true;
+        }
 
+        return false;
+    });
+
+    if (isMovieFound) {
+        return;
+    }
+
+    moviesInLocalStorage.push(targetMovie);
     localStorage.setItem('watchlist', JSON.stringify(moviesInLocalStorage));
 }
 
