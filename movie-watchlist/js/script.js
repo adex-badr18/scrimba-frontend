@@ -5,11 +5,13 @@ const movieList = document.getElementById('movie-list');
 const watchlist = document.getElementById('watchlist');
 
 // localStorage.removeItem('watchlist');
+// localStorage.setItem('watchlist', JSON.stringify([]));
 
 if (document.URL.includes('watchlist.html')) {
-    if (localStorage.getItem('watchlist')) {
+    const watchlistInLocalStorage = JSON.parse(localStorage.getItem('watchlist'));
+    if (watchlistInLocalStorage && watchlistInLocalStorage.length !== 0) {
         watchlist.style.justifyContent = 'flex-start';
-        renderMovies(JSON.parse(localStorage.getItem('watchlist')));
+        renderMovies(watchlistInLocalStorage);
     } else {
         watchlist.innerHTML = `
             <h3 class="no-search-text">Your watchlist is looking a little empty...</h3>
@@ -44,7 +46,6 @@ async function searchMovies() {
     // console.log(searchResult);
 
     if (searchResult.Response === 'True') {
-        movieList.style.justifyContent = 'flex-start';
         let movies = await Promise.all(searchResult.Search.map(async (movie) => {
             // console.log(movie);
             const movieResponse = await fetch(`http://www.omdbapi.com/?apikey=${apiKey}&i=${movie.imdbID}&plot=full`);
@@ -64,6 +65,7 @@ async function searchMovies() {
         const moviesArr = movies.filter(movie => movie.plot !== 'N/A');
         localStorage.setItem('movies', JSON.stringify(moviesArr));
 
+        movieList.style.justifyContent = 'flex-start';
         renderMovies(moviesArr);
         searchForm.reset();
     } else {
