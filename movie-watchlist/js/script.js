@@ -4,10 +4,12 @@ const searchForm = document.getElementById('search-form');
 const movieList = document.getElementById('movie-list');
 const watchlist = document.getElementById('watchlist');
 
+const isWatchlistPage = document.URL.includes('watchlist.html');
+
 // localStorage.removeItem('watchlist');
 // localStorage.setItem('watchlist', JSON.stringify([]));
 
-if (document.URL.includes('watchlist.html')) {
+if (isWatchlistPage) {
     const watchlistInLocalStorage = JSON.parse(localStorage.getItem('watchlist'));
     if (watchlistInLocalStorage && watchlistInLocalStorage.length !== 0) {
         watchlist.style.justifyContent = 'flex-start';
@@ -100,9 +102,15 @@ function renderMovies(movies) {
                     <div class="movie-sub-header">
                         <span class="movie-runtime">${movie.runtime}</span>
                         <span class="genre">${movie.genre}</span>
-                        <span class="add" data-id="${movie.id}">
-                            <i class="fa-solid fa-circle-plus"></i> Watchlist
-                        </span>
+                        ${isWatchlistPage ? 
+                            `<span class="remove" data-id="${movie.id}">
+                                <i class="fa-solid fa-circle-minus"></i> Watchlist
+                            </span>` 
+                        : 
+                            `<span class="add" data-id="${movie.id}">
+                                <i class="fa-solid fa-circle-plus"></i> Watchlist
+                            </span>`
+                        }
                     </div>
 
                     <p class="movie-description">
@@ -126,7 +134,6 @@ function addMovieToWatchlist(movieID) {
     const moviesArr = JSON.parse(localStorage.getItem('movies'));
 
     if (!localStorage.getItem('watchlist')) {
-        console.log('No watchlist in localStorage');
         localStorage.setItem('watchlist', JSON.stringify([]));
     }
 
