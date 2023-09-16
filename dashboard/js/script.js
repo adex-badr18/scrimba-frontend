@@ -53,5 +53,5 @@ fetch('https://api.coingecko.com/api/v3/coins/dogecoin')
     });
 
 setRandomBackgroundImage();
-renderCurrentTime();
+setInterval(renderCurrentTime, 1000);
 
