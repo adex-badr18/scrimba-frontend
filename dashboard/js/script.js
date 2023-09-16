@@ -3,6 +3,7 @@ const cryptoEl = document.getElementById('crypto');
 const cryptoImg = document.getElementById('crypto-img');
 const cryptoName = document.getElementById('crypto-name');
 const cryptoBody = document.getElementById('crypto-body');
+const timeEl = document.getElementById('time');
 
 async function setRandomBackgroundImage() {
     try {
@@ -15,6 +16,15 @@ async function setRandomBackgroundImage() {
         document.body.style.backgroundImage = `url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxNDI0NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTQ4NjcxNzR8&ixlib=rb-4.0.3&q=85')`
         authorEl.textContent = 'Thanos Pal';
     }
+}
+
+function renderCurrentTime() {
+    const d = new Date();
+    const hours = d.getHours();
+    const minutes = d.getMinutes();
+
+    const time = `${hours}:${minutes} ${hours > 12 ? 'PM' : 'AM'}`;
+    timeEl.textContent = time;
 }
 
 fetch('https://api.coingecko.com/api/v3/coins/dogecoin')
@@ -42,3 +52,5 @@ fetch('https://api.coingecko.com/api/v3/coins/dogecoin')
     });
 
 setRandomBackgroundImage();
+renderCurrentTime();
+
