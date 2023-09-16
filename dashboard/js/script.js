@@ -13,4 +13,9 @@ async function setRandomBackgroundImage() {
     }
 }
 
+fetch('https://api.coingecko.com/api/v3/coins/dogecoin')
+    .then(res => res.json())
+    .then(data => console.log(data))
+    .catch(error => console.log(error));
+
 setRandomBackgroundImage();
