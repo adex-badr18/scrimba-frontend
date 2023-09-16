@@ -28,6 +28,25 @@ function renderCurrentTime() {
     timeEl.textContent = time;
 }
 
+function getCurrentLocation() {
+    if (!navigator.geolocation) {
+        console.log("Geolocation is not supported by your browser!");
+    } else {
+        function success(position) {
+            const lat = position.coords.latitude;
+            const long = position.coords.longitude;
+
+            console.log(lat, long);
+        }
+
+        function error() {
+            console.log('Unable to retrieve your location');
+        }
+
+        navigator.geolocation.getCurrentPosition(success, error);
+    }
+}
+
 fetch('https://api.coingecko.com/api/v3/coins/dogecoin')
     .then(res => {
         if (!res.ok) throw Error('Crypto data not available.')
@@ -54,4 +73,4 @@ fetch('https://api.coingecko.com/api/v3/coins/dogecoin')
 
 setRandomBackgroundImage();
 setInterval(renderCurrentTime, 1000);
-
+getCurrentLocation();
