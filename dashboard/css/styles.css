@@ -45,3 +45,9 @@ main {
     align-items: center;
     gap: 1em;
 }
+
+.crypto-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
