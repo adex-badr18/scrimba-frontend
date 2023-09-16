@@ -20,10 +20,11 @@ async function setRandomBackgroundImage() {
 
 function renderCurrentTime() {
     const d = new Date();
-    const hours = d.getHours();
-    const minutes = d.getMinutes();
+    // const hours = d.getHours();
+    // const minutes = d.getMinutes();
 
-    const time = `${hours}:${minutes} ${hours > 12 ? 'PM' : 'AM'}`;
+    // const time = `${hours}:${minutes} ${hours > 12 ? 'PM' : 'AM'}`;
+    const time = d.toLocaleTimeString('en-us', {timeStyle: "short"});
     timeEl.textContent = time;
 }
 
