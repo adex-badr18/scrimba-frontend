@@ -6,7 +6,7 @@ async function setRandomBackgroundImage() {
 
     bodyEl.style.backgroundImage = `url(${data.urls.regular})`;
     bodyEl.innerHTML = `
-        <h3>${data.user.name}</h3>
+        <p id="author" class="author">${data.user.name}</p>
     `;
 }
 
