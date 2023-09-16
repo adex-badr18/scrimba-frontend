@@ -35,6 +35,10 @@ main {
     text-align: center;
 }
 
+.time-container {
+    justify-self: flex-start;
+}
+
 .crypto-container {
     display: flex;
     flex-direction: column;
