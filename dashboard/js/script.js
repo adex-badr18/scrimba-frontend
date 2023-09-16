@@ -1,4 +1,5 @@
 const authorEl = document.getElementById('author');
+const cryptoEl = document.getElementById('crypto');
 
 async function setRandomBackgroundImage() {
     try {
@@ -13,9 +14,17 @@ async function setRandomBackgroundImage() {
     }
 }
 
-fetch('https://api.coingecko.com/api/v3/coins/dogecoin')
-    .then(res => res.json())
+fetch('https://api.coingecko.com/api/v3/coins/dogecoins')
+    .then(res => {
+        if (!res.ok) throw Error('Could not get crypto data! Please try again.')
+        return res.json()
+    })
     .then(data => console.log(data))
-    .catch(error => console.log(error));
+    .catch(error => {
+        // console.error(error);
+        cryptoEl.innerHTML = `
+            <p>${error}</p>
+        `;
+    });
 
 setRandomBackgroundImage();
