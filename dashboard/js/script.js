@@ -24,7 +24,7 @@ function renderCurrentTime() {
     // const minutes = d.getMinutes();
 
     // const time = `${hours}:${minutes} ${hours > 12 ? 'PM' : 'AM'}`;
-    const time = d.toLocaleTimeString('en-us', {timeStyle: "short"});
+    const time = d.toLocaleTimeString('en-us', { timeStyle: "short" });
     timeEl.textContent = time;
 }
 
@@ -49,10 +49,20 @@ function getCurrentLocation() {
 }
 
 async function getWeatherInfo(lat, long) {
-    const res = await fetch(`https://apis.scrimba.com/openweathermap/data/2.5/weather?lat=${lat}&lon=${long}&units=metric`);
-    const weather = await res.json();
+    try {
+        const res = await fetch(`https://apis.scrimba.com/openweathermap/data/2.5/weather?lat=${lat}&lon=${long}&units=metric`);
 
-    console.log(weather);
+        if (!res.ok) {
+            throw Error('Unable to get weather data');
+        }
+
+        const weather = await res.json();
+
+        console.log(weather);
+    } catch (error) {
+        console.log(error);
+    }
+
 }
 
 fetch('https://api.coingecko.com/api/v3/coins/dogecoin')
