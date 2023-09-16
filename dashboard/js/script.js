@@ -2,6 +2,7 @@ const authorEl = document.getElementById('author');
 const cryptoEl = document.getElementById('crypto');
 const cryptoImg = document.getElementById('crypto-img');
 const cryptoName = document.getElementById('crypto-name');
+const cryptoBody = document.getElementById('crypto-body');
 
 async function setRandomBackgroundImage() {
     try {
@@ -26,6 +27,12 @@ fetch('https://api.coingecko.com/api/v3/coins/dogecoin')
         cryptoImg.setAttribute('src', `${data.image.small}`);
         cryptoImg.setAttribute('alt', `${data.name}`);
         cryptoName.textContent = data.name;
+
+        cryptoBody.innerHTML = `
+            <p>$${data.market_data.current_price.usd}</p>
+            <p>$${data.market_data.high_24h.usd}</p>
+            <p>$${data.market_data.low_24h.usd}</p>
+        `
     })
     .catch(error => {
         // console.error(error);
