@@ -4,6 +4,8 @@ const cryptoImg = document.getElementById('crypto-img');
 const cryptoName = document.getElementById('crypto-name');
 const cryptoBody = document.getElementById('crypto-body');
 const timeEl = document.getElementById('time');
+const weatherTemp = document.getElementById('weather-temp');
+const country = document.getElementById('country');
 
 async function setRandomBackgroundImage() {
     try {
@@ -56,13 +58,25 @@ async function getWeatherInfo(lat, long) {
             throw Error('Unable to get weather data');
         }
 
-        const weather = await res.json();
+        const weatherData = await res.json();
 
-        console.log(weather);
+        weatherTemp.innerHTML = `
+            <img src='https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png') alt='${weatherData.weather[0].description}' >
+
+            <p>${Math.ceil(weatherData.main.temp)}&deg;</p>
+        `;
+
+        country.textContent = weatherData.name;
+
+        console.log(weatherData);
     } catch (error) {
         console.log(error);
     }
+}
 
+function getWeatherIcon(iconID) {
+    fetch(`https://openweathermap.org/img/wn/${iconID}@2x.png`)
+        .then(res => res.json())
 }
 
 fetch('https://api.coingecko.com/api/v3/coins/dogecoin')

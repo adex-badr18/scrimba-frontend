@@ -56,3 +56,28 @@ main {
     flex-direction: column;
     align-items: flex-end;
 }
+
+.weather-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weather-temp {
+    display: flex;
+    align-items: center;
+}
+
+/* .weather-temp img {
+    border: 2px solid red;
+} */
+
+.weather-temp p {
+    font-size: 3rem;
+    margin-left: -8px;
+}
+
+.country {
+    font-size: 1.2rem;
+    margin-top: -10px;
+}
