@@ -37,6 +37,7 @@ function getCurrentLocation() {
             const long = position.coords.longitude;
 
             console.log(lat, long);
+            getWeatherInfo(lat, long);
         }
 
         function error() {
@@ -45,6 +46,13 @@ function getCurrentLocation() {
 
         navigator.geolocation.getCurrentPosition(success, error);
     }
+}
+
+async function getWeatherInfo(lat, long) {
+    const res = await fetch(`https://apis.scrimba.com/openweathermap/data/2.5/weather?lat=${lat}&lon=${long}&units=metric`);
+    const weather = await res.json();
+
+    console.log(weather);
 }
 
 fetch('https://api.coingecko.com/api/v3/coins/dogecoin')
