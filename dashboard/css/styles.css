@@ -34,3 +34,12 @@ main {
 .time {
     text-align: center;
 }
+
+.crypto-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.crypto-header {
+    display: flex;
+}
