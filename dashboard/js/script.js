@@ -5,7 +5,7 @@ const cryptoName = document.getElementById('crypto-name');
 const cryptoBody = document.getElementById('crypto-body');
 const timeEl = document.getElementById('time');
 const weatherTemp = document.getElementById('weather-temp');
-const country = document.getElementById('country');
+const city = document.getElementById('city');
 
 async function setRandomBackgroundImage() {
     try {
@@ -63,10 +63,10 @@ async function getWeatherInfo(lat, long) {
         weatherTemp.innerHTML = `
             <img src='https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png') alt='${weatherData.weather[0].description}' >
 
-            <p>${Math.ceil(weatherData.main.temp)}&deg;</p>
+            <p>${Math.round(weatherData.main.temp)}&deg;</p>
         `;
 
-        country.textContent = weatherData.name;
+        city.textContent = weatherData.name;
 
         console.log(weatherData);
     } catch (error) {
