@@ -35,6 +35,20 @@ p {
     margin-bottom: .5em;
 }
 
+span {
+    position: relative;
+}
+
+span::before {
+    content: '';
+    position: absolute;
+    bottom: .1em;
+    background-color: #71AE21;
+    width: 90%;
+    height: .2em;
+    z-index: -1;
+}
+
 
 /*
 UI DESIGN FUNDAMENTALS
