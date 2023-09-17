@@ -33,6 +33,7 @@ main {
 
 .time {
     text-align: center;
+    font-size: 4rem;
 }
 
 .time-container {
@@ -53,7 +54,7 @@ main {
 
 .crypto-name,
 .crypto-body p {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 .crypto-body p {
@@ -76,7 +77,7 @@ main {
 }
 
 .weather-temp p {
-    font-size: 2rem;
+    font-size: 1.7rem;
     margin-left: -8px;
 }
 
