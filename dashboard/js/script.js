@@ -30,7 +30,7 @@ function renderCurrentTime() {
     // const minutes = d.getMinutes();
 
     // const time = `${hours}:${minutes} ${hours > 12 ? 'PM' : 'AM'}`;
-    
+
 }
 
 function getCurrentLocation() {
@@ -48,7 +48,13 @@ function getCurrentLocation() {
             console.log('Unable to retrieve your location');
         }
 
-        navigator.geolocation.getCurrentPosition(success, error);
+        const options = {
+            enableHighAccuracy: true,
+            maximumAge: 30000,
+            timeout: 27000,
+        };
+
+        navigator.geolocation.getCurrentPosition(success, error, options);
     }
 }
 
@@ -72,11 +78,6 @@ async function getWeatherInfo(lat, long) {
     } catch (error) {
         console.log(error);
     }
-}
-
-function getWeatherIcon(iconID) {
-    fetch(`https://openweathermap.org/img/wn/${iconID}@2x.png`)
-        .then(res => res.json())
 }
 
 fetch('https://api.coingecko.com/api/v3/coins/ethereum')
