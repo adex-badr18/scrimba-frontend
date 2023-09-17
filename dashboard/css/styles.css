@@ -68,12 +68,12 @@ main {
     align-items: center;
 }
 
-/* .weather-temp img {
-    border: 2px solid red;
-} */
+.weather-temp img {
+    width: 80px;
+}
 
 .weather-temp p {
-    font-size: 3rem;
+    font-size: 2rem;
     margin-left: -8px;
 }
 
