@@ -22,12 +22,15 @@ async function setRandomBackgroundImage() {
 
 function renderCurrentTime() {
     const d = new Date();
+    const time = d.toLocaleTimeString('en-us', { timeStyle: "short" });
+    timeEl.textContent = time;
+
+    // OR
     // const hours = d.getHours();
     // const minutes = d.getMinutes();
 
     // const time = `${hours}:${minutes} ${hours > 12 ? 'PM' : 'AM'}`;
-    const time = d.toLocaleTimeString('en-us', { timeStyle: "short" });
-    timeEl.textContent = time;
+    
 }
 
 function getCurrentLocation() {
@@ -38,7 +41,6 @@ function getCurrentLocation() {
             const lat = position.coords.latitude;
             const long = position.coords.longitude;
 
-            console.log(lat, long);
             getWeatherInfo(lat, long);
         }
 
@@ -67,8 +69,6 @@ async function getWeatherInfo(lat, long) {
         `;
 
         city.textContent = weatherData.name;
-
-        console.log(weatherData);
     } catch (error) {
         console.log(error);
     }
@@ -85,7 +85,6 @@ fetch('https://api.coingecko.com/api/v3/coins/dogecoin')
         return res.json()
     })
     .then(data => {
-        console.log(data);
         cryptoImg.setAttribute('src', `${data.image.small}`);
         cryptoImg.setAttribute('alt', `${data.name}`);
         cryptoName.textContent = data.name;
@@ -97,7 +96,6 @@ fetch('https://api.coingecko.com/api/v3/coins/dogecoin')
         `
     })
     .catch(error => {
-        // console.error(error);
         cryptoEl.innerHTML = `
             <p>${error}</p>
         `;
