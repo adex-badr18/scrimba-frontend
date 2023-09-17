@@ -18,3 +18,26 @@ body {
     display: grid;
     place-content: center;
 }
+
+h1 {
+    font-size: 2.4rem;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: .5em;
+}
+
+
+/*
+UI DESIGN FUNDAMENTALS
+
+- White Space
+- Color 
+- Contrast 
+- Scale
+- Alignment
+- Typography
+- Visual Hierarchy
+
+*/
