@@ -19,9 +19,9 @@ body {
     place-content: center;
     background: #1C1C1C;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #434343, #000000);
+    background: -webkit-linear-gradient(0deg, rgba(34,34,34,1) 32%, rgba(28,28,28,1) 32%, rgba(28,28,28,1) 100%);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #434343, #000000);
+    background: linear-gradient(0deg, rgba(34,34,34,1) 32%, rgba(28,28,28,1) 32%, rgba(28,28,28,1) 100%);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: #FFFFFF;
 }
