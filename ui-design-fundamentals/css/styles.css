@@ -16,14 +16,15 @@ body {
 body {
     font-family: 'Montserrat';
     display: grid;
-    place-content: center;
-    background: #1C1C1C;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(0deg, rgba(34,34,34,1) 32%, rgba(28,28,28,1) 32%, rgba(28,28,28,1) 100%);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(0deg, rgba(34,34,34,1) 32%, rgba(28,28,28,1) 32%, rgba(28,28,28,1) 100%);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    align-items: center;
+    background: linear-gradient(322deg, rgba(43,46,39,1) 29%, rgba(28,28,28,1) 29%, rgba(28,28,28,1) 40%, rgba(43,46,39,1) 40%, rgba(43,46,39,1) 48%, rgba(28,28,28,1) 48%, rgba(28,28,28,1) 92%, rgba(113,174,33,1) 92%, rgba(113,174,33,1) 100%);
     color: #FFFFFF;
+}
+
+.container {
+    padding: 4em;
+    width: 40%;
+    height: 50vh;
 }
 
 h1 {
