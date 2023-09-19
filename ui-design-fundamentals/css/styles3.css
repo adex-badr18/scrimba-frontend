@@ -15,30 +15,41 @@ body {
 
 body {
     font-family: 'Montserrat';
-    display: grid;
-    align-items: center;
-    /* background: linear-gradient(322deg, rgba(43,46,39,1) 29%, rgba(28,28,28,1) 29%, rgba(28,28,28,1) 40%, rgba(43,46,39,1) 40%, rgba(43,46,39,1) 48%, rgba(28,28,28,1) 48%, rgba(28,28,28,1) 92%, rgba(113,174,33,1) 92%, rgba(113,174,33,1) 100%); */
-    background-image: url('../images/sky1.jpg');
-    /* background-image: url('../images/sky2.jpg'); */
-    /* background-image: url('../images/sky2_dark.jpg'); */
-    /* background-image: url('../images/moon_dark.jpg'); */
+    background-image: url('../images/sky3.jpg');
     background-size: cover;
     color: #FFFFFF;
 }
 
 .container {
     padding: 4em;
-    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    gap: 7em;
     height: 50vh;
 }
 
 h1 {
-    font-size: 2.4rem;
+    font-size: 3.5rem;
+    width: 90%;
+    position: relative;
+}
+
+h1::before {
+    position: absolute;
+    content: '';
+    width: .07em;
+    height: 232px;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 0;
+    left: -1.3em;
 }
 
 p {
-    font-size: 1.2rem;
-    margin-bottom: .5em;
+    font-size: 1.3rem;
+    margin-top: .5em;
+    width: 100%;
+    text-transform: uppercase;
 }
 
 span {
