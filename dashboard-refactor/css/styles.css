@@ -187,3 +187,21 @@ nav {
     padding: .5em 1em;
     margin-bottom: 2em;
 }
+
+/* MEDIA QUERIES */
+
+@media (min-width: 420px) {
+    body {
+        padding: 1em;
+        text-align: left;
+    }
+
+    ul.data {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    ul.data li {
+        flex: 0 0 50%;
+    }
+}
