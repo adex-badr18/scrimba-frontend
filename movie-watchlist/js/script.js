@@ -3,6 +3,7 @@ const searchBtn = document.getElementById('search-button');
 const searchForm = document.getElementById('search-form');
 const movieList = document.getElementById('movie-list');
 const watchlist = document.getElementById('watchlist');
+const apiKey = '80182aef';
 
 const isWatchlistPage = document.URL.includes('watchlist.html');
 
@@ -39,9 +40,8 @@ document.addEventListener('click', (e) => {
     }
 })
 
-async function searchMovies() {
-    const apiKey = '80182aef';
-    const searchTerm = searchInput.value;
+async function searchMovies(searchTerm = searchInput.value) {
+    // const searchTerm = searchInput.value;
     const res = await fetch(`https://www.omdbapi.com/?apikey=${apiKey}&s=${searchTerm}`);
     const searchResult = await res.json();
 
@@ -182,4 +182,10 @@ function showEmptyResult() {
         
         movieList.innerHTML = emptyResult;
     }
+}
+
+window.onload = () => {
+    const date = new Date();
+    const year = date.getFullYear();
+    searchMovies(year);
 }
