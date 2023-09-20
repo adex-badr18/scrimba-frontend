@@ -205,3 +205,17 @@ nav {
         flex: 0 0 50%;
     }
 }
+
+@media (min-width: 550px) {
+    ul.data {
+        justify-content: space-around;
+    }
+
+    .panel ul.data li {
+        flex: 0 0 33%;
+    }
+
+    .panel ul.data li p {
+        margin-bottom: 0;
+    }
+}
