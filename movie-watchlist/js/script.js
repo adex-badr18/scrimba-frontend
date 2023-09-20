@@ -7,9 +7,6 @@ const apiKey = '80182aef';
 
 const isWatchlistPage = document.URL.includes('watchlist.html');
 
-// localStorage.removeItem('watchlist');
-// localStorage.setItem('watchlist', JSON.stringify([]));
-
 if (isWatchlistPage) {
     const watchlistInLocalStorage = JSON.parse(localStorage.getItem('watchlist'));
 
@@ -41,15 +38,11 @@ document.addEventListener('click', (e) => {
 })
 
 async function searchMovies(searchTerm = searchInput.value) {
-    // const searchTerm = searchInput.value;
     const res = await fetch(`https://www.omdbapi.com/?apikey=${apiKey}&s=${searchTerm}`);
     const searchResult = await res.json();
 
-    // console.log(searchResult);
-
     if (searchResult.Response === 'True') {
         let movies = await Promise.all(searchResult.Search.map(async (movie) => {
-            // console.log(movie);
             const movieResponse = await fetch(`https://www.omdbapi.com/?apikey=${apiKey}&i=${movie.imdbID}&plot=full`);
             const movieObj = await movieResponse.json();
 
