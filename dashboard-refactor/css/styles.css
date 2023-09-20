@@ -281,4 +281,16 @@ nav {
     svg {
         display: none;
     }
+
+    nav {
+        visibility: unset;
+        opacity: 1;
+        transform: translateX(0);
+        width: 100%;
+        position: unset;
+    }
+
+    a.logo {
+        margin: 0;
+    }
 }
