@@ -14,13 +14,13 @@ function App() {
 function Header() {
   return (
     <header>
-      <nav>
+      <nav className='nav'>
         <img src={logo} className="App-logo" alt="logo" />
 
         <ul className='nav-menu'>
-          <li><a href='#'>Pricing</a></li>
-          <li><a href='#'>About</a></li>
-          <li><a href='#'>Contact</a></li>
+          <li className='nav-item'><a href='#' className='nav-link'>Pricing</a></li>
+          <li className='nav-item'><a href='#' className='nav-link'>About</a></li>
+          <li className='nav-item'><a href='#' className='nav-link'>Contact</a></li>
         </ul>
       </nav>
     </header>

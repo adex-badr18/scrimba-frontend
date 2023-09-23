@@ -15,6 +15,26 @@ body {
   padding: 10px;
 }
 
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu {
+  list-style-type: none;
+  margin-left: auto;
+  display: flex;
+}
+
+.nav-item {
+  padding: 1em;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: inherit;
+}
+
 .App-logo {
   width: 50px;
 }
