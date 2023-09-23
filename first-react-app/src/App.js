@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -40,14 +41,6 @@ function MainContent() {
         <li>Powers thousands of enterprise apps, including mobile apps</li>
       </ul>
     </main>
-  )
-}
-
-function Footer() {
-  return (
-    <footer>
-      <small>© 2021 Badrudeen development. All rights reserved.</small>
-    </footer>
   )
 }
 
