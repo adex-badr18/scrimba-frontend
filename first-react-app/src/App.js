@@ -1,6 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
 import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
 
 function App() {
   return (
@@ -10,22 +10,6 @@ function App() {
       <Footer />
     </div>
   );
-}
-
-function Header() {
-  return (
-    <header>
-      <nav className='nav'>
-        <img src={logo} className="App-logo" alt="logo" />
-
-        <ul className='nav-menu'>
-          <li className='nav-item'><a href='#' className='nav-link'>Pricing</a></li>
-          <li className='nav-item'><a href='#' className='nav-link'>About</a></li>
-          <li className='nav-item'><a href='#' className='nav-link'>Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-  )
 }
 
 function MainContent() {
