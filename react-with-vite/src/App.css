@@ -33,3 +33,8 @@ main {
     padding: 3.6em 1.7em;
     flex: 1;
 }
+
+.list-title {
+    font-size: 2.44rem;
+    font-weight: 700;
+}
