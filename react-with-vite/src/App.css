@@ -40,7 +40,7 @@ main::after {
     content: url('../public/Group.png');
     position: absolute;
     right: 1px;
-    top: 100px;
+    top: 150px;
 }
 
 .list-title {
