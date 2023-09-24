@@ -32,9 +32,22 @@ main {
     color: #FFFFFF;
     padding: 3.6em 1.7em;
     flex: 1;
+    position: relative;
+    z-index: 1;
+}
+
+main::after {
+    content: url('../public/Group.png');
+    position: absolute;
+    right: 1px;
+    top: 40px;
 }
 
 .list-title {
     font-size: 2.44rem;
     font-weight: 700;
+}
+
+.main-list li {
+    margin-bottom: 1.25em;
 }
