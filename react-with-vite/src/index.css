@@ -1,6 +1,4 @@
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
@@ -8,11 +6,19 @@ html,
 body {
   font-family: 'Inter', sans-serif;
   font-size: 16px;
+  margin: 0;
+  padding: 0;
 }
 
 div.container {
   width: 34.375em;
   margin: 0 auto;
+}
+
+h3, 
+h4 {
+  margin: 0;
+  padding: 0;
 }
 
 /* :root {
