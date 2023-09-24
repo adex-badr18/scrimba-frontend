@@ -1,2 +1,27 @@
+header {
+    background-color: #21222A;
+    color: #61DAFB;
+    padding: 2em 1.7em;
+}
 
+nav {
+    display: flex;
+    align-items: center;
+    gap: .42em;
+}
 
+.logo-img {
+    width: 1.75em;
+    color: #00D8FF;
+}
+
+.logo-text {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.course-title {
+    margin-left: auto;
+    color: #DEEBF8;
+    font-weight: 600;
+}
