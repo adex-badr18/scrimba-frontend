@@ -25,3 +25,10 @@ nav {
     color: #DEEBF8;
     font-weight: 600;
 }
+
+/* MAIN */
+main {
+    background-color: #282D35;
+    color: #FFFFFF;
+    padding: 3.6em 1.7em;
+}
