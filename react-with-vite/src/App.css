@@ -52,10 +52,12 @@ main::after {
 
 ul.main-list {
     margin-left: 20px;
+    max-width: 90%;
 }
 
 .main-list li {
-    margin-bottom: 1.25em;
+    margin-bottom: 1em;
+    line-height: 1.3;
 }
 
 .main-list li::marker {
