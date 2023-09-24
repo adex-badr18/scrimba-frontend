@@ -8,10 +8,12 @@ body {
   font-size: 16px;
   margin: 0;
   padding: 0;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 div.container {
+  display: flex;
+  flex-direction: column;
   width: 34.375em;
   height: 100vh;
   margin: 0 auto;
